@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["rickandmortyapi.com"],
+    domains: ["rickandmortyapi.com", "localhost"],
   },
   turbopack: {
-    // Example: adding an alias and custom file extension
     resolveAlias: {
       underscore: "lodash",
     },

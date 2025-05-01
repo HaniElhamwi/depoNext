@@ -7,7 +7,7 @@ import Link from "next/link";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Activities", path: "/activities" },
+  { name: "Events", path: "/events" },
   { name: "Blog", path: "/blog" },
   { name: "Reviews", path: "/reviews" },
   { name: "FAQ", path: "/faq" },
@@ -39,13 +39,15 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.path}
-                className="text-gray-700 hover:text-ssu-blue font-medium transition-colors">
+                className="text-gray-700 hover:text-ssu-blue font-medium transition-colors"
+              >
                 {item.name}
               </Link>
             ))}
             <Button
               variant="default"
-              className="bg-ssu-blue hover:bg-ssu-blue/90">
+              className="bg-ssu-blue hover:bg-ssu-blue/90"
+            >
               Contact Us
             </Button>
           </nav>
@@ -53,7 +55,8 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             className="md:hidden p-2 rounded-md text-gray-700 focus:outline-none"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -66,14 +69,16 @@ const Header = () => {
                 key={item.name}
                 href={item.path}
                 className="block text-gray-700 hover:text-ssu-blue font-medium py-2 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}>
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 {item.name}
               </Link>
             ))}
             <Button
               variant="default"
               className="w-full mt-2 bg-ssu-blue hover:bg-ssu-blue/90"
-              onClick={() => setMobileMenuOpen(false)}>
+              onClick={() => setMobileMenuOpen(false)}
+            >
               Contact Us
             </Button>
           </nav>
