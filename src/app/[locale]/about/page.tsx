@@ -1,6 +1,6 @@
 // "use client";
 import MainLayout from "@/components/layout/MainLayout";
-import TeamSection from "../about/TeamSection"; // 👈 استيراد المكون الجديد
+import TeamSection from "./TeamSection"; // 👈 استيراد المكون الجديد
 // import { Card, CardContent } from "@/components/ui/card";
 // import { useEffect, useState } from "react";
 // import { fetcher } from "@/lib/fetch";

@@ -5,8 +5,9 @@ import BlogPreview from "@/components/home/BlogPreview";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import FaqPreview from "@/components/home/FaqPreview";
 import CallToAction from "@/components/home/CallToAction";
+import { getTranslations } from "next-intl/server";
 
-const Index = () => {
+const Index = async () => {
   return (
     <MainLayout>
       <HeroSection />
