@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import LangaugeSelector from "../LanguageSelector";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -50,6 +51,7 @@ const Header = () => {
             >
               Contact Us
             </Button>
+            <LangaugeSelector />
           </nav>
 
           {/* Mobile menu button */}

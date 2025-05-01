@@ -1,4 +1,7 @@
 {
   "HOME_PAGE": {},
-  "COMMON": {}
+  "COMMON": {},
+  "ABOUT_PAGE":{
+    "OUR_MISSION":""
+  }
 }

@@ -10,11 +10,12 @@ const HeroSection = () => {
           'url("https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop")',
         backgroundSize: "cover",
         backgroundPosition: "center",
-      }}>
+      }}
+    >
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0 md:pr-10 space-y-6 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight rtl:font-changa ltr:font-montserrat">
               Welcome to Karabük University Syrian Student Union
             </h1>
             <p className="text-lg md:text-xl text-gray-100">
@@ -25,7 +26,8 @@ const HeroSection = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-white hover:bg-gray-200 text-ssu-blue">
+                className="bg-white hover:bg-gray-200 text-ssu-blue"
+              >
                 <Link href="/about" className="text-ssu-blue font-medium">
                   Learn More
                 </Link>
@@ -34,7 +36,8 @@ const HeroSection = () => {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white/30">
+                className="border-white text-white hover:bg-white/30"
+              >
                 <Link href="/activities" className="text-white font-medium">
                   View Activities
                 </Link>
