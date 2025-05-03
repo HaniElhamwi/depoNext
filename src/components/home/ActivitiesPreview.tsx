@@ -163,7 +163,7 @@ const ActivitiesPreview = async () => {
                 </CardContent>
                 <CardFooter>
                   <Link
-                    href={`/activities/${event.id}`}
+                    href={`/events/${event.id}`}
                     className="text-ssu-blue flex items-center hover:underline"
                   >
                     Read more <ArrowRight size={16} className="ml-1" />

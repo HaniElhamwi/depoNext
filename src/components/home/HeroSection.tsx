@@ -35,10 +35,10 @@ const HeroSection = () => {
               <Button
                 asChild
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white/30"
+                // variant="outline"
+                className="bg-white hover:bg-gray-200 text-ssu-blue"
               >
-                <Link href="/activities" className="text-white font-medium">
+                <Link href="/events" className="text-ssu-blue font-medium">
                   View Activities
                 </Link>
               </Button>

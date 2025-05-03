@@ -29,7 +29,7 @@ const CallToAction = () => {
             asChild
             size="lg"
             variant="outline"
-            className="border-white text-white hover:bg-white/10">
+            className="bg-white text-ssu-blue hover:bg-gray-100">
             <Link href="/activities">Explore Activities</Link>
           </Button>
         </div>

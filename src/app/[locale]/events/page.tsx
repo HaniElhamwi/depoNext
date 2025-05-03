@@ -74,6 +74,7 @@ import Image from "next/image";
 //     category: "Social",
 //   },
 // ];
+import { slugify } from "@/lib/slugify";
 
 const categories = [
   "All",
@@ -198,7 +199,11 @@ const Events = async ({ searchParams }: any) => {
                         </div>
                       </div>
                       <Link
-                        href={`/activities/${event.id}`}
+                        href={
+                          // `/activities/${event.id}`
+                          // `/events/${slugify(event.title)}`
+                          `/events/${event.documentId}`
+                        }
                         className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors"
                       >
                         View Details
