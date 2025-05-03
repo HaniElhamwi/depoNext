@@ -4,18 +4,21 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import LangaugeSelector from "../LanguageSelector";
+import { useTranslations } from "next-intl";
 
 const navItems = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Events", path: "/events" },
-  { name: "Blog", path: "/blog" },
-  { name: "Reviews", path: "/reviews" },
+  { name: "HOME", path: "/" },
+  { name: "ABOUT", path: "/about" },
+  { name: "EVENTS", path: "/events" },
+  { name: "BLOG", path: "/blog" },
+  { name: "REVIRES", path: "/reviews" },
   { name: "FAQ", path: "/faq" },
 ];
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const t = useTranslations("HOME_PAGE");
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
@@ -42,14 +45,14 @@ const Header = () => {
                 href={item.path}
                 className="text-gray-700 hover:text-ssu-blue font-medium transition-colors"
               >
-                {item.name}
+                {t(item.name)}
               </Link>
             ))}
             <Button
               variant="default"
               className="bg-ssu-blue hover:bg-ssu-blue/90"
             >
-              Contact Us
+              {t("CONTACT_US")}
             </Button>
             <LangaugeSelector />
           </nav>
@@ -73,7 +76,7 @@ const Header = () => {
                 className="block text-gray-700 hover:text-ssu-blue font-medium py-2 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {item.name}
+               {t(item.name)}
               </Link>
             ))}
             <Button
@@ -81,7 +84,7 @@ const Header = () => {
               className="w-full mt-2 bg-ssu-blue hover:bg-ssu-blue/90"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Contact Us
+               {t("CONTACT_US")}
             </Button>
           </nav>
         )}

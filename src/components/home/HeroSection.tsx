@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 const HeroSection = () => {
+    const t = useTranslations("HOME_PAGE");
   return (
     <section
       className="relative text-white py-20 md:py-32 before:absolute before:inset-0 before:bg-gradient-to-r before:from-ssu-blue/90 before:to-ssu-orange/80"
@@ -16,11 +18,10 @@ const HeroSection = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0 md:pr-10 space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight rtl:font-changa ltr:font-montserrat">
-              Welcome to Karabük University Syrian Student Union
+             {t("HERO_TITLE")}
             </h1>
             <p className="text-lg md:text-xl text-gray-100">
-              Supporting Syrian students through community, resources, and
-              opportunities for growth.
+              {t("HERO_DESCRIPTION")}
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Button
@@ -29,7 +30,7 @@ const HeroSection = () => {
                 className="bg-white hover:bg-gray-200 text-ssu-blue"
               >
                 <Link href="/about" className="text-ssu-blue font-medium">
-                  Learn More
+                 {t( "LEARN_MORE")}
                 </Link>
               </Button>
               <Button
@@ -39,7 +40,7 @@ const HeroSection = () => {
                 className="bg-white hover:bg-gray-200 text-ssu-blue"
               >
                 <Link href="/events" className="text-ssu-blue font-medium">
-                  View Activities
+                {t("VIEW_ACTIVITIES")} 
                 </Link>
               </Button>
             </div>

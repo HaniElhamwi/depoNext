@@ -75,6 +75,8 @@ import Image from "next/image";
 //   },
 // ];
 import { slugify } from "@/lib/slugify";
+import { getTranslations } from "next-intl/server";
+// import { useTranslations } from "next-intl";
 
 const categories = [
   "All",
@@ -87,6 +89,7 @@ const categories = [
 ];
 
 const Events = async ({ searchParams }: any) => {
+  const t = await getTranslations('ACTIVITIES_SECTION');
   const awaitedParams = await searchParams;
   const selectedCategory = awaitedParams.category || "All";
   const searchTerm = awaitedParams.search;
@@ -113,11 +116,9 @@ const Events = async ({ searchParams }: any) => {
       {/* Hero Section */}
       <section className="bg-ssu-blue text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="h1 mb-6">Activities & Events</h1>
+          <h1 className="h1 mb-6">{t("TITLE")}</h1>
           <p className="text-lg max-w-3xl mx-auto text-gray-100">
-            Discover our past and upcoming activities designed to support,
-            connect, and enrich the experience of Syrian students at Karabük
-            University.
+          {t("DESCRIPTION")}
           </p>
         </div>
       </section>
@@ -206,7 +207,7 @@ const Events = async ({ searchParams }: any) => {
                         }
                         className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors"
                       >
-                        View Details
+                       {t("VIEW_DETAILS")}
                       </Link>
                     </div>
                   </div>

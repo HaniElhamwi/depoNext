@@ -97,10 +97,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { fetcher } from "@/lib/fetch";
+import { useTranslations } from "next-intl";
 
 const BlogPreview = () => {
   const [posts, setPosts] = useState([]);
-
+const t = useTranslations( "BLOG_SECTION");
   useEffect(() => {
     fetcher("/posts?populate=image")
       .then((data) => {
@@ -126,10 +127,9 @@ const BlogPreview = () => {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="h2 text-ssu-blue mb-4">Latest from Our Blog</h2>
+          <h2 className="h2 text-ssu-blue mb-4">{t("TITLE")}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Stay updated with the latest news, announcements, and helpful guides
-            for Syrian students.
+          {t(  "DESCRIPTION")}
           </p>
         </div>
 
@@ -165,7 +165,7 @@ const BlogPreview = () => {
                     href={`/blog/${post.slug}`}
                     className="text-ssu-blue flex items-center hover:underline"
                   >
-                    Read more <ArrowRight size={16} className="ml-1" />
+                   {t( "READ_MORE")} <ArrowRight size={16} className="ml-1" />
                   </Link>
                 </div>
               </div>
@@ -179,7 +179,7 @@ const BlogPreview = () => {
             variant="outline"
             className="border-ssu-blue text-ssu-blue hover:bg-ssu-blue hover:text-white"
           >
-            <Link href="/blog">View All Posts</Link>
+            <Link href="/blog"> {t(  "VIEW_ALL_POSTS")}</Link>
           </Button>
         </div>
       </div>

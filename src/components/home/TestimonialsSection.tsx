@@ -102,11 +102,12 @@
 
 import { useEffect, useState } from "react";
 import { Separator } from "@/components/ui/separator";
+import { useTranslations } from "next-intl";
 
 const TestimonialsSection = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const t = useTranslations("STUDENT_TESTIMONIALS");
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
@@ -143,15 +144,15 @@ const TestimonialsSection = () => {
   }, []);
 
   if (testimonials.length === 0) return null;
+   
 
   return (
     <section className="py-16 bg-ssu-blue text-white">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="h2 mb-4">What Our Students Say</h2>
+          <h2 className="h2 mb-4">{t("TITLE")}</h2>
           <p className="text-gray-200 max-w-2xl mx-auto">
-            Hear from Syrian students about their experiences with our union and
-            how it has supported their academic journey.
+           {t(  "DESCRIPTION")}
           </p>
         </div>
 

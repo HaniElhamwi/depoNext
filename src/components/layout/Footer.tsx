@@ -1,19 +1,19 @@
 import { Facebook, Instagram, Twitter, Mail } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
+ const t =useTranslations( "FOOTER")
   return (
     <footer className="bg-ssu-blue text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About section */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Syrian Student Union</h3>
+            <h3 className="text-xl font-bold mb-4"> {t("SITE_NAME")}</h3>
             <p className="mb-4 text-gray-200">
-              Supporting Syrian students at Karabük University through
-              community, resources, and activities.
+             {t("SUPPORT_TEXT")}
             </p>
             <div className="flex space-x-4">
               <a
@@ -51,41 +51,41 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <h3 className="text-xl font-bold mb-4">   {t("QUICK_LINKS")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/about"
                   className="text-gray-200 hover:text-white transition-colors">
-                  About Us
+                  {t( "ABOUT")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/activities"
                   className="text-gray-200 hover:text-white transition-colors">
-                  Activities
+                     {t( "EVENTS")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/blog"
                   className="text-gray-200 hover:text-white transition-colors">
-                  Blog
+                  {t( "BLOG")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/reviews"
                   className="text-gray-200 hover:text-white transition-colors">
-                  Reviews
+                 {t( "REVIRES")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/faq"
                   className="text-gray-200 hover:text-white transition-colors">
-                  FAQ
+                 {t( "FAQ")}
                 </Link>
               </li>
             </ul>
@@ -93,22 +93,22 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+            <h3 className="text-xl font-bold mb-4">   {t("CONTACT_US")}</h3>
             <address className="not-italic">
-              <p className="mb-2">Karabük Üniversitesi</p>
-              <p className="mb-2">Karabük, Turkey</p>
+              <p className="mb-2"> {t("UNIVERSITY")}</p>
+              <p className="mb-2">{t("ADDRESS")}</p>
               <p className="mb-2">
                 <a
                   href="mailto:contact@ssukarabuk.com"
                   className="text-gray-200 hover:text-white transition-colors">
-                  contact@ssukarabuk.com
+                {t("EMAIL")}
                 </a>
               </p>
               <p>
                 <a
                   href="tel:+905555555555"
                   className="text-gray-200 hover:text-white transition-colors">
-                  +90 555 555 55 55
+                   {t("PHONE")}
                 </a>
               </p>
             </address>
@@ -117,8 +117,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-6 border-t border-gray-600 text-center text-gray-300">
           <p>
-            &copy; {currentYear} Karabük University Syrian Student Union. All
-            rights reserved.
+            &copy; {currentYear}  {t("COPYRIGHT")}
           </p>
         </div>
       </div>

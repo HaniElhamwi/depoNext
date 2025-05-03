@@ -104,7 +104,9 @@ import TeamSection from "./TeamSection"; // 👈 استيراد المكون ا�
 
 //   fetchTeamMembers();
 // }, []);
+
 const About = () => {
+  
   return (
     <MainLayout>
       {/* Hero Section */}

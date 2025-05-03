@@ -80,7 +80,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
-
+import { useTranslations } from "next-intl";
 interface Faq {
   id: number;
   attributes: {
@@ -92,7 +92,7 @@ interface Faq {
 const FaqPreview = () => {
   const [faqs, setFaqs] = useState<Faq[]>([]);
   const [loading, setLoading] = useState(true);
-
+  const t = useTranslations("FAQ_SECTION")
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
@@ -110,15 +110,14 @@ const FaqPreview = () => {
 
     fetchFaqs();
   }, []);
-
+ 
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="h2 text-ssu-blue mb-4">Frequently Asked Questions</h2>
+          <h2 className="h2 text-ssu-blue mb-4">{t( "TITLE")}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Find answers to common questions about the Syrian Student Union and
-            our services.
+          {t( "DESCRIPTION")}
           </p>
         </div>
 
@@ -150,7 +149,7 @@ const FaqPreview = () => {
               variant="outline"
               className="border-ssu-blue text-ssu-blue hover:bg-ssu-blue hover:text-white"
             >
-              <Link href="/faq">View All FAQs</Link>
+              <Link href="/faq">{t( "VIEW_ALL_FAQ")}</Link>
             </Button>
           </div>
         </div>
