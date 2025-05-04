@@ -111,7 +111,9 @@ const TestimonialsSection = () => {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const res = await fetch("http://localhost:1337/api/reviews?populate=*&publicationState=live");
+        const res = await fetch(
+          "http://localhost:1337/api/reviews?populate=*&publicationState=live"
+        );
         const data = await res.json();
 
         const extractTextFromRichText = (richText: any[]): string => {
@@ -144,15 +146,14 @@ const TestimonialsSection = () => {
   }, []);
 
   if (testimonials.length === 0) return null;
-   
 
   return (
     <section className="py-16 bg-ssu-blue text-white">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="h2 mb-4">{t("TITLE")}</h2>
-          <p className="text-gray-200 max-w-2xl mx-auto">
-           {t(  "DESCRIPTION")}
+          <h2 className="section-title">{t("TITLE")}</h2>
+          <p className="text-gray-200 max-w-2xl mx-auto font-semibold">
+            {t("DESCRIPTION")}
           </p>
         </div>
 
@@ -197,8 +198,7 @@ const TestimonialsSection = () => {
                     : "bg-white/30 hover:bg-white/50"
                 }`}
                 aria-label={`View testimonial ${index + 1}`}
-  
-            />
+              />
             ))}
           </div>
         </div>

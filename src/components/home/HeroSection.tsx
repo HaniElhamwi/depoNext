@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 const HeroSection = () => {
-    const t = useTranslations("HOME_PAGE");
+  const t = useTranslations("HOME_PAGE");
   return (
     <section
       className="relative text-white py-20 md:py-32 before:absolute before:inset-0 before:bg-gradient-to-r before:from-ssu-blue/90 before:to-ssu-orange/80"
@@ -12,35 +12,32 @@ const HeroSection = () => {
           'url("https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop")',
         backgroundSize: "cover",
         backgroundPosition: "center",
-      }}
-    >
+      }}>
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0 md:pr-10 space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight rtl:font-changa ltr:font-montserrat">
-             {t("HERO_TITLE")}
+              {t("HERO_TITLE")}
             </h1>
             <p className="text-lg md:text-xl text-gray-100">
               {t("HERO_DESCRIPTION")}
             </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className=" flex-col sm:flex-row flex gap-4  sm:gap-4">
               <Button
                 asChild
                 size="lg"
-                className="bg-white hover:bg-gray-200 text-ssu-blue"
-              >
+                className="bg-white hover:bg-gray-200 text-ssu-blue">
                 <Link href="/about" className="text-ssu-blue font-medium">
-                 {t( "LEARN_MORE")}
+                  {t("LEARN_MORE")}
                 </Link>
               </Button>
               <Button
                 asChild
                 size="lg"
                 // variant="outline"
-                className="bg-white hover:bg-gray-200 text-ssu-blue"
-              >
+                className="bg-white hover:bg-gray-200 text-ssu-blue">
                 <Link href="/events" className="text-ssu-blue font-medium">
-                {t("VIEW_ACTIVITIES")} 
+                  {t("VIEW_ACTIVITIES")}
                 </Link>
               </Button>
             </div>
@@ -50,7 +47,7 @@ const HeroSection = () => {
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center overflow-hidden">
                 <div className="text-center p-6">
                   <div className="text-5xl font-bold">SSU</div>
-                  <div className="text-xl mt-2">Karabük University</div>
+                  <div className="text-xl mt-2">{t("KARABUK_UNIVERSITY")}</div>
                   <div className="text-sm mt-1 opacity-80">Est. 2020</div>
                 </div>
               </div>

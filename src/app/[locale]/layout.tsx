@@ -23,11 +23,11 @@ export default async function RootLayout({
   const isArabic = locale === "ar";
   const direction = isArabic ? "rtl" : "ltr";
 
+  const fontClass = isArabic ? changa.className : montserrat.className;
+
   return (
     <html lang={locale} dir={direction}>
-      <body
-        className={`${tajwal.className} ${changa.className} ${montserrat.className}`}
-      >
+      <body className={`font-tajawal ${tajwal.className} ${fontClass}`}>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>

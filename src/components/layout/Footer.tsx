@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
- const t =useTranslations( "FOOTER")
+  const t = useTranslations("FOOTER");
   return (
     <footer className="bg-ssu-blue text-white">
       <div className="container mx-auto px-4 py-12">
@@ -12,10 +12,8 @@ const Footer = () => {
           {/* About section */}
           <div>
             <h3 className="text-xl font-bold mb-4"> {t("SITE_NAME")}</h3>
-            <p className="mb-4 text-gray-200">
-             {t("SUPPORT_TEXT")}
-            </p>
-            <div className="flex space-x-4">
+            <p className="mb-4 text-gray-200">{t("SUPPORT_TEXT")}</p>
+            <div className="flex gap-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
@@ -51,41 +49,41 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-4">   {t("QUICK_LINKS")}</h3>
+            <h3 className="text-xl font-bold mb-4">{t("QUICK_LINKS")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/about"
                   className="text-gray-200 hover:text-white transition-colors">
-                  {t( "ABOUT")}
+                  {t("ABOUT")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/activities"
                   className="text-gray-200 hover:text-white transition-colors">
-                     {t( "EVENTS")}
+                  {t("EVENTS")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/blog"
                   className="text-gray-200 hover:text-white transition-colors">
-                  {t( "BLOG")}
+                  {t("BLOG")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/reviews"
                   className="text-gray-200 hover:text-white transition-colors">
-                 {t( "REVIRES")}
+                  {t("REVIRES")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/faq"
                   className="text-gray-200 hover:text-white transition-colors">
-                 {t( "FAQ")}
+                  {t("FAQ")}
                 </Link>
               </li>
             </ul>
@@ -93,7 +91,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xl font-bold mb-4">   {t("CONTACT_US")}</h3>
+            <h3 className="text-xl font-bold mb-4"> {t("CONTACT_US")}</h3>
             <address className="not-italic">
               <p className="mb-2"> {t("UNIVERSITY")}</p>
               <p className="mb-2">{t("ADDRESS")}</p>
@@ -101,14 +99,14 @@ const Footer = () => {
                 <a
                   href="mailto:contact@ssukarabuk.com"
                   className="text-gray-200 hover:text-white transition-colors">
-                {t("EMAIL")}
+                  {t("EMAIL")}
                 </a>
               </p>
               <p>
                 <a
                   href="tel:+905555555555"
                   className="text-gray-200 hover:text-white transition-colors">
-                   {t("PHONE")}
+                  {t("PHONE")}
                 </a>
               </p>
             </address>
@@ -117,7 +115,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-6 border-t border-gray-600 text-center text-gray-300">
           <p>
-            &copy; {currentYear}  {t("COPYRIGHT")}
+            &copy; {currentYear} {t("COPYRIGHT")}
           </p>
         </div>
       </div>

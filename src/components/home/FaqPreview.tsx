@@ -92,7 +92,7 @@ interface Faq {
 const FaqPreview = () => {
   const [faqs, setFaqs] = useState<Faq[]>([]);
   const [loading, setLoading] = useState(true);
-  const t = useTranslations("FAQ_SECTION")
+  const t = useTranslations("FAQ_SECTION");
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
@@ -110,14 +110,14 @@ const FaqPreview = () => {
 
     fetchFaqs();
   }, []);
- 
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="h2 text-ssu-blue mb-4">{t( "TITLE")}</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-          {t( "DESCRIPTION")}
+          <h2 className="h2 text-ssu-blue mb-4 section-title">{t("TITLE")}</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto font-semibold">
+            {t("DESCRIPTION")}
           </p>
         </div>
 
@@ -128,14 +128,13 @@ const FaqPreview = () => {
             <Accordion
               type="single"
               collapsible
-              className="bg-white rounded-lg shadow-md p-6"
-            >
+              className="bg-white rounded-lg shadow-md p-6">
               {faqs.map((item) => (
                 <AccordionItem key={item.id} value={`item-${item.id}`}>
-                  <AccordionTrigger className="text-left font-medium">
+                  <AccordionTrigger className="text-left  font-semibold">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600">
+                  <AccordionContent className="text-gray-800 font-medium">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -147,9 +146,8 @@ const FaqPreview = () => {
             <Button
               asChild
               variant="outline"
-              className="border-ssu-blue text-ssu-blue hover:bg-ssu-blue hover:text-white"
-            >
-              <Link href="/faq">{t( "VIEW_ALL_FAQ")}</Link>
+              className="border-ssu-blue text-ssu-blue hover:bg-ssu-blue hover:text-white">
+              <Link href="/faq">{t("VIEW_ALL_FAQ")}</Link>
             </Button>
           </div>
         </div>
@@ -159,4 +157,3 @@ const FaqPreview = () => {
 };
 
 export default FaqPreview;
-

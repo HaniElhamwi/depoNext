@@ -4,11 +4,13 @@ import React, { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Input } from "../ui/input";
 import { Search } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
   const searchParams = useSearchParams();
+  const t = useTranslations("ACTIVITIES_SECTION");
 
   // Debounce logic
   useEffect(() => {
@@ -35,10 +37,10 @@ function SearchBar() {
       />
       <Input
         type="text"
-        placeholder="Search activities..."
+        placeholder={t("SEARCH_PLACEHOLDER")}
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="pl-10"
+        className="pl-10 font-medium placeholder:font-medium"
       />
     </div>
   );

@@ -101,7 +101,7 @@ import { useTranslations } from "next-intl";
 
 const BlogPreview = () => {
   const [posts, setPosts] = useState([]);
-const t = useTranslations( "BLOG_SECTION");
+  const t = useTranslations("BLOG_SECTION");
   useEffect(() => {
     fetcher("/posts?populate=image")
       .then((data) => {
@@ -127,9 +127,9 @@ const t = useTranslations( "BLOG_SECTION");
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="h2 text-ssu-blue mb-4">{t("TITLE")}</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-          {t(  "DESCRIPTION")}
+          <h2 className="h2 text-ssu-blue mb-4 section-title">{t("TITLE")}</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto font-semibold">
+            {t("DESCRIPTION")}
           </p>
         </div>
 
@@ -137,8 +137,7 @@ const t = useTranslations( "BLOG_SECTION");
           {posts.map((post) => (
             <div
               key={post.id}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover-effect"
-            >
+              className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
               <div className="h-56 overflow-hidden">
                 <img
                   src={post.image}
@@ -147,7 +146,7 @@ const t = useTranslations( "BLOG_SECTION");
                 />
               </div>
               <div className="p-6">
-                <div className="flex items-center mb-2">
+                <div className="flex items-center mb-2 gap-2">
                   <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
                     {post.category}
                   </span>
@@ -163,9 +162,8 @@ const t = useTranslations( "BLOG_SECTION");
                   <div className="text-sm text-gray-500">By {post.author}</div>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="text-ssu-blue flex items-center hover:underline"
-                  >
-                   {t( "READ_MORE")} <ArrowRight size={16} className="ml-1" />
+                    className="text-ssu-blue flex items-center hover:underline">
+                    {t("READ_MORE")} <ArrowRight size={16} className="ml-1" />
                   </Link>
                 </div>
               </div>
@@ -177,9 +175,8 @@ const t = useTranslations( "BLOG_SECTION");
           <Button
             asChild
             variant="outline"
-            className="border-ssu-blue text-ssu-blue hover:bg-ssu-blue hover:text-white"
-          >
-            <Link href="/blog"> {t(  "VIEW_ALL_POSTS")}</Link>
+            className="border-ssu-blue text-ssu-blue hover:bg-ssu-blue hover:text-white">
+            <Link href="/blog"> {t("VIEW_ALL_POSTS")}</Link>
           </Button>
         </div>
       </div>

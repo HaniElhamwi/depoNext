@@ -25,33 +25,33 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center gap-2">
             <div className="h-10 w-10 bg-ssu-blue rounded-full flex items-center justify-center">
               <span className="text-white font-bold">SSU</span>
             </div>
             <div className="hidden md:block">
-              <h1 className="text-lg font-bold text-ssu-blue">
-                Syrian Student Union
+              <h1 className="text-lg font-bold text-ssu-blue rtl:font-changa ltr:font-montserrat">
+                {t("SSU")}
               </h1>
-              <p className="text-xs text-gray-600">Karabük University</p>
+              <p className="text-xs text-gray-600 rtl:font-changa ltr:font-montserrat">
+                {t("KARABUK_UNIVERSITY")}
+              </p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center gap-4">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.path}
-                className="text-gray-700 hover:text-ssu-blue font-medium transition-colors"
-              >
+                className="text-gray-800 hover:text-ssu-blue font-semibold transition-colors ">
                 {t(item.name)}
               </Link>
             ))}
             <Button
               variant="default"
-              className="bg-ssu-blue hover:bg-ssu-blue/90"
-            >
+              className="bg-ssu-blue hover:bg-ssu-blue/90">
               {t("CONTACT_US")}
             </Button>
             <LangaugeSelector />
@@ -60,8 +60,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             className="md:hidden p-2 rounded-md text-gray-700 focus:outline-none"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -74,17 +73,15 @@ const Header = () => {
                 key={item.name}
                 href={item.path}
                 className="block text-gray-700 hover:text-ssu-blue font-medium py-2 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-               {t(item.name)}
+                onClick={() => setMobileMenuOpen(false)}>
+                {t(item.name)}
               </Link>
             ))}
             <Button
               variant="default"
               className="w-full mt-2 bg-ssu-blue hover:bg-ssu-blue/90"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-               {t("CONTACT_US")}
+              onClick={() => setMobileMenuOpen(false)}>
+              {t("CONTACT_US")}
             </Button>
           </nav>
         )}

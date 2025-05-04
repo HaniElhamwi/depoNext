@@ -89,7 +89,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-tajawal;
   }
 
   .h1 {
@@ -156,4 +156,25 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.section-title {
+  @apply text-3xl font-bold sm:text-4xl rtl:font-changa ltr:font-montserrat;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4); /* adjust to match theme */
+  transform: scale(0);
+  animation: ripple-animation 600ms linear;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }

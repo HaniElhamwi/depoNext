@@ -4,77 +4,7 @@ import { Calendar, MapPin } from "lucide-react";
 import Link from "next/link";
 import SearchBar from "@/components/events/SearchBar";
 import { fetcher } from "@/lib/fetch";
-import Image from "next/image";
 
-// const activities = [
-//   {
-//     id: 1,
-//     title: "Welcome Day 2023",
-//     description:
-//       "A special welcome event for new Syrian students joining Karabük University.",
-//     date: "September 15, 2023",
-//     location: "University Main Hall",
-//     image:
-//       "https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-//     category: "Orientation",
-//   },
-//   {
-//     id: 2,
-//     title: "Career Workshop",
-//     description:
-//       "Learn about job opportunities and career planning for Syrian students in Turkey.",
-//     date: "October 10, 2023",
-//     location: "Engineering Faculty",
-//     image:
-//       "https://images.unsplash.com/photo-1560439514-4e9645039924?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-//     category: "Career",
-//   },
-//   {
-//     id: 3,
-//     title: "Cultural Exchange Day",
-//     description:
-//       "Share Syrian culture with the university community through food, music, and art.",
-//     date: "November 5, 2023",
-//     location: "University Square",
-//     image:
-//       "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-//     category: "Cultural",
-//   },
-//   {
-//     id: 4,
-//     title: "Academic Success Workshop",
-//     description:
-//       "Tips and strategies for academic excellence and managing university coursework.",
-//     date: "November 20, 2023",
-//     location: "Library Conference Room",
-//     image:
-//       "https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-//     category: "Academic",
-//   },
-//   {
-//     id: 5,
-//     title: "Turkish Language Practice Group",
-//     description:
-//       "Weekly conversation practice to improve Turkish language skills.",
-//     date: "Every Thursday",
-//     location: "Student Center, Room 103",
-//     image:
-//       "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-//     category: "Language",
-//   },
-//   {
-//     id: 6,
-//     title: "End of Year Celebration",
-//     description:
-//       "Celebrate the achievements of Syrian students at Karabük University.",
-//     date: "December 15, 2023",
-//     location: "University Cultural Center",
-//     image:
-//       "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-//     category: "Social",
-//   },
-// ];
-import { slugify } from "@/lib/slugify";
 import { getTranslations } from "next-intl/server";
 // import { useTranslations } from "next-intl";
 
@@ -89,7 +19,7 @@ const categories = [
 ];
 
 const Events = async ({ searchParams }: any) => {
-  const t = await getTranslations('ACTIVITIES_SECTION');
+  const t = await getTranslations("ACTIVITIES_SECTION");
   const awaitedParams = await searchParams;
   const selectedCategory = awaitedParams.category || "All";
   const searchTerm = awaitedParams.search;
@@ -116,9 +46,11 @@ const Events = async ({ searchParams }: any) => {
       {/* Hero Section */}
       <section className="bg-ssu-blue text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="h1 mb-6">{t("TITLE")}</h1>
-          <p className="text-lg max-w-3xl mx-auto text-gray-100">
-          {t("DESCRIPTION")}
+          <h1 className="h1 mb-6 rtl:font-changa font-montserrat">
+            {t("TITLE")}
+          </h1>
+          <p className="text-lg max-w-3xl mx-auto text-gray-100 font-semibold">
+            {t("DESCRIPTION")}
           </p>
         </div>
       </section>
@@ -136,8 +68,7 @@ const Events = async ({ searchParams }: any) => {
                       category,
                     },
                   }}
-                  key={category}
-                >
+                  key={category}>
                   <Button
                     variant={
                       selectedCategory === category ? "default" : "outline"
@@ -146,11 +77,12 @@ const Events = async ({ searchParams }: any) => {
                     // onClick={() => setSelectedCategory(category)}
                     className={
                       selectedCategory === category
-                        ? "bg-ssu-blue hover:bg-ssu-blue/90"
-                        : ""
-                    }
-                  >
-                    {category}
+                        ? "bg-ssu-blue hover:bg-ssu-blue/90 !font-tajawal"
+                        : "!font-tajawal"
+                    }>
+                    <span className="font-tajawal font-semibold">
+                      {category}
+                    </span>
                   </Button>
                 </Link>
               ))}
@@ -171,8 +103,7 @@ const Events = async ({ searchParams }: any) => {
                 return (
                   <div
                     key={event.id}
-                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect"
-                  >
+                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
                     <div className="h-56 overflow-hidden">
                       <img
                         src={image}
@@ -205,9 +136,8 @@ const Events = async ({ searchParams }: any) => {
                           // `/events/${slugify(event.title)}`
                           `/events/${event.documentId}`
                         }
-                        className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors"
-                      >
-                       {t("VIEW_DETAILS")}
+                        className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
+                        {t("VIEW_DETAILS")}
                       </Link>
                     </div>
                   </div>
