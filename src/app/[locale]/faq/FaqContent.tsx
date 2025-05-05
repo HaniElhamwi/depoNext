@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Search } from "lucide-react";
 import {
   Accordion,
@@ -8,13 +8,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
+import { useTranslations } from "next-intl";
+import SearchBar from "@/components/faq/SearchBar";
 
 interface FAQ {
   question: string;
@@ -22,69 +19,63 @@ interface FAQ {
   category: string;
 }
 
-export default function FaqContent({ faqs }: { faqs: FAQ[] }) {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [activeTab, setActiveTab] = useState("general");
+export default function FaqContent({
+  faqs,
+  categories,
+}: {
+  faqs: FAQ[];
+  categories: any[];
+}) {
+  const [activeTab, setActiveTab] = useState();
 
-  const grouped = {
-    general: [] as FAQ[],
-    academics: [] as FAQ[],
-    events: [] as FAQ[],
-    resources: [] as FAQ[],
-  };
+  const t = useTranslations("FAQ_PAGE");
 
-  faqs.forEach((item) => {
-    const key = item.category.toLowerCase();
-    if (grouped[key]) grouped[key].push(item);
-  });
-
-  const filterQuestions = (category: string) => {
-    if (!searchTerm) return grouped[category as keyof typeof grouped] || [];
-
-    return (grouped[category as keyof typeof grouped] || []).filter(
-      (item) =>
-        item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.answer.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  };
-  
- 
+  useEffect(() => {
+    if (!activeTab) {
+      setActiveTab(categories[0].documentId);
+    }
+  }, []);
 
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-md mx-auto mb-6 relative">
-          <Search
-            size={18}
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-          />
-          <Input
-            type="text"
-            placeholder="Search questions..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="pl-10"
-          />
+          <SearchBar />
         </div>
 
         <div className="max-w-3xl mx-auto">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="grid w-full grid-cols-4 mb-6">
-              <TabsTrigger value="general">General</TabsTrigger>
-              <TabsTrigger value="academics">Academics</TabsTrigger>
-              <TabsTrigger value="events">Events</TabsTrigger>
-              <TabsTrigger value="resources">Resources</TabsTrigger>
+            <TabsList className={`grid grid-cols-${categories.length} mb-6`}>
+              {categories.map((category) => (
+                <TabsTrigger
+                  key={category.documentId}
+                  value={category.documentId}
+                  className="font-semibold">
+                  {category.name}
+                </TabsTrigger>
+              ))}
             </TabsList>
 
-            {["general", "academics", "events", "resources"].map((category) => (
-              <TabsContent key={category} value={category}>
+            {categories.map((category: any) => (
+              <TabsContent
+                key={category.documentId}
+                value={category.documentId}>
                 <Accordion type="multiple" className="w-full">
-                  {filterQuestions(category).map((item, idx) => (
-                    <AccordionItem key={idx} value={`item-${idx}`}>
-                      <AccordionTrigger>{item.question}</AccordionTrigger>
-                      <AccordionContent>{item.answer}</AccordionContent>
-                    </AccordionItem>
-                  ))}
+                  {faqs
+                    .filter(
+                      (item: any) =>
+                        item.category?.documentId === category.documentId
+                    )
+                    .map((item, idx) => (
+                      <AccordionItem key={idx} value={`item-${idx}`}>
+                        <AccordionTrigger className="font-semibold">
+                          {item.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="font-semibold">
+                          {item.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
                 </Accordion>
               </TabsContent>
             ))}
@@ -94,4 +85,3 @@ export default function FaqContent({ faqs }: { faqs: FAQ[] }) {
     </section>
   );
 }
-

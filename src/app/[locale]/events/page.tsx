@@ -1,4 +1,3 @@
-import MainLayout from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin } from "lucide-react";
 import Link from "next/link";
@@ -6,17 +5,6 @@ import SearchBar from "@/components/events/SearchBar";
 import { fetcher } from "@/lib/fetch";
 
 import { getTranslations } from "next-intl/server";
-// import { useTranslations } from "next-intl";
-
-const categories = [
-  "All",
-  "Orientation",
-  "Career",
-  "Cultural",
-  "Academic",
-  "Language",
-  "Social",
-];
 
 const Events = async ({ searchParams }: any) => {
   const t = await getTranslations("ACTIVITIES_SECTION");
@@ -24,12 +12,10 @@ const Events = async ({ searchParams }: any) => {
   const selectedCategory = awaitedParams.category || "All";
   const searchTerm = awaitedParams.search;
 
-  console.log(searchTerm);
-
   let query = `/events?populate=images`;
 
   if (selectedCategory !== "All") {
-    query += `&filters[category][$eq]=${selectedCategory.toLowerCase()}`;
+    query += `&filters[category][documentId][$eq]=${selectedCategory}`;
   }
 
   if (searchTerm) {
@@ -37,12 +23,22 @@ const Events = async ({ searchParams }: any) => {
     query += `&filters[$or][1][description][$containsi]=${searchTerm}`;
   }
 
-  const data: any = await fetcher(query);
+  const [data, categoriesData = []]: any = await Promise.all([
+    await fetcher(query),
+    await fetcher("/categories?filters[pages][page][$eq]=events"),
+  ]);
 
-  const events = data.data || [];
+  const events = data?.data || [];
+  const categories = categoriesData?.data || [];
+
+  categories.unshift({
+    id: "all",
+    name: t("ALL"),
+    documentId: "All",
+  });
 
   return (
-    <MainLayout>
+    <>
       {/* Hero Section */}
       <section className="bg-ssu-blue text-white py-16">
         <div className="container mx-auto px-4 text-center">
@@ -65,7 +61,7 @@ const Events = async ({ searchParams }: any) => {
                 <Link
                   href={{
                     query: {
-                      category,
+                      category: category.documentId,
                     },
                   }}
                   key={category}>
@@ -76,12 +72,12 @@ const Events = async ({ searchParams }: any) => {
                     size="sm"
                     // onClick={() => setSelectedCategory(category)}
                     className={
-                      selectedCategory === category
-                        ? "bg-ssu-blue hover:bg-ssu-blue/90 !font-tajawal"
+                      selectedCategory === category.documentId
+                        ? "bg-ssu-blue hover:bg-ssu-blue/90 !font-tajawal text-white hover:text-white"
                         : "!font-tajawal"
                     }>
                     <span className="font-tajawal font-semibold">
-                      {category}
+                      {category?.name}
                     </span>
                   </Button>
                 </Link>
@@ -119,7 +115,11 @@ const Events = async ({ searchParams }: any) => {
                         </span>
                       </div>
                       <h3 className="text-xl font-bold mb-2">{event.title}</h3>
-                      <p className="text-gray-600 mb-4">{event.description}</p>
+
+                      {/* max 3 lines */}
+                      <p className="text-gray-600 mb-4 line-clamp-3 text-ellipsis">
+                        {event.description}
+                      </p>
                       <div className="flex flex-col space-y-2 text-gray-500 mb-4">
                         <div className="flex items-center">
                           <Calendar size={16} className="mr-2" />
@@ -147,22 +147,22 @@ const Events = async ({ searchParams }: any) => {
           ) : (
             <div className="text-center py-12">
               <h3 className="text-xl font-medium text-gray-600">
-                No activities found.
+                {t("NO_EVENTS_FOUND")}
               </h3>
               <p className="text-gray-500 mt-2">
-                Try adjusting your search or filter criteria.
+                {t("NO_EVENTS_FOUND_DESCRIPTION")}
               </p>
             </div>
           )}
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 
 export default Events;
 
-const formatDate = (dateString) => {
+export const formatDate = (dateString) => {
   const date = new Date(dateString);
   return new Intl.DateTimeFormat("en-US", {
     year: "numeric",

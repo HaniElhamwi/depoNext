@@ -1,0 +1,120 @@
+{
+  "HOME_PAGE": {
+    "HOME": "Ana Sayfa",
+    "ABOUT": "Hakkımızda",
+    "EVENTS": "Etkinlikler",
+    "BLOG": "Blog",
+    "REVIEWS": "Yorumlar",
+    "FAQ": "SSS",
+    "CONTACT_US": "Bize Ulaşın",
+    "HERO_TITLE": "Karabük Üniversitesi Suriyeli Öğrenciler Birliği'ne Hoş Geldiniz",
+    "HERO_DESCRIPTION": "Topluluk, kaynaklar ve gelişim fırsatları ile Suriyeli öğrencilere destek veriyoruz.",
+    "LEARN_MORE": "Daha Fazla Bilgi",
+    "VIEW_ACTIVITIES": "Etkinlikleri Görüntüle",
+    "KARABUK_UNIVERSITY": "Karabük Üniversitesi",
+    "ACTIVITY_TITLE": "Son Etkinliklerimiz",
+    "ACTIVITY_DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrencileri desteklemeyi, bağ kurmayı ve güçlendirmeyi amaçlayan etkinliklerimizi keşfedin.",
+    "VIEW_ALL_ACTIVITIES": "Tüm Etkinlikleri Gör",
+    "SSU": "Suriyeli Öğrenciler Birliği",
+    "REVIRES": "Yorumlar"
+  },
+  "STUDENT_TESTIMONIALS": {
+    "TITLE": "Öğrencilerimiz Ne Diyor",
+    "DESCRIPTION": "Suriyeli öğrencilerin birliğimizle olan deneyimlerini ve bu deneyimlerin akademik yolculuklarına nasıl katkı sağladığını keşfedin.",
+    "TESTIMONIAL": "Türkiye'de yeni bir öğrenci olarak, birliğin düzenlediği tanıtım etkinlikleri üniversite prosedürlerini anlamama ve kampüs yaşamına uyum sağlamama yardımcı oldu. Destekleri için minnettarım!",
+    "STUDENT_NAME": "Muhammed Al-Raymi",
+    "STUDENT_DEPARTMENT": "Bilgisayar Mühendisliği, 3. Sınıf"
+  },
+  "BLOG_SECTION": {
+    "TITLE": "Blogumuzdan Son Yazılar",
+    "DESCRIPTION": "Suriyeli öğrenciler için en son etkinlikler, duyurular ve rehberlerle güncel kalın.",
+    "READ_MORE": "Devamını Oku",
+    "VIEW_ALL_POSTS": "Tüm Yazıları Gör",
+    "VIEW_DETAILS": "Detayları Gör",
+    "BLOGS_AND_NEWS": "Bloglar ve Haberler",
+    "BLOG_DESCRIPTION": "Kampüs yaşamı, kaynaklar ve etkinlikler hakkında yazılar için blogumuzu keşfedin.",
+    "ALL": "Hepsi",
+    "NO_BLOGS_FOUND_DESCRIPTION": "Henüz yazı bulunamadı. Lütfen daha sonra tekrar kontrol edin.",
+    "NO_BLOGS_FOUND": "Yazı Bulunamadı",
+    "BY": "Yazan"
+  },
+  "FAQ_SECTION": {
+    "TITLE": "Sıkça Sorulan Sorular",
+    "DESCRIPTION": "Suriyeli Öğrenciler Birliği ve hizmetlerimiz hakkında sık sorulan sorulara göz atın.",
+    "VIEW_ALL_FAQ": "Tüm SSS'leri Gör"
+  },
+  "JOIN_SECTION": {
+    "TITLE": "Topluluğumuza Bugün Katılın",
+    "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenciler Birliği'nin bir parçası olun, kaynaklara ulaşın ve etkinliklere katılın.",
+    "LEARN_ABOUT": "Daha Fazla Bilgi",
+    "EXPLORE_ACTIVITIES": "Etkinlikleri Keşfet"
+  },
+  "FOOTER": {
+    "SUPPORT_TEXT": "Karabük Üniversitesi'ndeki Suriyeli öğrencilere topluluk, kaynaklar ve etkinliklerle destek sağlıyoruz.",
+    "QUICK_LINKS": "Hızlı Bağlantılar",
+    "CONTACT_US": "Bize Ulaşın",
+    "UNIVERSITY": "Karabük Üniversitesi",
+    "ADDRESS": "Karabük, Türkiye",
+    "EMAIL": "iletisim@ssukarabuk.com",
+    "PHONE": "+90 555 555 55 55",
+    "SITE_NAME": "Suriyeli Öğrenciler Birliği",
+    "COPYRIGHT": "Karabük Üniversitesi Suriyeli Öğrenciler Birliği. Tüm hakları saklıdır.",
+    "ABOUT": "Hakkımızda",
+    "EVENTS": "Etkinlikler",
+    "BLOG": "Blog",
+    "REVIEWS": "Yorumlar",
+    "FAQ": "SSS",
+    "REVIRES": "Yorumlar"
+  },
+  "ACTIVITIES_SECTION": {
+    "TITLE": "Etkinlikler ve Faaliyetler",
+    "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrenciler için düzenlenen geçmiş ve gelecek etkinlikleri keşfedin.",
+    "Social": "Sosyal",
+    "Language": "Dil",
+    "Academic": "Akademik",
+    "Cultural": "Kültürel",
+    "Career": "Kariyer",
+    "Orientation": "Oryantasyon",
+    "All": "Hepsi",
+    "SEARCH_PLACEHOLDER": "Etkinlik ara...",
+    "VIEW_DETAILS": "Detayları Gör",
+    "ALL": "Hepsi",
+    "NO_EVENTS_FOUND": "Etkinlik Bulunamadı",
+    "NO_EVENTS_FOUND_DESCRIPTION": "Henüz etkinlik bulunamadı. Lütfen daha sonra tekrar kontrol edin."
+  },
+  "ABOUT_SECTION": {
+    "TITLE": "Hakkımızda",
+    "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenciler Birliği hakkında daha fazla bilgi edinin: misyonumuz, vizyonumuz, tarihçemiz ve ekibimiz.",
+    "VISION_TITLE": "Vizyonumuz",
+    "VISION_DESCRIPTION_1": "Her Suriyeli öğrencinin akademik, mesleki ve kişisel başarısı için gereken destek ve fırsatlara erişebildiği bir topluluk hayal ediyoruz.",
+    "VISION_DESCRIPTION_2": "Suriyeli öğrenciler ile üniversite topluluğu arasında kültürel anlayış ve kalıcı ilişkiler kurmayı hedefliyoruz.",
+    "MISSION_TITLE": "Misyonumuz",
+    "MISSION_DESCRIPTION_1": "Karabük Üniversitesi Suriyeli Öğrenciler Birliği olarak, öğrencilerin akademik yolculuklarında onlara destek olmayı taahhüt ediyoruz. Misyonumuz, akademik başarıyı, kişisel gelişimi ve kültürel etkileşimi teşvik eden sıcak bir ortam yaratmaktır.",
+    "MISSION_DESCRIPTION_2": "Öğrencilerin Türkiye’deki üniversite yaşamına uyum sağlamaları ve başarılı olmaları için kaynak sağlıyor, etkinlikler düzenliyor ve bağlantılar kurmalarına yardımcı oluyoruz.",
+    "HISTORY_TITLE": "Tarihçemiz",
+    "HISTORY_DESCRIPTION_1": "2020 yılında, arkadaşlarını desteklemek isteyen küçük bir Suriyeli öğrenci grubu tarafından kuruldu.",
+    "HISTORY_DESCRIPTION_2": "Başlangıçta yeni öğrencilerin üniversiteye uyum sağlamasına yardımcı olmak için düzenlenen toplantılar, zamanla organize bir birliğe dönüştü.",
+    "HISTORY_DESCRIPTION_3": "Bugün, oryantasyon etkinlikleri, akademik atölyeler, kültürel kutlamalar ve kariyer geliştirme fırsatlarıyla yüzlerce öğrenciye hizmet veriyoruz.",
+    "TEAM_TITLE": "Ekibimizle Tanışın",
+    "ALL": "Hepsi",
+    "MEET_OUR_TEAM": "Ekibimizle Tanışın"
+  },
+  "COMMON": {
+    "READ_MORE": "Devamını Oku"
+  },
+  "ABOUT_PAGE": {
+    "OUR_MISSION": ""
+  },
+  "REVIEWS_PAGE": {
+    "STUDENTS_REVIEWS": "Öğrenci Yorumları",
+    "REVIEWS_DESCRIPTION": "Birliğimizin öğrencilerin akademik yolculuklarına nasıl katkı sağladığını öğrencilerden dinleyin.",
+    "FILTER_BY_RATING": "Puana Göre Filtrele:",
+    "ALL_REVIEWS": "Tüm Yorumları Gör"
+  },
+  "FAQ_PAGE": {
+    "FAQ_TITLE": "Sıkça Sorulan Sorular",
+    "FAQ_DESCRIPTION": "Birliğimiz hakkında merak edilen soruların cevaplarını bulun.",
+    "SEARCH_PLACEHOLDER": "Soruları ara...",
+    "VIEW_ALL_FAQ": "Tüm SSS'leri Gör"
+  }
+}

@@ -4,9 +4,11 @@
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { fetcher } from "@/lib/fetch"; // تأكد أن هذا موجود ويعمل
+import { useTranslations } from "next-intl";
 
 const TeamSection = () => {
   const [teamMembers, setTeamMembers] = useState([]);
+  const t = useTranslations("ABOUT_SECTION");
 
   useEffect(() => {
     const fetchTeam = async () => {
@@ -39,7 +41,9 @@ const TeamSection = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <h2 className="h2 text-ssu-blue mb-8 text-center">Meet Our Team</h2>
+        <h2 className="h2 text-ssu-blue mb-8 text-center section-title">
+          {t("MEET_OUR_TEAM")}
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <Card key={index} className="hover-effect">

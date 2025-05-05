@@ -38,21 +38,27 @@ export default function LanguageSelector() {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-48">
-          <DropdownMenuItem
+          {/* <DropdownMenuItem
             onClick={() => switchLang("en")}
             className={`flex items-center justify-between font-montserrat ${
               currentLocale === "en" ? "font-bold" : ""
-            }`}
-          >
+            }`}>
             English
             {currentLocale === "en" && <CheckIcon className="h-4 w-4" />}
+          </DropdownMenuItem> */}
+          <DropdownMenuItem
+            onClick={() => switchLang("tr")}
+            className={`flex items-center justify-between font-montserrat ${
+              currentLocale === "tr" ? "font-bold" : ""
+            }`}>
+            Türkçe
+            {currentLocale === "tr" && <CheckIcon className="h-4 w-4" />}
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={() => switchLang("ar")}
             className={`flex items-center justify-between font-changa ${
               currentLocale === "ar" ? "font-bold" : ""
-            }`}
-          >
+            }`}>
             عربي
             {currentLocale === "ar" && <CheckIcon className="h-4 w-4" />}
           </DropdownMenuItem>
@@ -74,8 +80,7 @@ function CheckIcon(props) {
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+      strokeLinejoin="round">
       <path d="M20 6 9 17l-5-5" />
     </svg>
   );
@@ -93,8 +98,7 @@ function ChevronDownIcon(props) {
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+      strokeLinejoin="round">
       <path d="m6 9 6 6 6-6" />
     </svg>
   );
@@ -112,8 +116,7 @@ function GlobeIcon(props) {
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+      strokeLinejoin="round">
       <circle cx="12" cy="12" r="10" />
       <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
       <path d="M2 12h20" />

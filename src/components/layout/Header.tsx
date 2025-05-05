@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import LangaugeSelector from "../LanguageSelector";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const navItems = [
   { name: "HOME", path: "/" },
@@ -24,28 +25,34 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="h-10 w-10 bg-ssu-blue rounded-full flex items-center justify-center">
+            {/* <div className="h-10 w-10 bg-ssu-blue rounded-full flex items-center justify-center">
               <span className="text-white font-bold">SSU</span>
-            </div>
+            </div> */}
+            <Image
+              src="/images/logo.png"
+              alt="SSU Logo"
+              width={100}
+              height={100}
+              className="h-10 w-10 rounded-full"
+            />
             <div className="hidden md:block">
               <h1 className="text-lg font-bold text-ssu-blue rtl:font-changa ltr:font-montserrat">
                 {t("SSU")}
               </h1>
-              <p className="text-xs text-gray-600 rtl:font-changa ltr:font-montserrat">
+              <p className="text-xs text-[#e8791d] rtl:font-changa ltr:font-montserrat">
                 {t("KARABUK_UNIVERSITY")}
               </p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-4">
+          <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.path}
-                className="text-gray-800 hover:text-ssu-blue font-semibold transition-colors ">
+                className="text-gray-800 hover:text-ssu-blue !font-semi transition-colors font-tajawal">
                 {t(item.name)}
               </Link>
             ))}

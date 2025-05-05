@@ -1,65 +1,70 @@
 {
   "HOME_PAGE": {
     "HOME": "Home",
-    "ABOUT": "About",
+    "ABOUT": "About Us",
     "EVENTS": "Events",
     "BLOG": "Blog",
-    "REVIRES": "Revires",
-    "FAQ": "Faq",
+    "REVIEWS": "Reviews",
+    "FAQ": "Frequently Asked Questions",
     "CONTACT_US": "Contact Us",
-    "HERO_TITLE": "Welcome to Karabük University Syrian Student Union",
-    "HERO_DESCRIPTION": "Supporting Syrian students through community, resources, and opportunities for growth.",
-    "LEARN_MORE": "Learn more",
-    "VIEW_ACTIVITIES": "View activities",
+    "HERO_TITLE": "Welcome to the Syrian Students Union at Karabuk University",
+    "HERO_DESCRIPTION": "We support Syrian students through community, resources, and opportunities for growth.",
+    "LEARN_MORE": "Learn More",
+    "VIEW_ACTIVITIES": "View Activities",
     "KARABUK_UNIVERSITY": "Karabuk University",
     "ACTIVITY_TITLE": "Our Recent Activities",
-    "ACTIVITY_DESCRIPTION": "Explore our recent events and activities organized to support, connect, and empower Syrian students at Karabük University.",
-    "VIEW_ALL_ACTIVITIES": "View all activities",
-    "SSU": "Syrian Student Union"
+    "ACTIVITY_DESCRIPTION": "Discover our recent events and activities aimed at supporting, connecting, and empowering Syrian students at Karabuk University.",
+    "VIEW_ALL_ACTIVITIES": "View All Activities",
+    "SSU": "Syrian Students Union",
+    "REVIRES": "Reviews"
   },
   "STUDENT_TESTIMONIALS": {
     "TITLE": "What Our Students Say",
-    "DESCRIPTION": "Hear from Syrian students about their experiences with our union and how it has supported their academic journey.",
-    "TESTIMONIAL": "As a new student in Turkey, the orientation events by SSU helped me understand university procedures and adapt to campus life quickly. I'm grateful for their support!",
-    "STUDENT_NAME": "Muhammed Elrimi",
-    "STUDENT_DEPARTMENT": "Computer Engineering, 3rd year"
+    "DESCRIPTION": "Hear from Syrian students about their experiences with the union and how it has helped them in their academic journey.",
+    "TESTIMONIAL": "As a new student in Turkey, the orientation events organized by the union helped me understand university procedures and adapt to campus life quickly. I'm grateful for their support!",
+    "STUDENT_NAME": "Mohammad Al-Raymi",
+    "STUDENT_DEPARTMENT": "Computer Engineering, 3rd Year"
   },
   "BLOG_SECTION": {
     "TITLE": "Latest from Our Blog",
     "DESCRIPTION": "Stay updated with the latest events, announcements, and helpful guides for Syrian students.",
-    "READ_MORE": "Read more",
-    "VIEW_ALL_POSTS": "View All Posts"
+    "READ_MORE": "Read More",
+    "VIEW_ALL_POSTS": "View All Posts",
+    "VIEW_DETAILS": "View Details",
+    "BLOGS_AND_NEWS": "Blogs and News",
+    "BLOG_DESCRIPTION": "Explore our blog for articles, tips, and news about campus life, resources, and events for Syrian students at Karabuk University.",
+    "ALL": "All"
   },
   "FAQ_SECTION": {
     "TITLE": "Frequently Asked Questions",
-    "DESCRIPTION": "Find answers to common questions about the Syrian Student Union and our services.",
+    "DESCRIPTION": "Find answers to common questions about the Syrian Students Union and our services.",
     "VIEW_ALL_FAQ": "View All FAQs"
   },
   "JOIN_SECTION": {
     "TITLE": "Join Our Community Today",
-    "DESCRIPTION": "Become part of the Syrian Student Union at Karabük University and connect with fellow students, access resources, and participate in enriching activities.",
+    "DESCRIPTION": "Become a part of the Syrian Students Union at Karabuk University, connect with fellow students, access resources, and participate in beneficial activities.",
     "LEARN_ABOUT": "Learn More",
     "EXPLORE_ACTIVITIES": "Explore Activities"
   },
   "FOOTER": {
-    "SUPPORT_TEXT": "Supporting Syrian students at Karabük University through community, resources, and activities.",
+    "SUPPORT_TEXT": "Supporting Syrian students at Karabuk University through community, resources, and activities.",
     "QUICK_LINKS": "Quick Links",
     "CONTACT_US": "Contact Us",
-    "UNIVERSITY": "Karabük Üniversitesi",
-    "ADDRESS": "Karabük, Turkey",
+    "UNIVERSITY": "Karabuk University",
+    "ADDRESS": "Karabuk, Turkey",
     "EMAIL": "contact@ssukarabuk.com",
     "PHONE": "+90 555 555 55 55",
-    "SITE_NAME": "Syrian Student Union",
-    "COPYRIGHT": " Karabük University Syrian Student Union. All rights reserved.",
-    "ABOUT": "About",
+    "SITE_NAME": "Syrian Students Union",
+    "COPYRIGHT": "Syrian Students Union at Karabuk University. All rights reserved.",
+    "ABOUT": "About Us",
     "EVENTS": "Events",
     "BLOG": "Blog",
-    "REVIRES": "Revires",
-    "FAQ": "Faq"
+    "REVIEWS": "Reviews",
+    "FAQ": "FQA"
   },
   "ACTIVITIES_SECTION": {
-    "TITLE": "Activities & Events",
-    "DESCRIPTION": "Discover our past and upcoming activities designed to support, connect, and enrich the experience of Syrian students at Karabük University.",
+    "TITLE": "Activities and Events",
+    "DESCRIPTION": "Discover our past and upcoming activities designed to support, connect, and enrich the experience of Syrian students at Karabuk University.",
     "Social": "Social",
     "Language": "Language",
     "Academic": "Academic",
@@ -68,28 +73,42 @@
     "Orientation": "Orientation",
     "All": "All",
     "SEARCH_PLACEHOLDER": "Search activities...",
-    "VIEW_DETAILS": "View Details"
+    "VIEW_DETAILS": "View Details",
+    "ALL": "All"
   },
   "ABOUT_SECTION": {
     "TITLE": "About Us",
-    "DESCRIPTION": "Learn about the Syrian Student Union at Karabük University, our mission, vision, history, and the dedicated team supporting Syrian students.",
+    "DESCRIPTION": "Learn about the Syrian Students Union at Karabuk University, our mission, vision, history, and the team supporting Syrian students.",
     "VISION_TITLE": "Our Vision",
-    "VISION_DESCRIPTION_1": "We envision a community where every Syrian student at Karabük University has access to the support, resources, and opportunities they need to succeed academically, professionally, and personally.",
-    "VISION_DESCRIPTION_2": "We aim to be a bridge between Syrian students and the wider university community, promoting cultural understanding and creating lasting connections.",
+    "VISION_DESCRIPTION_1": "We envision a community where every Syrian student at Karabuk University has access to the support, resources, and opportunities needed to succeed academically, professionally, and personally.",
+    "VISION_DESCRIPTION_2": "We aim to be a bridge between Syrian students and the broader university community, fostering cultural understanding and building lasting relationships.",
     "MISSION_TITLE": "Our Mission",
-    "MISSION_DESCRIPTION_1": "The Syrian Student Union at Karabük University is committed to supporting Syrian students throughout their academic journey. We strive to create a welcoming community that fosters academic excellence, personal growth, and cultural exchange.",
-    "MISSION_DESCRIPTION_2": "Our mission is to provide resources, organize activities, and facilitate connections to help Syrian students thrive in their studies and adapt to university life in Turkey.",
+    "MISSION_DESCRIPTION_1": "The Syrian Students Union at Karabuk University is committed to supporting Syrian students throughout their academic journey. We strive to create a welcoming community that promotes academic excellence, personal growth, and cultural exchange.",
+    "MISSION_DESCRIPTION_2": "Our mission is to provide resources, organize activities, and facilitate connections to help Syrian students succeed in their studies and adapt to university life in Turkey.",
     "HISTORY_TITLE": "Our History",
-    "HISTORY_DESCRIPTION_1": "The Syrian Student Union at Karabük University was established in 2020 by a small group of dedicated Syrian students who recognized the need for a support system for their peers.",
-    "HISTORY_DESCRIPTION_2": "What began as informal gatherings to help new students acclimate to university life quickly evolved into an organized union with a clear mission to support the growing Syrian student community at Karabük University.",
-    "HISTORY_DESCRIPTION_3": "Over the years, we have expanded our activities to include orientation events, academic workshops, cultural celebrations, and career development opportunities. Today, we proudly serve hundreds of Syrian students, helping them navigate their educational journey in Turkey.",
-    "TEAM_TITLE": "Meet Our Team"
+    "HISTORY_DESCRIPTION_1": "Founded in 2020 by a small group of dedicated Syrian students who recognized the need for a support system for their peers.",
+    "HISTORY_DESCRIPTION_2": "Initial informal meetings to assist new students in adapting to university life quickly evolved into an organized union with a clear mission to support the growing Syrian student community at the university.",
+    "HISTORY_DESCRIPTION_3": "Over the years, we have expanded our activities to include orientation events, academic workshops, cultural celebrations, and professional development opportunities. Today, we proudly serve hundreds of Syrian students, aiding them in their educational journey in Turkey.",
+    "TEAM_TITLE": "Meet Our Team",
+    "ALL": "All",
+    "MEET_OUR_TEAM": "Meet Our Team"
   },
-
   "COMMON": {
-    "READ_MORE": "Read more"
+    "READ_MORE": "Read More"
   },
   "ABOUT_PAGE": {
     "OUR_MISSION": ""
+  },
+  "REVIEWS_PAGE": {
+    "STUDENTS_REVIEWS": "Student Reviews",
+    "REVIEWS_DESCRIPTION": "Hear from Syrian students about their experiences with the union and how it has helped them in their academic journey.",
+    "FILTER_BY_RATING": "Filter by Rating:",
+    "ALL_REVIEWS": "View All Reviews"
+  },
+  "FAQ_PAGE": {
+    "FAQ_TITLE": "Frequently Asked Questions",
+    "FAQ_DESCRIPTION": "Find answers to common questions about the Syrian Students Union and our services.",
+    "SEARCH_PLACEHOLDER": "Search questions...",
+    "VIEW_ALL_FAQ": "View All FAQs"
   }
 }

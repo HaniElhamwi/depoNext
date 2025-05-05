@@ -1,4 +1,3 @@
-import MainLayout from "@/components/layout/MainLayout";
 import HeroSection from "@/components/home/HeroSection";
 import ActivitiesPreview from "@/components/home/ActivitiesPreview";
 import BlogPreview from "@/components/home/BlogPreview";
@@ -8,14 +7,14 @@ import CallToAction from "@/components/home/CallToAction";
 
 const Index = async () => {
   return (
-    <MainLayout>
+    <>
       <HeroSection />
       <ActivitiesPreview />
       <TestimonialsSection />
       <BlogPreview />
       <FaqPreview />
       <CallToAction />
-    </MainLayout>
+    </>
   );
 };
 

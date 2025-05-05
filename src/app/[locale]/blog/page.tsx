@@ -1,28 +1,156 @@
-import MainLayout from "@/components/layout/MainLayout";
+import SearchBar from "@/components/blogs/SearchBar";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { fetcher } from "@/lib/fetch";
-import { Calendar, Search, User } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import Link from "next/link";
-import PlogContent from "./content";
+import qs from "qs";
 
-const Blog = async () => {
-  const posts = (await fetcher("/posts?populate=image")) as any;
+const Blog = async ({ searchParams }: any) => {
+  const t = await getTranslations("BLOG_SECTION");
+  const awaitedParams = await searchParams;
+  const selectedCategory = awaitedParams.category || "All";
+  const searchTerm = awaitedParams.search;
 
-  const formatted = posts?.data?.map((item) => ({
-    id: item.id,
-    title: item.title,
-    description: item.description?.[0]?.children?.[0]?.text || "",
-    date: item.date,
-    author: item.author,
-    category: item.category,
-    slug: item.slug,
-    image: item.image?.url
-      ? `http://localhost:1337${item.image?.url}`
-      : "/placeholder.jpg",
-  }));
+  const queryParams = {
+    filters: {
+      ...(selectedCategory &&
+        selectedCategory !== "All" && {
+          category: {
+            documentId: {
+              $eq: selectedCategory,
+            },
+          },
+        }),
+      ...(searchTerm && {
+        $or: [
+          { title: { $containsi: searchTerm } },
+          { description: { $containsi: searchTerm } },
+        ],
+      }),
+    },
+  };
+  const queryString = qs.stringify(queryParams, { encode: false });
 
-  return <PlogContent posts={formatted} />;
+  const [data = [], categoriesData = []]: any = await Promise.all([
+    await fetcher(`/posts?${queryString}&populate=image`),
+    await fetcher("/categories?filters[pages][page][$eq]=posts"),
+  ]);
+  const posts = data?.data || [];
+  const categories = categoriesData?.data || [];
+
+  categories.unshift({
+    id: "all",
+    name: t("ALL"),
+    documentId: "All",
+  });
+
+  return (
+    <>
+      <section className="bg-ssu-blue text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="h1 mb-6 rtl:font-changa ltr:font-montserrat">
+            {t("BLOGS_AND_NEWS")}
+          </h1>
+          <p className="text-lg max-w-3xl mx-auto text-gray-100 font-medium">
+            {t("BLOG_DESCRIPTION")}
+          </p>
+        </div>
+      </section>
+
+      <section className="py-8 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+            <SearchBar />
+            <div className="flex flex-wrap gap-2 justify-center">
+              {categories.map((category: any) => (
+                <Link
+                  href={{
+                    query: {
+                      category: category.documentId,
+                    },
+                  }}
+                  key={category}>
+                  <Button
+                    variant={
+                      selectedCategory === category.documentId
+                        ? "default"
+                        : "outline"
+                    }
+                    size="sm"
+                    className={
+                      selectedCategory === category.documentId
+                        ? "bg-ssu-blue hover:bg-ssu-blue/90 !font-tajawal"
+                        : "!font-tajawal"
+                    }>
+                    <span className="font-tajawal font-semibold">
+                      {category?.name}
+                    </span>
+                  </Button>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          {posts?.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {posts?.map((event) => {
+                const image = event.image?.url
+                  ? `http://localhost:1337${event.image?.url}`
+                  : "/placeholder.jpg";
+
+                return (
+                  <div
+                    key={event.id}
+                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
+                    <div className="h-56 overflow-hidden">
+                      <img
+                        src={image}
+                        // layout="fill"
+                        alt={event.title}
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center mb-2">
+                        <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
+                          {event?.category?.name}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">{event.title}</h3>
+                      <p className="text-gray-600 mb-4">{event.description}</p>
+
+                      <Link
+                        href={
+                          // `/activities/${event.id}`
+                          // `/events/${slugify(event.title)}`
+                          `/events/${event.documentId}`
+                        }
+                        className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
+                        {t("VIEW_DETAILS")}
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <h3 className="text-xl font-medium text-gray-600">
+                {t("NO_BLOGS_FOUND")}
+              </h3>
+              <p className="text-gray-500 mt-2">
+                {t("NO_BLOGS_FOUND_DESCRIPTION")}
+              </p>
+            </div>
+          )}
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default Blog;
