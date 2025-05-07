@@ -69,6 +69,7 @@ const About = async () => {
         </div>
       </section>
       <TeamSection />
+     
     </>
   );
 };
