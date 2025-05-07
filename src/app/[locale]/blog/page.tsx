@@ -98,17 +98,17 @@ const Blog = async ({ searchParams }: any) => {
           {posts?.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts?.map((event) => {
-                const image = event.image?.url
-                  ? `http://localhost:1337${event.image?.url}`
-                  : "/placeholder.jpg";
-
+                const firstImageUrl= event.image?.[0]?.url
+                ? `http://localhost:1337${event.image[0].url}`
+                : "/placeholder.jpg";
+               console.log("catch error :" ,firstImageUrl)
                 return (
                   <div
                     key={event.id}
                     className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
                     <div className="h-56 overflow-hidden">
                       <img
-                        src={image}
+                        src={firstImageUrl}
                         // layout="fill"
                         alt={event.title}
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
@@ -127,7 +127,7 @@ const Blog = async ({ searchParams }: any) => {
                         href={
                           // `/activities/${event.id}`
                           // `/events/${slugify(event.title)}`
-                          `/events/${event.documentId}`
+                       `/blog/${event.slug}`
                         }
                         className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
                         {t("VIEW_DETAILS")}

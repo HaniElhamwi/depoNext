@@ -1,4 +1,4 @@
-import TeamSection from "./TeamSection"; // 👈 استيراد المكون الجديد
+import TeamSection from "../../../components/TeamSection"; // 👈 استيراد المكون الجديد
 import { getTranslations } from "next-intl/server";
 
 const About = async () => {
