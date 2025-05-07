@@ -31,7 +31,7 @@ const BlogPreview = async () => {
               className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
               <div className="h-56 overflow-hidden">
                 <Image
-                  src={`http://localhost:1337${post.image?.data?.attributes?.url || ""}`}
+                  src={`http://localhost:1337${post.image?.[0]?.url ?? "/placeholder.jpg"}`}
                   alt={post.title}
                   width={500}
                   height={300}
