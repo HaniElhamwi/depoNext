@@ -11,6 +11,7 @@ import { Navigation } from "swiper/modules";
 const EventDetail = () => {
   const params = useParams();
   const id = params?.documentId;
+  
 
   const [event, setEvent] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -21,7 +22,9 @@ const EventDetail = () => {
       try {
         setLoading(true);
         const query = `/events?filters[documentId][$eq]=${id}&populate=images`;
+        console.log("Query being sent:", query);
         const res = await fetcher(query);
+        console.log("Response from Strapi:", res);
 
         if (!res?.data || res.data.length === 0) {
           throw new Error("Event not found.");
@@ -47,6 +50,7 @@ const EventDetail = () => {
           content: e.content,
           images,
         };
+        console.log("Fetching event with documentId:", id);
 
         setEvent(formatted);
         setError(null);
