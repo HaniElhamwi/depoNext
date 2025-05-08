@@ -64,7 +64,8 @@
     "BLOG": "Blog",
     "REVIEWS": "Yorumlar",
     "FAQ": "SSS",
-    "REVIRES": "Yorumlar"
+    "REVIRES": "Yorumlar",
+    "DEPARTMENTS": "Bölümler"
   },
   "ACTIVITIES_SECTION": {
     "TITLE": "Etkinlikler ve Faaliyetler",
@@ -80,7 +81,13 @@
     "VIEW_DETAILS": "Detayları Gör",
     "ALL": "Hepsi",
     "NO_EVENTS_FOUND": "Etkinlik Bulunamadı",
-    "NO_EVENTS_FOUND_DESCRIPTION": "Henüz etkinlik bulunamadı. Lütfen daha sonra tekrar kontrol edin."
+    "NO_EVENTS_FOUND_DESCRIPTION": "Henüz etkinlik bulunamadı. Lütfen daha sonra tekrar kontrol edin.",
+    "CONTACT_US": "Bizi içer",
+    "SEND": "Göndermek",
+    "LEAVE_COMMENT": "Serleme Yorumu",
+    "YOUR_MESSAGE": "Mesajınız",
+    "LET_US_KNOW_HOW_WE_CAN_HELP_YOU": "Size nasıl yardımcı olabileceğimizi bize bildirin.",
+    "YOUR_EMAIL": "E -postanız"
   },
   "ABOUT_SECTION": {
     "TITLE": "Hakkımızda",
@@ -116,5 +123,16 @@
     "FAQ_DESCRIPTION": "Birliğimiz hakkında merak edilen soruların cevaplarını bulun.",
     "SEARCH_PLACEHOLDER": "Soruları ara...",
     "VIEW_ALL_FAQ": "Tüm SSS'leri Gör"
+  },
+  "FACULTIES_SECTION": {
+    "TITLE": "Fakülteler"
+  },
+  "DEPARTMENTS_SECTION": {
+    "TITLE": "Departmanlar",
+    "DESCRIPTION": "Üniversitenin dalları ve uzmanları hakkında bilgi edinin",
+    "VIEW_DETAILS": "Ayrıntıları Görüntüle",
+    "NO_DEPARTMENTS_FOUND": "Departman bulunamadı",
+    "NO_DEPARTMENTS_FOUND_DESCRIPTION": "Henüz ekleme eklentisi yok",
+    "CONTACT_WITH_EXPERTS": "Bir yetkiliyle iletişime geçin"
   }
 }

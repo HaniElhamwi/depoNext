@@ -16,7 +16,8 @@
     "ACTIVITY_DESCRIPTION": "Discover our recent events and activities aimed at supporting, connecting, and empowering Syrian students at Karabuk University.",
     "VIEW_ALL_ACTIVITIES": "View All Activities",
     "SSU": "Syrian Students Union",
-    "REVIRES": "Reviews"
+    "REVIRES": "Reviews",
+    "DEPARTMENTS": "Departments"
   },
   "STUDENT_TESTIMONIALS": {
     "TITLE": "What Our Students Say",
@@ -74,7 +75,14 @@
     "All": "All",
     "SEARCH_PLACEHOLDER": "Search activities...",
     "VIEW_DETAILS": "View Details",
-    "ALL": "All"
+    "ALL": "All",
+    "CONTACT_US": "Contect us",
+    "SEND": "Send",
+    "YOUR_MESSAGE": "Your message",
+    "LEAVE_COMMENT": "Leav comment",
+    "SUBJECT": "Subject",
+    "LET_US_KNOW_HOW_WE_CAN_HELP_YOU": "Let us know how we can help you.",
+    "YOUR_EMAIL": "Your email"
   },
   "ABOUT_SECTION": {
     "TITLE": "About Us",
@@ -110,5 +118,17 @@
     "FAQ_DESCRIPTION": "Find answers to common questions about the Syrian Students Union and our services.",
     "SEARCH_PLACEHOLDER": "Search questions...",
     "VIEW_ALL_FAQ": "View All FAQs"
+  },
+  "FACULTIES_SECTION": {
+    "TITLE": "Faculties"
+  },
+  "DEPARTMENTS_SECTION": {
+    "TITLE": "Departments",
+    "DESCRIPTION": "Learn about the university's branches and experts",
+    "ALL": "All",
+    "VIEW_DETAILS": "View details",
+    "NO_DEPARTMENTS_FOUND": "No departments found",
+    "NO_DEPARTMENTS_FOUND_DESCRIPTION": "There is no departments add yet",
+    "CONTACT_WITH_EXPERTS": "Contact an official"
   }
 }

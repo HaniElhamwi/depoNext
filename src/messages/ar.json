@@ -15,7 +15,8 @@
     "ACTIVITY_TITLE": "أنشطتنا الأخيرة",
     "ACTIVITY_DESCRIPTION": "اكتشف فعالياتنا وأنشطتنا الأخيرة التي تهدف إلى دعم وربط وتمكين الطلاب السوريين في جامعة كارابوك.",
     "VIEW_ALL_ACTIVITIES": "عرض جميع الأنشطة",
-    "SSU": "اتحاد الطلبة السوريين"
+    "SSU": "اتحاد الطلبة السوريين",
+    "DEPARTMENTS": "الأفرع"
   },
   "STUDENT_TESTIMONIALS": {
     "TITLE": "ماذا يقول طلابنا",
@@ -78,7 +79,14 @@
     "VIEW_DETAILS": "عرض التفاصيل",
     "ALL": "الكل",
     "NO_EVENTS_FOUND": "لا توجد أنشطة",
-    "NO_EVENTS_FOUND_DESCRIPTION": "لم يتم العثور على أنشطة حتى الآن. يرجى التحقق مرة أخرى لاحقًا."
+    "NO_EVENTS_FOUND_DESCRIPTION": "لم يتم العثور على أنشطة حتى الآن. يرجى التحقق مرة أخرى لاحقًا.",
+    "CONTACT_US": "تواصل معنا",
+    "SEND": "ارسال",
+    "LEAVE_COMMENT": "اترك رسالتك",
+    "YOUR_MESSAGE": "رسالتك",
+    "SUBJECT": "الموضوع",
+    "LET_US_KNOW_HOW_WE_CAN_HELP_YOU": "دعنا نعرف كيف يمكننا مساعدتك",
+    "YOUR_EMAIL": "بريدك الإلكتروني"
   },
   "ABOUT_SECTION": {
     "TITLE": "من نحن",
@@ -114,5 +122,18 @@
     "FAQ_DESCRIPTION": "اكتشف إجابات عن الأسئلة الشائعة حول اتحاد الطلبة السوريين وخدماتنا.",
     "SEARCH_PLACEHOLDER": "ابحث عن الأسئلة...",
     "VIEW_ALL_FAQ": "عرض جميع الأسئلة"
+  },
+  "FACULTIES_SECTION": {
+    "TITLE": "الكليات",
+    "DESCRIPTION": "كلياتنا في الجامعة والطلاب الخبراء بها"
+  },
+  "DEPARTMENTS_SECTION": {
+    "TITLE": "الأفرع",
+    "DESCRIPTION": "تعرف على افرع في الجامعة وخبرائها",
+    "ALL": "الكل",
+    "VIEW_DETAILS": "عرض التفاصيل",
+    "NO_DEPARTMENTS_FOUND": "لم يتم العثور على أقسام",
+    "NO_DEPARTMENTS_FOUND_DESCRIPTION": "لا توجد اقسام تم اضافتها بعد",
+    "CONTACT_WITH_EXPERTS": "تواصل مع مسؤول"
   }
 }
