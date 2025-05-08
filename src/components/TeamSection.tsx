@@ -24,7 +24,7 @@ const TeamSection = () => {
             role: item.position,
             bio: item.bio?.[0]?.children?.[0]?.text || "",
             image: item.image?.url
-              ? `http://localhost:1337${item.image.url}`
+              ? `process.env.NEXT_PUBLIC_BACKEND_URL${item.image.url}`
               : "/placeholder.jpg",
           };
         });

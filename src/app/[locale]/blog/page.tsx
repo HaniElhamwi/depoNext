@@ -98,10 +98,10 @@ const Blog = async ({ searchParams }: any) => {
           {posts?.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts?.map((event) => {
-                const firstImageUrl= event.image?.[0]?.url
-                ? `http://localhost:1337${event.image[0].url}`
-                : "/placeholder.jpg";
-               console.log("catch error :" ,firstImageUrl)
+                const firstImageUrl = event.image?.[0]?.url
+                  ? `process.env.NEXT_PUBLIC_BACKEND_URL${event.image[0].url}`
+                  : "/placeholder.jpg";
+                console.log("catch error :", firstImageUrl);
                 return (
                   <div
                     key={event.id}
@@ -127,7 +127,7 @@ const Blog = async ({ searchParams }: any) => {
                         href={
                           // `/activities/${event.id}`
                           // `/events/${slugify(event.title)}`
-                       `/blog/${event.slug}`
+                          `/blog/${event.slug}`
                         }
                         className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
                         {t("VIEW_DETAILS")}

@@ -25,7 +25,7 @@
 //       {images.map((img, index) => (
 //         <SwiperSlide key={index}>
 //           <Image
-//             src={`http://localhost:1337${img.url}`}
+//             src={`process.env.NEXT_PUBLIC_BACKEND_URL${img.url}`}
 //             alt={img.alternativeText || 'blog image'}
 //             width={800}
 //             height={450}
@@ -70,7 +70,7 @@
 //         {images.map((img, index) => (
 //           <SwiperSlide key={index}>
 //             <Image
-//               src={`http://localhost:1337${img.url}`}
+//               src={`process.env.NEXT_PUBLIC_BACKEND_URL${img.url}`}
 //               alt={img.alternativeText || 'blog image'}
 //               width={800}
 //               height={450}
@@ -129,7 +129,7 @@
 //             <SwiperSlide key={index}>
 //               <div className="relative w-full h-full">
 //                 <Image
-//                   src={`http://localhost:1337${img.url}`}
+//                   src={`process.env.NEXT_PUBLIC_BACKEND_URL${img.url}`}
 //                   alt={img.alternativeText || 'blog image'}
 //                   fill
 //                   className="object-cover rounded-lg"
@@ -160,13 +160,13 @@
 //   );
 // }
 
-'use client';
+"use client";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper/modules';
-import Image from 'next/image';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import "swiper/css";
+import "swiper/css/pagination";
 
 type ImageType = {
   url: string;
@@ -189,18 +189,17 @@ export default function BlogImageSwiper({ images }: { images: ImageType[] }) {
           }}
           pagination={{
             clickable: true,
-            el: '.custom-swiper-pagination',
+            el: ".custom-swiper-pagination",
             renderBullet: (_, className) =>
               `<span class="${className} mx-1 inline-block rounded-full w-2 h-2 transition-all duration-300"></span>`,
           }}
-          className="h-full"
-        >
+          className="h-full">
           {images.map((img, index) => (
             <SwiperSlide key={index}>
               <div className="relative w-full h-full">
                 <Image
-                  src={`http://localhost:1337${img.url}`}
-                  alt={img.alternativeText || 'blog image'}
+                  src={`process.env.NEXT_PUBLIC_BACKEND_URL${img.url}`}
+                  alt={img.alternativeText || "blog image"}
                   fill
                   className="object-cover rounded-lg"
                 />
@@ -233,6 +232,3 @@ export default function BlogImageSwiper({ images }: { images: ImageType[] }) {
     </div>
   );
 }
-
-
-

@@ -33,7 +33,7 @@ const ActivitiesPreview = async () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => {
             const imageUrl = event.images?.[0]?.url
-              ? `http://localhost:1337${event.images?.[0]?.url}`
+              ? `process.env.NEXT_PUBLIC_BACKEND_URL${event.images?.[0]?.url}`
               : "/placeholder.jpg"; // صورة بديلة في حال عدم وجود صورة
 
             return (

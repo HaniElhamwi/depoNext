@@ -14,7 +14,7 @@ const BlogPreview = async () => {
         `/posts?pagination[limit]=6&sort[0]=createdAt:desc&populate=image`
       )
     ).data || [];
-    return (
+  return (
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
@@ -31,14 +31,14 @@ const BlogPreview = async () => {
               className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
               <div className="h-56 overflow-hidden">
                 <Image
-                  src={`http://localhost:1337${post.image?.[0]?.url ?? "/placeholder.jpg"}`}
+                  src={`process.env.NEXT_PUBLIC_BACKEND_URL${
+                    post.image?.[0]?.url ?? "/placeholder.jpg"
+                  }`}
                   alt={post.title}
                   width={500}
                   height={300}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                  
                 />
-                
               </div>
               <div className="p-6">
                 <div className="flex items-center mb-2 gap-2">

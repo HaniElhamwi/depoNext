@@ -1,3 +1,4 @@
+import { BACKEND_URL } from "@/constants/env";
 import { getLocale } from "next-intl/server";
 import qs from "qs";
 
@@ -6,9 +7,8 @@ export async function fetcher<T>(
   options?: RequestInit
 ): Promise<T> {
   const locale = await getLocale();
-  const baseUrl = "http://localhost:1337/api";
+  const baseUrl = BACKEND_URL; // Replace with your base URL
 
-  // Separate path and query string
   const [path, queryString = ""] = url.split("?");
 
   const existingQuery = qs.parse(queryString);

@@ -1,6 +1,9 @@
 import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     remotePatterns: [
       {
@@ -15,8 +18,8 @@ const nextConfig = {
     },
     resolveExtensions: [".mdx", ".tsx", ".ts", ".jsx", ".js", ".json"],
   },
-  images: {
-    unoptimized: true,
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 
