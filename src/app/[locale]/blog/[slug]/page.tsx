@@ -10,7 +10,7 @@ async function BlogPage({
   params: { locale: string; slug: string };
 }) {
   try {
-    const blogData: any = await fetcher(
+    const blogData = await fetcher<any>(
       `/posts?filters[slug][$eq]=${params.slug}&populate=*&locale=${params.locale}`
     );
 
@@ -55,6 +55,7 @@ async function BlogPage({
         <div className="prose prose-lg max-w-none text-gray-800">
           <BlocksRenderer content={content} />
         </div>
+        {content && <BlocksRenderer content={content} />}
       </div>
     );
   } catch (err) {

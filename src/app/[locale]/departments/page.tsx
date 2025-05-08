@@ -1,41 +1,34 @@
-import SearchBar from "@/components/blogs/SearchBar";
 import { Button } from "@/components/ui/button";
-import { fetcher } from "@/lib/fetch";
-import { getTranslations } from "next-intl/server";
 import Link from "next/link";
-import qs from "qs";
+import SearchBar from "@/components/events/SearchBar";
+import { fetcher } from "@/lib/fetch";
 
-const Blog = async ({ searchParams }: any) => {
-  const t = await getTranslations("BLOG_SECTION");
+import { getTranslations } from "next-intl/server";
+import Image from "next/image";
+
+const Departments = async ({ searchParams }: any) => {
+  const t = await getTranslations("DEPARTMENTS_SECTION");
   const awaitedParams = await searchParams;
   const selectedCategory = awaitedParams.category || "All";
   const searchTerm = awaitedParams.search;
 
-  const queryParams = {
-    filters: {
-      ...(selectedCategory &&
-        selectedCategory !== "All" && {
-          category: {
-            documentId: {
-              $eq: selectedCategory,
-            },
-          },
-        }),
-      ...(searchTerm && {
-        $or: [
-          { title: { $containsi: searchTerm } },
-          { description: { $containsi: searchTerm } },
-        ],
-      }),
-    },
-  };
-  const queryString = qs.stringify(queryParams, { encode: false });
+  let query = `/departments?populate[0]=image&populate[1]=category`;
 
-  const [data = [], categoriesData = []]: any = await Promise.all([
-    await fetcher(`/posts?${queryString}&populate=image`),
-    await fetcher("/categories?filters[pages][page][$eq]=posts"),
+  if (selectedCategory !== "All") {
+    query += `&filters[category][documentId][$eq]=${selectedCategory}`;
+  }
+
+  if (searchTerm) {
+    query += `&filters[$or][0][title][$containsi]=${searchTerm}`;
+    query += `&filters[$or][1][description][$containsi]=${searchTerm}`;
+  }
+
+  const [data, categoriesData = []]: any = await Promise.all([
+    await fetcher(query),
+    await fetcher("/categories?filters[pages][page][$eq]=departments"),
   ]);
-  const posts = data?.data || [];
+
+  const departments = data?.data || [];
   const categories = categoriesData?.data || [];
 
   categories.unshift({
@@ -46,23 +39,25 @@ const Blog = async ({ searchParams }: any) => {
 
   return (
     <>
+      {/* Hero Section */}
       <section className="bg-ssu-blue text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="h1 mb-6 rtl:font-changa ltr:font-montserrat">
-            {t("BLOGS_AND_NEWS")}
+          <h1 className="h1 mb-6 rtl:font-changa font-montserrat">
+            {t("TITLE")}
           </h1>
-          <p className="text-lg max-w-3xl mx-auto text-gray-100 font-medium">
-            {t("BLOG_DESCRIPTION")}
+          <p className="text-lg max-w-3xl mx-auto text-gray-100 font-semibold">
+            {t("DESCRIPTION")}
           </p>
         </div>
       </section>
 
+      {/* Search and Filter */}
       <section className="py-8 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <SearchBar />
             <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map((category: any) => (
+              {categories.map((category) => (
                 <Link
                   href={{
                     query: {
@@ -73,14 +68,12 @@ const Blog = async ({ searchParams }: any) => {
                 >
                   <Button
                     variant={
-                      selectedCategory === category.documentId
-                        ? "default"
-                        : "outline"
+                      selectedCategory === category ? "default" : "outline"
                     }
                     size="sm"
                     className={
                       selectedCategory === category.documentId
-                        ? "bg-ssu-blue hover:bg-ssu-blue/90 !font-tajawal"
+                        ? "bg-ssu-blue hover:bg-ssu-blue/90 !font-tajawal text-white hover:text-white"
                         : "!font-tajawal"
                     }
                   >
@@ -97,41 +90,50 @@ const Blog = async ({ searchParams }: any) => {
 
       <section className="py-12">
         <div className="container mx-auto px-4">
-          {posts?.length > 0 ? (
+          {departments?.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts?.map((event) => {
-                const firstImageUrl = event.image?.[0]?.url
-                  ? `${process.env.NEXT_PUBLIC_BACKEND_URL}${event.image[0].url}`
+              {departments?.map((department) => {
+                const image = department.image?.url
+                  ? `http://localhost:1337${department.image?.url}`
                   : "/placeholder.jpg";
-                console.log("catch error :", firstImageUrl);
+
                 return (
                   <div
-                    key={event.id}
+                    key={department.id}
                     className="bg-white rounded-lg overflow-hidden shadow-md hover-effect"
                   >
                     <div className="h-56 overflow-hidden">
-                      <img
-                        src={firstImageUrl}
-                        // layout="fill"
-                        alt={event.title}
+                      <Image
+                        src={image}
+                        width={500}
+                        height={300}
+                        alt={department.title}
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                       />
                     </div>
                     <div className="p-6">
-                      <div className="flex items-center mb-2">
-                        <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
-                          {event?.category?.name}
+                      {department?.category?.name && (
+                        <div className="flex items-center mb-2">
+                          <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
+                            {department?.category?.name}
+                          </span>
+                        </div>
+                      )}
+                      <h3 className="text-xl font-bold mb-2">
+                        {department.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4 line-clamp-2 text-ellipsis">
+                        {department.description}
+                      </p>
+
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="text-sm text-gray-500">
+                          {t("CONTACT_WITH_EXPERTS")}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold mb-2">{event.title}</h3>
-                      <p className="text-gray-600 mb-4">{event.description}</p>
 
                       <Link
-                        href={
-                          // `/activities/${event.id}`
-                          // `/events/${slugify(event.title)}`
-                          `/blog/${event.slug}`
-                        }
+                        href={`/departments/${department.documentId}`}
                         className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors"
                       >
                         {t("VIEW_DETAILS")}
@@ -144,10 +146,10 @@ const Blog = async ({ searchParams }: any) => {
           ) : (
             <div className="text-center py-12">
               <h3 className="text-xl font-medium text-gray-600">
-                {t("NO_BLOGS_FOUND")}
+                {t("NO_DEPARTMENTS_FOUND")}
               </h3>
               <p className="text-gray-500 mt-2">
-                {t("NO_BLOGS_FOUND_DESCRIPTION")}
+                {t("NO_DEPARTMENTS_FOUND_DESCRIPTION")}
               </p>
             </div>
           )}
@@ -157,4 +159,13 @@ const Blog = async ({ searchParams }: any) => {
   );
 };
 
-export default Blog;
+export default Departments;
+
+export const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }).format(date);
+};
