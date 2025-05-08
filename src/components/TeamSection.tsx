@@ -1,42 +1,27 @@
-// components/about/TeamSection.tsx
-"use client";
-
-import { useEffect, useState } from "react";
+import { getTranslations } from "next-intl/server";
 import { Card, CardContent } from "@/components/ui/card";
-import { fetcher } from "@/lib/fetch"; // تأكد أن هذا موجود ويعمل
-import { useTranslations } from "next-intl";
+import { fetcher } from "@/lib/fetch";
 
-const TeamSection = () => {
-  const [teamMembers, setTeamMembers] = useState([]);
-  const t = useTranslations("ABOUT_SECTION");
+const TeamSection = async () => {
+  const t = await getTranslations("ABOUT_SECTION");
 
-  useEffect(() => {
-    const fetchTeam = async () => {
-      try {
-        const TeamMembers = (await fetcher(
-          "/team-members?populate=image"
-        )) as any;
+  let teamMembers = [];
 
-        const formatted = TeamMembers?.data?.map((item) => {
-          return {
-            id: item.id,
-            name: item.name,
-            role: item.position,
-            bio: item.bio?.[0]?.children?.[0]?.text || "",
-            image: item.image?.url
-              ? `process.env.NEXT_PUBLIC_BACKEND_URL${item.image.url}`
-              : "/placeholder.jpg",
-          };
-        });
-
-        setTeamMembers(formatted ?? []);
-      } catch (error) {
-        console.error("Error loading team members:", error);
-      }
-    };
-
-    fetchTeam();
-  }, []);
+  try {
+    const res = await fetcher("/team-members?populate=image");
+    teamMembers =
+      res?.data?.map((item: any) => ({
+        id: item.id,
+        name: item.name,
+        role: item.position,
+        bio: item.bio?.[0]?.children?.[0]?.text || "",
+        image: item.image?.url
+          ? `http://localhost:1337${item.image.url}`
+          : "/placeholder.jpg",
+      })) ?? [];
+  } catch (error) {
+    console.error("Error loading team members:", error);
+  }
 
   return (
     <section className="py-16">
@@ -45,8 +30,8 @@ const TeamSection = () => {
           {t("MEET_OUR_TEAM")}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map((member, index) => (
-            <Card key={index} className="hover-effect">
+          {teamMembers.map((member) => (
+            <Card key={member.id} className="hover-effect">
               <CardContent className="p-0">
                 <div className="aspect-square overflow-hidden">
                   <img

@@ -127,7 +127,8 @@ const Events = async ({ searchParams }: any) => {
                         </div>
                         <div className="flex items-center">
                           <MapPin size={16} className="mr-2" />
-                          <span>{event.location}</span>
+                          <span>{  event.location} </span>
+                          
                         </div>
                       </div>
                       <Link
