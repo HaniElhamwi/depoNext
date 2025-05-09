@@ -17,7 +17,40 @@
     "VIEW_ALL_ACTIVITIES": "Tüm Etkinlikleri Gör",
     "SSU": "Suriyeli Öğrenciler Birliği",
     "REVIRES": "Yorumlar",
-    "DEPARTMENTS": "Bölümler"
+    "DEPARTMENTS": "Bölümler",
+    "CART_TITLE": "Karabük Üniversitesi Suriyeli Öğrenci Birliği Ofisi",
+    "OFFICES": [
+      {
+        "id": "1",
+        "name": "Kültür Ofisi",
+        "description": "Birliğin kültürel, bilimsel ve ahlaki düzeyde öğrenciyi zenginleştiren bir ortam oluşturmasını sağlamayı amaçlıyoruz. Edebi kullanarak aydınlatıcı anlatımı geliştirmeyi ve Suriye kimliğini güçlendirmeyi hedefliyoruz."
+      },
+      {
+        "id": "2",
+        "name": "Bilim Ofisi",
+        "description": "Öğrencilerin akademik ihtiyaçlarını karşılamaya odaklanan ve eğitim çıktılarının kalitesini garanti altına alan bütünleşik eğitim hizmetleri sunmayı hedefliyoruz. Ayrıca öğrencilerin teknik projelerdeki potansiyellerini geliştirerek bilim ofisini üretkenlik ve başarıyı teşvik eden etkili bir platform haline getirmeyi amaçlıyoruz."
+      },
+      {
+        "id": "3",
+        "name": "Kız Öğrenciler Ofisi",
+        "description": "Kız öğrenciler için güvenli bir üniversite ortamı oluşturarak, birliğin sunduğu özel hizmetler aracılığıyla onların ihtiyaçlarını karşılamayı amaçlıyoruz. Ayrıca akademik olarak gelişimlerini desteklemek ve öğrenci programlarının uygulanmasını kolaylaştırmak için gerekli desteği sağlıyoruz."
+      },
+      {
+        "id": "4",
+        "name": "Hizmet Ofisi",
+        "description": "Üniversite ortamını iyileştirerek ve etkili iletişimi kolaylaştırarak öğrencilerin ihtiyaçlarını karşılamaya çalışıyoruz. Özellikle yeni öğrenciler için gerekli temel bilgileri sağlayarak üniversite ortamına başarılı entegrasyonlarını desteklemeye odaklanıyoruz."
+      },
+      {
+        "id": "5",
+        "name": "Medya Ofisi",
+        "description": "Suriyeli öğrencilerin kimliğini yansıtan ve seslerini net bir şekilde duyuran etkili bir medya yapısı kurmak istiyoruz. Birlik ile öğrenciler arasında iletişimi güçlendirerek anlamlı içerikler sunmayı hedefliyoruz."
+      },
+      {
+        "id": "6",
+        "name": "Etkinlik Ofisi",
+        "description": "Eğlence ve gelişimi bir araya getiren etkileşimli bir ortam sunuyoruz. Öğrencilerin ders dışı becerilerini geliştirmek için eğitim, eğlence, spor, teknik ve mesleki alanlarda çeşitli etkinlikler düzenlemeyi amaçlıyoruz."
+      }
+    ]
   },
   "STUDENT_TESTIMONIALS": {
     "TITLE": "Öğrencilerimiz Ne Diyor",
