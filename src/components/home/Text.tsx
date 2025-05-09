@@ -1,6 +1,6 @@
 // // Text.tsx or Text.ts
 // async function getStrapiData(path: string) {
-//     const baseUrl = "http://localhost:1337";
+//     const baseUrl = "process.env.NEXT_PUBLIC_BACKEND_URL";
 //     try {
 //       const response = await fetch(baseUrl + path);
 //       const data = await response.json();
@@ -9,23 +9,22 @@
 //       console.error(error);
 //     }
 //   }
-  
+
 //   const Text = async () => {
 //     const strapiData = await getStrapiData("/api/events/:id"); // Replace ':id' with an actual ID
 //     const { title } = strapiData.data.attributes;
-  
+
 //     return (
 //       <>
 //         <h1>{title}</h1>
 //       </>
 //     ); ما
 //   };
-  
+
 //   export default Text;
-  
 
 async function getStrapiData(path: string) {
-  const baseUrl = "http://localhost:1337";
+  const baseUrl = "process.env.NEXT_PUBLIC_BACKEND_URL";
   try {
     const response = await fetch(baseUrl + path);
     const data = await response.json();

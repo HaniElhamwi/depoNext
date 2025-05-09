@@ -6,10 +6,9 @@ const HeroSection = () => {
   const t = useTranslations("HOME_PAGE");
   return (
     <section
-      className="relative text-white py-20 md:py-32 before:absolute before:inset-0 before:bg-gradient-to-r before:from-ssu-blue/90 before:to-ssu-orange/80"
+      className="relative text-white py-20  md:py-32 before:absolute before:inset-0 before:bg-gradient-to-r before:from-ssu-blue/90 before:to-ssu-orange/80"
       style={{
-        backgroundImage:
-          'url("https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop")',
+        backgroundImage: 'url("/images/hero.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}>
@@ -46,9 +45,9 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center overflow-hidden">
                 <div className="text-center p-6">
-                  <div className="text-5xl font-bold">SSU</div>
+                  <div className="text-5xl font-bold">KBUSYOGR</div>
                   <div className="text-xl mt-2">{t("KARABUK_UNIVERSITY")}</div>
-                  <div className="text-sm mt-1 opacity-80">Est. 2020</div>
+                  <div className="text-sm mt-1 opacity-80">Est. 02.11.2025</div>
                 </div>
               </div>
               <div className="absolute -bottom-3 -right-3 w-24 h-24 rounded-full bg-ssu-orange"></div>

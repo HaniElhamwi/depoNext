@@ -4,9 +4,12 @@ import { NextIntlClientProvider } from "next-intl";
 import { Changa, Tajawal, Montserrat } from "next/font/google";
 import MainLayout from "@/components/layout/MainLayout";
 
-const changa = Changa({ weight: "700" }); // Bold for Arabic
-const tajwal = Tajawal({ weight: "300" }); // Light for both Arabic & English
-const montserrat = Montserrat({ weight: "700" }); // Bold for English
+const changa = Changa({
+  weight: "700",
+  subsets: ["arabic"],
+});
+const tajwal = Tajawal({ weight: "300", subsets: ["arabic", "latin"] }); // Light for both Arabic & English
+const montserrat = Montserrat({ weight: "700", subsets: ["latin"] }); // Bold for English
 
 export const metadata: Metadata = {
   title: "Create Next App",

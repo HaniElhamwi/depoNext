@@ -20,7 +20,7 @@ const Reviews = () => {
   const fetchReviews = async () => {
     try {
       const res = await fetch(
-        "http://localhost:1337/api/reviews?populate=*&publicationState=live"
+        "process.env.NEXT_PUBLIC_BACKEND_URL/api/reviews?populate=*&publicationState=live"
       );
       const data = await res.json();
       const extractTextFromRichText = (richText: any[]): string => {
@@ -41,7 +41,7 @@ const Reviews = () => {
         comment: extractTextFromRichText(item.review),
         date: item.date,
         avatar: item.avatar?.url
-          ? `http://localhost:1337${item.avatar.url}`
+          ? `process.env.NEXT_PUBLIC_BACKEND_URL${item.avatar.url}`
           : "/placeholder.jpg",
       }));
 
@@ -66,10 +66,13 @@ const Reviews = () => {
         const formDataImg = new FormData();
         formDataImg.append("files", avatarFile);
 
-        const uploadRes = await fetch("http://localhost:1337/api/upload", {
-          method: "POST",
-          body: formDataImg,
-        });
+        const uploadRes = await fetch(
+          "process.env.NEXT_PUBLIC_BACKEND_URL/api/upload",
+          {
+            method: "POST",
+            body: formDataImg,
+          }
+        );
 
         const uploadData = await uploadRes.json();
         avatarId = uploadData?.[0]?.id;
@@ -89,13 +92,16 @@ const Reviews = () => {
         },
       };
 
-      const res = await fetch("http://localhost:1337/api/reviews", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
+      const res = await fetch(
+        "process.env.NEXT_PUBLIC_BACKEND_URL/api/reviews",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
 
       if (!res.ok) throw new Error("Failed to submit review");
 

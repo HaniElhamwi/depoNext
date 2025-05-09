@@ -112,7 +112,7 @@ const TestimonialsSection = () => {
     const fetchTestimonials = async () => {
       try {
         const res = await fetch(
-          "http://localhost:1337/api/reviews?populate=*&publicationState=live"
+          "process.env.NEXT_PUBLIC_BACKEND_URL/api/reviews?populate=*&publicationState=live"
         );
         const data = await res.json();
 
@@ -132,7 +132,7 @@ const TestimonialsSection = () => {
           year: item.year,
           quote: extractTextFromRichText(item.review),
           avatar: item.avatar?.url
-            ? `http://localhost:1337${item.avatar.url}`
+            ? `process.env.NEXT_PUBLIC_BACKEND_URL${item.avatar.url}`
             : "/placeholder.jpg",
         }));
 

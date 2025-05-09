@@ -5,6 +5,7 @@ import SearchBar from "@/components/events/SearchBar";
 import { fetcher } from "@/lib/fetch";
 
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 
 const Events = async ({ searchParams }: any) => {
   const t = await getTranslations("ACTIVITIES_SECTION");
@@ -12,7 +13,7 @@ const Events = async ({ searchParams }: any) => {
   const selectedCategory = awaitedParams.category || "All";
   const searchTerm = awaitedParams.search;
 
-  let query = `/events?populate=images`;
+  let query = `/events?populate[0]=images&populate[1]=category`;
 
   if (selectedCategory !== "All") {
     query += `&filters[category][documentId][$eq]=${selectedCategory}`;
@@ -64,7 +65,8 @@ const Events = async ({ searchParams }: any) => {
                       category: category.documentId,
                     },
                   }}
-                  key={category}>
+                  key={category.id}
+                >
                   <Button
                     variant={
                       selectedCategory === category ? "default" : "outline"
@@ -75,7 +77,8 @@ const Events = async ({ searchParams }: any) => {
                       selectedCategory === category.documentId
                         ? "bg-ssu-blue hover:bg-ssu-blue/90 !font-tajawal text-white hover:text-white"
                         : "!font-tajawal"
-                    }>
+                    }
+                  >
                     <span className="font-tajawal font-semibold">
                       {category?.name}
                     </span>
@@ -93,16 +96,19 @@ const Events = async ({ searchParams }: any) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {events?.map((event) => {
                 const image = event.images?.[0]?.url
-                  ? `http://localhost:1337${event.images?.[0]?.url}`
+                  ? `process.env.NEXT_PUBLIC_BACKEND_URL${event.images?.[0]?.url}`
                   : "/placeholder.jpg";
 
                 return (
                   <div
                     key={event.id}
-                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
+                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect"
+                  >
                     <div className="h-56 overflow-hidden">
-                      <img
+                      <Image
                         src={image}
+                        width={500}
+                        height={500}
                         // layout="fill"
                         alt={event.title}
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
@@ -111,7 +117,7 @@ const Events = async ({ searchParams }: any) => {
                     <div className="p-6">
                       <div className="flex items-center mb-2">
                         <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
-                          {event.category}
+                          {event?.category?.name}
                         </span>
                       </div>
                       <h3 className="text-xl font-bold mb-2">{event.title}</h3>
@@ -127,17 +133,13 @@ const Events = async ({ searchParams }: any) => {
                         </div>
                         <div className="flex items-center">
                           <MapPin size={16} className="mr-2" />
-                          <span>{  event.location} </span>
-                          
+                          <span>{event.location} </span>
                         </div>
                       </div>
                       <Link
-                        href={
-                          // `/activities/${event.id}`
-                          // `/events/${slugify(event.title)}`
-                          `/events/${event.documentId}`
-                        }
-                        className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
+                        href={`/events/${event.documentId}`}
+                        className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors"
+                      >
                         {t("VIEW_DETAILS")}
                       </Link>
                     </div>
