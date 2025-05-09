@@ -1,5 +1,6 @@
-import { Facebook, Instagram, Twitter, Mail } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 
 const Footer = () => {
@@ -14,32 +15,32 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4"> {t("SITE_NAME")}</h3>
             <p className="mb-4 text-gray-200">{t("SUPPORT_TEXT")}</p>
             <div className="flex gap-4">
-              <a
+              {/* <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-300 transition-colors">
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
-              </a>
+              </a> */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/kbusyogr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-300 transition-colors">
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a
+              {/* <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-300 transition-colors">
-                <Twitter size={20} />
+                <Whatapp size={20} />
                 <span className="sr-only">Twitter</span>
-              </a>
+              </a> */}
               <a
-                href="mailto:contact@ssukarabuk.com"
+                href="mailto:kbusyogr@gmail.com"
                 className="hover:text-gray-300 transition-colors">
                 <Mail size={20} />
                 <span className="sr-only">Email</span>
@@ -60,7 +61,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/activities"
+                  href="/events"
                   className="text-gray-200 hover:text-white transition-colors">
                   {t("EVENTS")}
                 </Link>
@@ -97,18 +98,19 @@ const Footer = () => {
               <p className="mb-2">{t("ADDRESS")}</p>
               <p className="mb-2">
                 <a
-                  href="mailto:contact@ssukarabuk.com"
+                  href="mailto:kbusyogr@gmail.com"
                   className="text-gray-200 hover:text-white transition-colors">
-                  {t("EMAIL")}
+                  {/* {t("EMAIL")} */}
+                  kbusyogr@gmail.com
                 </a>
               </p>
-              <p>
+              {/* <p>
                 <a
                   href="tel:+905555555555"
                   className="text-gray-200 hover:text-white transition-colors">
                   {t("PHONE")}
                 </a>
-              </p>
+              </p> */}
             </address>
           </div>
         </div>

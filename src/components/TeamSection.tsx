@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Card, CardContent } from "@/components/ui/card";
 import { fetcher } from "@/lib/fetch";
+import Image from "next/image";
 
 const TeamSection = async () => {
   const t = await getTranslations("ABOUT_SECTION");
@@ -15,9 +16,7 @@ const TeamSection = async () => {
         name: item.name,
         role: item.position,
         bio: item.bio?.[0]?.children?.[0]?.text || "",
-        image: item.image?.url
-          ? `http://localhost:1337${item.image.url}`
-          : "/placeholder.jpg",
+        image: item.image?.url ? `${item.image.url}` : "/placeholder.jpg",
       })) ?? [];
   } catch (error) {
     console.error("Error loading team members:", error);
@@ -33,19 +32,23 @@ const TeamSection = async () => {
           {teamMembers.map((member) => (
             <Card key={member.id} className="hover-effect">
               <CardContent className="p-0">
-                <div className="aspect-square overflow-hidden">
-                  <img
+                <div className=" overflow-hidden">
+                  <Image
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    width={400}
+                    height={200}
+                    className="w-full h-full object-cover rounded-t-md"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-ssu-blue font-medium mb-3">
+                  <h3 className="text-xl font-bold mb-1 rtl:font-changa font-montserrat text-ssu-blue">
+                    {member.name}
+                  </h3>
+                  <p className="font-bold  mb-3 text-ssu-orange">
                     {member.role}
                   </p>
-                  <p className="text-gray-600">{member.bio}</p>
+                  <p className="text-gray-600 font-changa">{member.bio}</p>
                 </div>
               </CardContent>
             </Card>

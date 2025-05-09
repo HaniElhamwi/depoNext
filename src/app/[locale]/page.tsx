@@ -6,19 +6,16 @@ import FaqPreview from "@/components/home/FaqPreview";
 import CallToAction from "@/components/home/CallToAction";
 import OfficeSwiper from "@/components/home/OfficeSwiper";
 
-
 const Index = async () => {
-  
   return (
     <>
       <HeroSection />
       <ActivitiesPreview />
+      <OfficeSwiper />
       {/* <TestimonialsSection /> */}
       <BlogPreview />
-      <OfficeSwiper />
-      <FaqPreview />
       <CallToAction />
-     
+      <FaqPreview />
     </>
   );
 };

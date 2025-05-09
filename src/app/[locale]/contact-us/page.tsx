@@ -39,8 +39,7 @@ const ContactUs = async () => {
             <div>
               <Label
                 htmlFor="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                 {t("YOUR_EMAIL")}
               </Label>
               <Input
@@ -55,8 +54,7 @@ const ContactUs = async () => {
             <div>
               <Label
                 htmlFor="subject"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                 {t("SUBJECT")}
               </Label>
               <Input
@@ -71,8 +69,7 @@ const ContactUs = async () => {
             <div className="sm:col-span-2">
               <Label
                 htmlFor="message"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
-              >
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
                 {t("YOUR_MESSAGE")}
               </Label>
               <Textarea
@@ -84,7 +81,9 @@ const ContactUs = async () => {
                 required
               />
             </div>
-            <Button type="submit">{t("SEND")}</Button>
+            <Button type="submit" className="bg-ssu-blue">
+              {t("SEND")}
+            </Button>
           </form>
         </div>
       </section>

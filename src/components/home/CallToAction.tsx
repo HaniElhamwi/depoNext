@@ -30,7 +30,7 @@ const CallToAction = () => {
             size="lg"
             variant="outline"
             className="bg-white text-ssu-blue hover:bg-gray-100 hover:text-ssu-blue">
-            <Link href="/activities">{t("EXPLORE_ACTIVITIES")}</Link>
+            <Link href="/events">{t("EXPLORE_ACTIVITIES")}</Link>
           </Button>
         </div>
       </div>

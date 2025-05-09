@@ -20,7 +20,7 @@ const ActivitiesPreview = async () => {
   const events = data.data || [];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="h2 text-ssu-blue mb-4 rtl:font-changa ltr:font-montserrat section-title">
@@ -58,9 +58,8 @@ const ActivitiesPreview = async () => {
                 </CardContent>
                 <CardFooter>
                   <Link
-                    href={`/events/${event.id}`}
-                    className="text-ssu-orange flex items-center hover:underline"
-                  >
+                    href={`/events/${event.documentId}`}
+                    className="text-ssu-orange flex items-center hover:underline">
                     {t("COMMON.READ_MORE")}{" "}
                     <ArrowRight size={16} className="ml-1" />
                   </Link>
@@ -74,8 +73,7 @@ const ActivitiesPreview = async () => {
           <Button
             asChild
             variant="outline"
-            className="border-ssu-light-orange text-ssu-orange hover:bg-ssu-light-orange hover:text-white"
-          >
+            className="border-ssu-light-orange text-ssu-orange hover:bg-ssu-light-orange hover:text-white">
             <Link href="/events">{t("HOME_PAGE.VIEW_ALL_ACTIVITIES")}</Link>
           </Button>
         </div>
