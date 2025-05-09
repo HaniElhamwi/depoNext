@@ -3,6 +3,7 @@ import MainLayout from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -153,7 +154,8 @@ const Reviews = () => {
                   filterRating === rating
                     ? "bg-ssu-blue hover:bg-ssu-blue/90"
                     : ""
-                }>
+                }
+              >
                 {rating === 0 ? (
                   "All Reviews"
                 ) : (
@@ -176,7 +178,9 @@ const Reviews = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                      <img
+                      <Image
+                        width={48}
+                        height={48}
                         src={review.avatar}
                         alt={review.name}
                         className="w-full h-full object-cover"
@@ -276,7 +280,8 @@ const Reviews = () => {
               />
               <Button
                 type="submit"
-                className="bg-ssu-blue hover:bg-ssu-blue/90">
+                className="bg-ssu-blue hover:bg-ssu-blue/90"
+              >
                 Submit
               </Button>
             </form>
@@ -295,7 +300,8 @@ const Reviews = () => {
           </p>
           <Button
             className="bg-ssu-blue hover:bg-ssu-blue/90"
-            onClick={() => setShowForm(true)}>
+            onClick={() => setShowForm(true)}
+          >
             Submit a Review
           </Button>
         </div>

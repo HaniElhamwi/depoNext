@@ -16,7 +16,8 @@
     "ACTIVITY_DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrencileri desteklemeyi, bağ kurmayı ve güçlendirmeyi amaçlayan etkinliklerimizi keşfedin.",
     "VIEW_ALL_ACTIVITIES": "Tüm Etkinlikleri Gör",
     "SSU": "Suriyeli Öğrenciler Birliği",
-    "REVIRES": "Yorumlar"
+    "REVIRES": "Yorumlar",
+    "DEPARTMENTS": "Bölümler"
   },
   "STUDENT_TESTIMONIALS": {
     "TITLE": "Öğrencilerimiz Ne Diyor",
@@ -107,7 +108,8 @@
     "MEET_OUR_TEAM": "Ekibimizle Tanışın"
   },
   "COMMON": {
-    "READ_MORE": "Devamını Oku"
+    "READ_MORE": "Devamını Oku",
+    "BACK": "Geri"
   },
   "ABOUT_PAGE": {
     "OUR_MISSION": ""
@@ -128,11 +130,15 @@
     "TITLE": "Fakülteler"
   },
   "DEPARTMENTS_SECTION": {
-    "TITLE": "Departmanlar",
+    "TITLE": "Bölümler",
     "DESCRIPTION": "Üniversitenin dalları ve uzmanları hakkında bilgi edinin",
     "VIEW_DETAILS": "Ayrıntıları Görüntüle",
     "NO_DEPARTMENTS_FOUND": "Departman bulunamadı",
     "NO_DEPARTMENTS_FOUND_DESCRIPTION": "Henüz ekleme eklentisi yok",
-    "CONTACT_WITH_EXPERTS": "Bir yetkiliyle iletişime geçin"
+    "CONTACT_WITH_EXPERTS": "Bir yetkiliyle iletişime geçin",
+    "EXPERTS_SECTION": {
+      "TITLE": "Şube yetkilileri"
+    },
+    "ALL": "Tüm"
   }
 }

@@ -58,7 +58,7 @@ const Events = async ({ searchParams }: any) => {
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <SearchBar />
             <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map((category) => (
+              {categories?.map((category) => (
                 <Link
                   href={{
                     query: {
@@ -95,10 +95,7 @@ const Events = async ({ searchParams }: any) => {
           {events?.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {events?.map((event) => {
-                const image = event.images?.[0]?.url
-                  ? `process.env.NEXT_PUBLIC_BACKEND_URL${event.images?.[0]?.url}`
-                  : "/placeholder.jpg";
-
+                const image = event.images?.[0]?.url || "/placeholder.jpg";
                 return (
                   <div
                     key={event.id}

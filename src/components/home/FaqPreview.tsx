@@ -12,8 +12,8 @@ import { fetcher } from "@/lib/fetch";
 const FaqPreview = async () => {
   const t = await getTranslations("FAQ_SECTION");
   const faqs: any =
-    (await fetcher(`/faqs?pagination[limit]=6&sort[0]=createdAt:desc`)).data ||
-    [];
+    (await fetcher<any>(`/faqs?pagination[limit]=6&sort[0]=createdAt:desc`))
+      .data || [];
 
   return (
     <section className="py-16 bg-gray-50">
@@ -29,8 +29,9 @@ const FaqPreview = async () => {
           <Accordion
             type="single"
             collapsible
-            className="bg-white rounded-lg shadow-md p-6">
-            {faqs.map((item) => (
+            className="bg-white rounded-lg shadow-md p-6"
+          >
+            {faqs?.map((item) => (
               <AccordionItem key={item.id} value={`item-${item.id}`}>
                 <AccordionTrigger className="text-left font-bold">
                   {item.question}
@@ -47,15 +48,13 @@ const FaqPreview = async () => {
               <Button
                 asChild
                 variant="outline"
-                className="border-ssu-blue text-ssu-blue hover:bg-ssu-blue hover:text-white">
+                className="border-ssu-blue text-ssu-blue hover:bg-ssu-blue hover:text-white"
+              >
                 {t("VIEW_ALL_FAQ")}
               </Button>
             </Link>
           </div>
         </div>
-        
- 
-
       </div>
     </section>
   );

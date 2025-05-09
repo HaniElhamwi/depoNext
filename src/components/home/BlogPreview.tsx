@@ -8,12 +8,13 @@ import Image from "next/image";
 const BlogPreview = async () => {
   const t = await getTranslations("BLOG_SECTION");
 
-  const posts: any =
+  const posts =
     (
-      await fetcher(
+      await fetcher<any>(
         `/posts?pagination[limit]=6&sort[0]=createdAt:desc&populate=image`
       )
     ).data || [];
+
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
@@ -25,15 +26,14 @@ const BlogPreview = async () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {posts.map((post) => (
+          {posts?.map((post) => (
             <div
               key={post.id}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
+              className="bg-white rounded-lg overflow-hidden shadow-md hover-effect"
+            >
               <div className="h-56 overflow-hidden">
                 <Image
-                  src={`process.env.NEXT_PUBLIC_BACKEND_URL${
-                    post.image?.[0]?.url ?? "/placeholder.jpg"
-                  }`}
+                  src={post.image?.[0]?.url || "/placeholder.jpg"}
                   alt={post.title}
                   width={500}
                   height={300}
@@ -61,7 +61,8 @@ const BlogPreview = async () => {
                   )}
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="text-ssu-orange flex items-center hover:underline">
+                    className="text-ssu-orange flex items-center hover:underline"
+                  >
                     {t("READ_MORE")} <ArrowRight size={16} className="ml-1" />
                   </Link>
                 </div>
@@ -74,7 +75,8 @@ const BlogPreview = async () => {
           <Button
             asChild
             variant="outline"
-            className="border-ssu-orange text-ssu-orange hover:bg-ssu-orange hover:text-white">
+            className="border-ssu-orange text-ssu-orange hover:bg-ssu-orange hover:text-white"
+          >
             <Link href="/blog">{t("VIEW_ALL_POSTS")}</Link>
           </Button>
         </div>

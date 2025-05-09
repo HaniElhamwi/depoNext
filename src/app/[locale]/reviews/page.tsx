@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { fetcher } from "@/lib/fetch";
 import { Star } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function ReviewsPage({
@@ -51,7 +52,8 @@ export default async function ReviewsPage({
                     currentRating === rating
                       ? "bg-ssu-blue hover:bg-ssu-blue/90 !font-tajawal"
                       : "!font-tajawal"
-                  }>
+                  }
+                >
                   {rating === 0 ? (
                     t("ALL_REVIEWS")
                   ) : (
@@ -73,12 +75,14 @@ export default async function ReviewsPage({
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allReviews.map((review) => (
+            {allReviews?.map((review) => (
               <Card key={review.id} className="hover-effect">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                      <img
+                      <Image
+                        width={48}
+                        height={48}
                         src={review.avatar}
                         alt={review.name}
                         className="w-full h-full object-cover"
@@ -110,7 +114,6 @@ export default async function ReviewsPage({
               </Card>
             ))}
           </div>
-      
         </div>
       </section>
     </>

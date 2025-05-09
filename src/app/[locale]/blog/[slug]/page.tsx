@@ -37,25 +37,9 @@ async function BlogPage({
         {imageList.length > 0 && <BlogImageSwiper images={imageList} />}
 
         {/* Content */}
-        {/* <div className="prose prose-lg max-w-none text-gray-800">
-          {Array.isArray(content) ? (
-            content.map((block, i) =>
-              block.type === "paragraph" ? (
-                <p key={i}>
-                  {block.children?.map((child, j) => (
-                    <span key={j}>{child.text}</span>
-                  ))}
-                </p>
-              ) : null
-            )
-          ) : (
-            <p>{content}</p>
-          )}
-        </div> */}
         <div className="prose prose-lg max-w-none text-gray-800">
-          <BlocksRenderer content={content} />
+          {content && <BlocksRenderer content={content} />}
         </div>
-        {content && <BlocksRenderer content={content} />}
       </div>
     );
   } catch (err) {

@@ -161,6 +161,9 @@
 .section-title {
   @apply text-3xl font-bold sm:text-4xl rtl:font-changa ltr:font-montserrat text-ssu-blue;
 }
+.section-subtitle {
+  @apply text-xl font-bold sm:text-xl rtl:font-changa ltr:font-montserrat text-ssu-blue;
+}
 
 .ripple {
   position: absolute;

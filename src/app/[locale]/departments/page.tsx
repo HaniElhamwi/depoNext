@@ -5,6 +5,17 @@ import { fetcher } from "@/lib/fetch";
 
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import { Facebook, Instagram, Phone } from "lucide-react";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("DEPARTMENTS_SECTION");
+
+  return {
+    title: t("TITLE"),
+    description: t("DESCRIPTION"),
+  };
+}
 
 const Departments = async ({ searchParams }: any) => {
   const t = await getTranslations("DEPARTMENTS_SECTION");
@@ -12,7 +23,7 @@ const Departments = async ({ searchParams }: any) => {
   const selectedCategory = awaitedParams.category || "All";
   const searchTerm = awaitedParams.search;
 
-  let query = `/departments?populate[0]=image&populate[1]=category`;
+  let query = `/departments?populate[0]=image&populate[1]=category&populate[2]=experts`;
 
   if (selectedCategory !== "All") {
     query += `&filters[category][documentId][$eq]=${selectedCategory}`;
@@ -57,7 +68,7 @@ const Departments = async ({ searchParams }: any) => {
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <SearchBar />
             <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map((category) => (
+              {categories?.map((category) => (
                 <Link
                   href={{
                     query: {
@@ -94,8 +105,9 @@ const Departments = async ({ searchParams }: any) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {departments?.map((department) => {
                 const image = department.image?.url
-                  ? `http://localhost:1337${department.image?.url}`
+                  ? department.image?.url
                   : "/placeholder.jpg";
+                const expert = department.experts?.[0];
 
                 return (
                   <div
@@ -126,10 +138,39 @@ const Departments = async ({ searchParams }: any) => {
                         {department.description}
                       </p>
 
-                      <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center justify-between mb-2">
                         <span className="text-sm text-gray-500">
-                          {t("CONTACT_WITH_EXPERTS")}
+                          {t("CONTACT_WITH_EXPERTS")} :
                         </span>
+                      </div>
+                      <div className="flex gap-4 mb-6">
+                        {expert?.instagram && (
+                          <a
+                            href={expert?.instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Instagram size={20} />
+                          </a>
+                        )}
+                        {expert?.facebook && (
+                          <a
+                            href={expert?.facebook}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Facebook size={20} />
+                          </a>
+                        )}
+                        {expert?.phone && (
+                          <a
+                            href={`tel:${expert?.phone}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Phone size={20} />
+                          </a>
+                        )}
                       </div>
 
                       <Link

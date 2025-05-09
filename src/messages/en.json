@@ -102,7 +102,8 @@
     "MEET_OUR_TEAM": "Meet Our Team"
   },
   "COMMON": {
-    "READ_MORE": "Read More"
+    "READ_MORE": "Read More",
+    "BACK": "Back"
   },
   "ABOUT_PAGE": {
     "OUR_MISSION": ""
@@ -129,6 +130,9 @@
     "VIEW_DETAILS": "View details",
     "NO_DEPARTMENTS_FOUND": "No departments found",
     "NO_DEPARTMENTS_FOUND_DESCRIPTION": "There is no departments add yet",
-    "CONTACT_WITH_EXPERTS": "Contact an official"
+    "CONTACT_WITH_EXPERTS": "Contact an official",
+    "EXPERTS_SECTION": {
+      "TITLE": "Department officials"
+    }
   }
 }

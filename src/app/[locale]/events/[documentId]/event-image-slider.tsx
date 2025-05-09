@@ -16,7 +16,7 @@ export default function EventImageSlider({ images }: EventImageSliderProps) {
       modules={[Navigation]}
       className="rounded-xl shadow-md mb-6 h-64 w-full"
     >
-      {images.map((img: string, index: number) => (
+      {images?.map((img: string, index: number) => (
         <SwiperSlide key={index}>
           <img
             src={img || "/placeholder.svg"}

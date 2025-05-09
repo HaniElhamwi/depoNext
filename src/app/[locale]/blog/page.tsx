@@ -32,7 +32,9 @@ const Blog = async ({ searchParams }: any) => {
   const queryString = qs.stringify(queryParams, { encode: false });
 
   const [data = [], categoriesData = []]: any = await Promise.all([
-    await fetcher(`/posts?${queryString}&populate=image`),
+    await fetcher(
+      `/posts?${queryString}&populate[0]=image&populate[1]=category`
+    ),
     await fetcher("/categories?filters[pages][page][$eq]=posts"),
   ]);
   const posts = data?.data || [];
@@ -62,7 +64,7 @@ const Blog = async ({ searchParams }: any) => {
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <SearchBar />
             <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map((category: any) => (
+              {categories?.map((category: any) => (
                 <Link
                   href={{
                     query: {

@@ -40,7 +40,7 @@ export default async function EventDetail({
 }: {
   params: { documentId: string };
 }) {
-  const id = params.documentId;
+  const id = params?.documentId;
 
   // This will automatically throw and show the closest error boundary if there's an error
   const event = await getEvent(id);

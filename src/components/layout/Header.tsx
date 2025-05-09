@@ -49,7 +49,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            {navItems.map((item) => (
+            {navItems?.map((item) => (
               <Link
                 key={item.name}
                 href={item.path}
@@ -82,7 +82,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <nav className="md:hidden pt-4 pb-2 space-y-3">
-            {navItems.map((item) => (
+            {navItems?.map((item) => (
               <Link
                 key={item.name}
                 href={item.path}
