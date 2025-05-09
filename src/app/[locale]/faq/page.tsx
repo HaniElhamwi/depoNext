@@ -1,7 +1,17 @@
 import FaqContent from "../faq/FaqContent";
 import { fetcher } from "@/lib/fetch";
+import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import qs from "qs";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("FAQ_PAGE");
+
+  return {
+    title: t("TITLE"),
+    description: t("DESCRIPTION"),
+  };
+}
 
 export default async function FAQPage({ searchParams }: any) {
   const awaitedParams = await searchParams;

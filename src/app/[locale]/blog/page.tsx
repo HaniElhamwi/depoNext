@@ -1,10 +1,20 @@
 import SearchBar from "@/components/blogs/SearchBar";
 import { Button } from "@/components/ui/button";
 import { fetcher } from "@/lib/fetch";
+import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 import qs from "qs";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("BLOG_SECTION");
+
+  return {
+    title: t("TITLE"),
+    description: t("DESCRIPTION"),
+  };
+}
 
 const Blog = async ({ searchParams }: any) => {
   const t = await getTranslations("BLOG_SECTION");

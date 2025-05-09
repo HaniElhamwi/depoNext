@@ -17,7 +17,9 @@
     "VIEW_ALL_ACTIVITIES": "View All Activities",
     "SSU": "Syrian Students Union",
     "REVIRES": "Reviews",
-    "DEPARTMENTS": "Departments"
+    "DEPARTMENTS": "Departments",
+    "TITLE": "Home",
+    "DESCRIPTION": "The Syrian Student Union at Karabuk University is dedicated to supporting Syrian students throughout their academic journey in Turkey. Established in 2020, the union has been providing resources and organizing activities that promote academic excellence, personal growth, and cultural exchange. Thanks to our committed team, we proudly contribute to the success and integration of hundreds of Syrian students at Karabuk University."
   },
   "STUDENT_TESTIMONIALS": {
     "TITLE": "What Our Students Say",
@@ -112,13 +114,17 @@
     "STUDENTS_REVIEWS": "Student Reviews",
     "REVIEWS_DESCRIPTION": "Hear from Syrian students about their experiences with the union and how it has helped them in their academic journey.",
     "FILTER_BY_RATING": "Filter by Rating:",
-    "ALL_REVIEWS": "View All Reviews"
+    "ALL_REVIEWS": "View All Reviews",
+    "DESCRIPTION": "Explore student reviews and experiences from Syrian students at Karabuk University about the services and activities provided by the Syrian Student Union.",
+    "TITLE": "Student Reviews & Testimonials"
   },
   "FAQ_PAGE": {
     "FAQ_TITLE": "Frequently Asked Questions",
     "FAQ_DESCRIPTION": "Find answers to common questions about the Syrian Students Union and our services.",
     "SEARCH_PLACEHOLDER": "Search questions...",
-    "VIEW_ALL_FAQ": "View All FAQs"
+    "VIEW_ALL_FAQ": "View All FAQs",
+    "DESCRIPTION": "Find answers to common questions about registration, events, academic support, and university life in Turkey on the FAQ page of the Syrian Student Union at Karabuk University.",
+    "TITLE": "FAQ"
   },
   "FACULTIES_SECTION": {
     "TITLE": "Faculties"

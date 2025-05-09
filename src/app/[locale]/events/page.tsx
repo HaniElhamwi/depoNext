@@ -6,6 +6,16 @@ import { fetcher } from "@/lib/fetch";
 
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("ACTIVITIES_SECTION");
+
+  return {
+    title: t("TITLE"),
+    description: t("DESCRIPTION"),
+  };
+}
 
 const Events = async ({ searchParams }: any) => {
   const t = await getTranslations("ACTIVITIES_SECTION");

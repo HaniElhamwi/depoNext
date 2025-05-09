@@ -2,7 +2,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("ACTIVITIES_SECTION");
+
+  return {
+    title: t("TITLE"),
+    description: t("DESCRIPTION"),
+  };
+}
 
 const ContactUs = async () => {
   const t = await getTranslations("ACTIVITIES_SECTION");
