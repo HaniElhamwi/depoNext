@@ -11,7 +11,7 @@ const BlogPreview = async () => {
   const posts =
     (
       await fetcher<any>(
-        `/posts?pagination[limit]=6&sort[0]=createdAt:desc&populate=image`
+        `/posts?pagination[pageSize]=6&sort[0]=createdAt:desc&populate=image`
       )
     ).data || [];
 
@@ -25,11 +25,11 @@ const BlogPreview = async () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {posts?.map((post) => (
             <div
               key={post.id}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
+              className="group shadow-md hover:shadow-lg transition-shadow duration-300 rounded-lg overflow-hidden">
               <div className="h-56 overflow-hidden">
                 <Image
                   src={post.image?.url || "/placeholder.jpg"}

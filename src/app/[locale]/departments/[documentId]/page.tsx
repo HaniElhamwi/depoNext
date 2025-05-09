@@ -3,10 +3,11 @@ import Link from "next/link";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Facebook, Instagram, Phone } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import { cache } from "react";
+import { BiLogoWhatsapp } from "react-icons/bi";
 
 export const getDepartment = cache(async (id: string) => {
   try {
@@ -147,12 +148,20 @@ export default async function DepartmentDetail({
                         <Facebook size={20} />
                       </a>
                     )}
-                    {expert?.phone && (
+                    {/* {expert?.phone && (
                       <a
                         href={`tel:${expert.phone}`}
                         target="_blank"
                         rel="noopener noreferrer">
                         <Phone size={20} />
+                      </a>
+                    )} */}
+                    {expert?.phone && (
+                      <a
+                        href={`https://wa.me/${expert?.phone}`}
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <BiLogoWhatsapp size={24} color="primary" />
                       </a>
                     )}
                   </div>

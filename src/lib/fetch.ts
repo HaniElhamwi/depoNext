@@ -19,7 +19,6 @@ export async function fetcher<T>(
   };
 
   const fullUrl = `${baseUrl}${path}?${qs.stringify(fullQuery)}`;
-  console.log("Full URL:", fullUrl); // Debugging line
 
   const res = await fetch(fullUrl, {
     ...options,

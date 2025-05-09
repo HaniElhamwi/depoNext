@@ -2,10 +2,10 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import LangaugeSelector from "../LanguageSelector";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 
 const navItems = [
   { name: "HOME", path: "/" },

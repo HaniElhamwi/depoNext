@@ -96,14 +96,22 @@ const Footer = () => {
             <address className="not-italic">
               <p className="mb-2"> {t("UNIVERSITY")}</p>
               <p className="mb-2">{t("ADDRESS")}</p>
+
               <p className="mb-2">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfnLJqs6iLc9zE8vPG-fBYKkwFA5TDd7UPvswvCyPxU0RyhPg/viewform"
+                  className="text-gray-200 hover:text-white transition-colors">
+                  {/* {t("EMAIL")} */}
+                  {t("CONTACT_FORM")}
+                </a>
+              </p>
+              {/* <p className="mb-2">
                 <a
                   href="mailto:kbusyogr@gmail.com"
                   className="text-gray-200 hover:text-white transition-colors">
-                  {/* {t("EMAIL")} */}
                   kbusyogr@gmail.com
                 </a>
-              </p>
+              </p> */}
               {/* <p>
                 <a
                   href="tel:+905555555555"

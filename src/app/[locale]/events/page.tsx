@@ -107,15 +107,15 @@ const Events = async ({ searchParams }: any) => {
                 return (
                   <div
                     key={event.id}
-                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
-                    <div className="h-56 overflow-hidden">
+                    className="bg-white rounded-lg overflow-hidden shadow-md  group ">
+                    <div className="h-56 overflow-hidden ">
                       <Image
                         src={image}
                         width={500}
                         height={500}
                         // layout="fill"
                         alt={event.title}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full h-full object-cover group-hover:scale-110  transition-transform duration-500 hover:scale-105"
                       />
                     </div>
                     <div className="p-6">
@@ -137,10 +137,12 @@ const Events = async ({ searchParams }: any) => {
                           <Calendar size={16} className="mr-2" />
                           <span>{formatDate("2025-04-29")}</span>
                         </div>
-                        <div className="flex items-center">
-                          <MapPin size={16} className="mr-2" />
-                          <span>{event.location} </span>
-                        </div>
+                        {event.location && (
+                          <div className="flex items-center">
+                            <MapPin size={16} className="mr-2" />
+                            <span>{event.location} </span>
+                          </div>
+                        )}
                       </div>
                       <Link
                         href={`/events/${event.documentId}`}

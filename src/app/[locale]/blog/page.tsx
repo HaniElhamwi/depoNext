@@ -116,7 +116,7 @@ const Blog = async ({ searchParams }: any) => {
                 return (
                   <div
                     key={event.id}
-                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
+                    className="bg-white rounded-lg group flex flex-col justify-between overflow-hidden shadow-md ">
                     <div className="h-56 overflow-hidden">
                       <Image
                         width={500}
@@ -125,24 +125,30 @@ const Blog = async ({ searchParams }: any) => {
                         unoptimized
                         src={firstImageUrl}
                         alt={event.title}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 hover:scale-105"
                       />
                     </div>
-                    <div className="p-6">
-                      <div className="flex items-center mb-2">
-                        {event?.category?.name && (
-                          <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
-                            {event?.category?.name}
-                          </span>
-                        )}
+                    <div className="p-6 flex justify-between flex-col h-max">
+                      <div>
+                        <div className="flex items-center mb-2">
+                          {event?.category?.name && (
+                            <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
+                              {event?.category?.name}
+                            </span>
+                          )}
+                        </div>
+                        <h3 className="text-xl font-bold mb-2 rtl:font-changa font-montserrat text-ssu-blue">
+                          {event.title}
+                        </h3>
+                        <p className="text-gray-600 mb-4">
+                          {event.description}
+                        </p>
                       </div>
-                      <h3 className="text-xl font-bold mb-2 rtl:font-changa font-montserrat text-ssu-blue">
-                        {event.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4">{event.description}</p>
 
                       <Link
                         href={`/blog/${event.documentId}`}
+                        // blnk
+
                         className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
                         {t("VIEW_DETAILS")}
                       </Link>

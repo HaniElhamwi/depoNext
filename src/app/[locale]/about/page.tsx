@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import TeamSection from "../../../components/TeamSection"; // 👈 استيراد المكون الجديد
+import TeamSection from "../../../components/Team/TeamSection"; // 👈 استيراد المكون الجديد
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -49,35 +49,11 @@ const About = async () => {
               <p className="text-gray-600 mb-4 font-semibold">
                 {t("VISION_DESCRIPTION_1")}
               </p>
-              <p className="text-gray-600 font-semibold">
-                {t("VISION_DESCRIPTION_2")}
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* History */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="h2 text-ssu-blue mb-6 text-center rtl:font-changa ltr:font-montserrat">
-            {t("HISTORY_TITLE")}
-          </h2>
-          <div className="max-w-3xl mx-auto">
-            <div className="space-y-6">
-              <p className="text-gray-600 font-semibold">
-                {t("HISTORY_DESCRIPTION_1")}
-              </p>
-              <p className="text-gray-600 font-semibold">
-                {t("HISTORY_DESCRIPTION_2")}
-              </p>
-              <p className="text-gray-600 font-semibold">
-                {t("HISTORY_DESCRIPTION_3")}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
       <TeamSection />
     </>
   );

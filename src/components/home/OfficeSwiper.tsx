@@ -126,10 +126,12 @@ function OfficeSwiper() {
               <div
                 className={`bg-gradient-to-b ${
                   cardColors[index % cardColors.length]
-                } text-white rounded-2xl p-6 shadow-xl h-full transition-all duration-500 hover:scale-105 flex flex-col justify-between min-h-[280px]`}>
+                } text-white rounded-2xl p-6 shadow-xl h-full transition-all duration-500 flex flex-col justify-between min-h-[280px]`}>
                 <div>
-                  <h3 className="text-xl font-semibold mb-3">{office.name}</h3>
-                  <p className="text-sm leading-relaxed">
+                  <h3 className="text-xl font-semibold mb-3  rtl:font-changa font-montserrat">
+                    {office.name}
+                  </h3>
+                  <p className="text-md font-medium leading-relaxed">
                     {office.description}
                   </p>
                 </div>

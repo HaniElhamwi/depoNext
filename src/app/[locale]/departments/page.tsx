@@ -5,7 +5,9 @@ import { fetcher } from "@/lib/fetch";
 
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import { Facebook, Instagram, Phone } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
+import { BiLogoWhatsapp } from "react-icons/bi";
+
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -110,14 +112,14 @@ const Departments = async ({ searchParams }: any) => {
                 return (
                   <div
                     key={department.id}
-                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect flex flex-col">
+                    className="bg-white rounded-lg overflow-hidden group shadow-md flex flex-col">
                     <div className="h-56 overflow-hidden">
                       <Image
                         src={image}
                         width={500}
                         height={300}
                         alt={department.title}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full h-full object-cover  group-hover:scale-110  transition-transform duration-500 hover:scale-105"
                       />
                     </div>
                     <div className="p-6 flex-1 flex justify-between flex-col">
@@ -132,7 +134,7 @@ const Departments = async ({ searchParams }: any) => {
                         <h3 className="text-xl font-bold mb-2">
                           {department.title}
                         </h3>
-                        <p className="text-gray-600 mb-4 line-clamp-2 text-ellipsis">
+                        <p className="text-gray-600 mb-4 line-clamp-1 text-ellipsis">
                           {department.description}
                         </p>
 
@@ -165,10 +167,10 @@ const Departments = async ({ searchParams }: any) => {
                           )}
                           {expert?.phone && (
                             <a
-                              href={`tel:${expert?.phone}`}
+                              href={`https://wa.me/${expert?.phone}`}
                               target="_blank"
                               rel="noopener noreferrer">
-                              <Phone size={20} className="text-gray-500" />
+                              <BiLogoWhatsapp size={24} color="primary" />
                             </a>
                           )}
                         </div>

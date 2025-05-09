@@ -14,7 +14,11 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
 const ActivitiesPreview = async () => {
-  const data: any = await fetcher("/events?populate=images");
+  // const data: any = await fetcher("/events?populate=images&limit=3");
+  // get last 3 events
+  const data: any = await fetcher(
+    "/events?populate=images&sort[0]=date:desc&pagination[pageSize]=3"
+  );
 
   const t = await getTranslations();
   const events = data.data || [];
@@ -36,7 +40,9 @@ const ActivitiesPreview = async () => {
             const imageUrl = event.images?.[0]?.url || "/placeholder.jpg"; // صورة بديلة في حال عدم وجود صورة
 
             return (
-              <Card key={event.id} className="hover-effect">
+              <Card
+                key={event.id}
+                className="group shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="h-48 overflow-hidden">
                   <Image
                     width={400}
@@ -44,7 +50,7 @@ const ActivitiesPreview = async () => {
                     priority
                     src={imageUrl}
                     alt={event.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <CardHeader>
