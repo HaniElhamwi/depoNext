@@ -75,8 +75,7 @@ const Events = async ({ searchParams }: any) => {
                       category: category.documentId,
                     },
                   }}
-                  key={category.id}
-                >
+                  key={category.id}>
                   <Button
                     variant={
                       selectedCategory === category ? "default" : "outline"
@@ -87,8 +86,7 @@ const Events = async ({ searchParams }: any) => {
                       selectedCategory === category.documentId
                         ? "bg-ssu-blue hover:bg-ssu-blue/90 !font-tajawal text-white hover:text-white"
                         : "!font-tajawal"
-                    }
-                  >
+                    }>
                     <span className="font-tajawal font-semibold">
                       {category?.name}
                     </span>
@@ -109,8 +107,7 @@ const Events = async ({ searchParams }: any) => {
                 return (
                   <div
                     key={event.id}
-                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect"
-                  >
+                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
                     <div className="h-56 overflow-hidden">
                       <Image
                         src={image}
@@ -123,9 +120,11 @@ const Events = async ({ searchParams }: any) => {
                     </div>
                     <div className="p-6">
                       <div className="flex items-center mb-2">
-                        <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
-                          {event?.category?.name}
-                        </span>
+                        {event?.category?.name && (
+                          <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
+                            {event?.category?.name}
+                          </span>
+                        )}
                       </div>
                       <h3 className="text-xl font-bold mb-2">{event.title}</h3>
 
@@ -145,8 +144,7 @@ const Events = async ({ searchParams }: any) => {
                       </div>
                       <Link
                         href={`/events/${event.documentId}`}
-                        className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors"
-                      >
+                        className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
                         {t("VIEW_DETAILS")}
                       </Link>
                     </div>

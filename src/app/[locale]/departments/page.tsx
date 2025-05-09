@@ -75,8 +75,7 @@ const Departments = async ({ searchParams }: any) => {
                       category: category.documentId,
                     },
                   }}
-                  key={category.id}
-                >
+                  key={category.id}>
                   <Button
                     variant={
                       selectedCategory === category ? "default" : "outline"
@@ -86,8 +85,7 @@ const Departments = async ({ searchParams }: any) => {
                       selectedCategory === category.documentId
                         ? "bg-ssu-blue hover:bg-ssu-blue/90 !font-tajawal text-white hover:text-white"
                         : "!font-tajawal"
-                    }
-                  >
+                    }>
                     <span className="font-tajawal font-semibold">
                       {category?.name}
                     </span>
@@ -112,8 +110,7 @@ const Departments = async ({ searchParams }: any) => {
                 return (
                   <div
                     key={department.id}
-                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect"
-                  >
+                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
                     <div className="h-56 overflow-hidden">
                       <Image
                         src={image}
@@ -140,7 +137,10 @@ const Departments = async ({ searchParams }: any) => {
 
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-sm text-gray-500">
-                          {t("CONTACT_WITH_EXPERTS")} :
+                          {t("CONTACT_WITH_EXPERTS")} :{" "}
+                          <span className="text-ssu-orange font-bold">
+                            {expert.name}
+                          </span>
                         </span>
                       </div>
                       <div className="flex gap-4 mb-6">
@@ -148,35 +148,31 @@ const Departments = async ({ searchParams }: any) => {
                           <a
                             href={expert?.instagram}
                             target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Instagram size={20} />
+                            rel="noopener noreferrer">
+                            <Instagram size={20} className="text-gray-500" />
                           </a>
                         )}
                         {expert?.facebook && (
                           <a
                             href={expert?.facebook}
                             target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Facebook size={20} />
+                            rel="noopener noreferrer">
+                            <Facebook size={20} className="text-gray-500" />
                           </a>
                         )}
                         {expert?.phone && (
                           <a
                             href={`tel:${expert?.phone}`}
                             target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Phone size={20} />
+                            rel="noopener noreferrer">
+                            <Phone size={20} className="text-gray-500" />
                           </a>
                         )}
                       </div>
 
                       <Link
                         href={`/departments/${department.documentId}`}
-                        className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors"
-                      >
+                        className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
                         {t("VIEW_DETAILS")}
                       </Link>
                     </div>

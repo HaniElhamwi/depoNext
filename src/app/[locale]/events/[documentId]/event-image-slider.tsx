@@ -1,9 +1,8 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
+import Image from "next/image";
 
 interface EventImageSliderProps {
   images: string[];
@@ -13,15 +12,17 @@ export default function EventImageSlider({ images }: EventImageSliderProps) {
   return (
     <Swiper
       navigation
-      modules={[Navigation]}
-      className="rounded-xl shadow-md mb-6 h-64 w-full"
-    >
+      modules={[]}
+      className="rounded-xl shadow-md mb-6  w-full">
       {images?.map((img: string, index: number) => (
-        <SwiperSlide key={index}>
-          <img
+        <SwiperSlide key={index} className="relative !h-96 bg-red-700 w-full">
+          <Image
+            // width={500}
+            // height={800}
+            layout="fill"
             src={img || "/placeholder.svg"}
             alt={`Event image ${index + 1}`}
-            className="w-full h-64 object-cover rounded-xl"
+            className="object-cover rounded-xl"
           />
         </SwiperSlide>
       ))}

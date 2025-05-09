@@ -1,11 +1,10 @@
 import { fetcher } from "@/lib/fetch";
 import EventImageSlider from "./event-image-slider";
-import Link from "next/link";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
-import { Button } from "@/components/ui/button";
 import { cache } from "react";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
+import { Calendar, MapPin } from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -68,7 +67,6 @@ export default async function EventDetail({
 }) {
   const id = params?.documentId;
 
-  // This will automatically throw and show the closest error boundary if there's an error
   const event = await getEvent(id);
 
   if (!event) {
@@ -77,22 +75,16 @@ export default async function EventDetail({
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
-      <Link href="/events">
-        <Button variant="outline">← Back to Events</Button>
-      </Link>
-
       {event.images.length > 0 && <EventImageSlider images={event.images} />}
 
-      <h1 className="text-4xl font-bold text-blue-700 mb-2">{event.title}</h1>
-      <p className="text-gray-600 mb-1">
-        <strong>Date:</strong> {event.date}
-      </p>
-      <p className="text-gray-600 mb-4">
-        <strong>Location:</strong> {event.location}
-      </p>
-
-      <div className="bg-white p-4 rounded-lg shadow text-gray-800 mb-6">
-        {event.description}
+      <h1 className="text-4xl font-bold  mb-2 section-title">{event.title}</h1>
+      <div className="text-gray-600 mb-2 flex gap-1 items-center">
+        <Calendar size={16} />
+        {event.date}
+      </div>
+      <div className="text-gray-600 mb-4 flex gap-1 items-center">
+        <MapPin size={16} />
+        {event.location}
       </div>
 
       {event.content && <BlocksRenderer content={event.content} />}

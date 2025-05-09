@@ -31,18 +31,15 @@ export default function BlogImageSwiper({ images }: { images: ImageType[] }) {
             renderBullet: (_, className) =>
               `<span class="${className} mx-1 inline-block rounded-full w-2 h-2 transition-all duration-300"></span>`,
           }}
-          className="h-full"
-        >
+          className="h-full">
           {images?.map((img, index) => (
             <SwiperSlide key={index}>
               <div className="relative w-full h-full">
                 <Image
-                  src={img.url}
-                  width={500}
-                  height={500}
+                  src={img}
                   priority
                   alt={img.alternativeText || "blog image"}
-                  fill
+                  layout="fill"
                   className="object-cover rounded-lg"
                 />
               </div>
