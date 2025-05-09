@@ -1,5 +1,15 @@
+import { Metadata } from "next";
 import TeamSection from "../../../components/TeamSection"; // 👈 استيراد المكون الجديد
 import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("ABOUT_SECTION");
+
+  return {
+    title: t("TITLE"),
+    description: t("DESCRIPTION"),
+  };
+}
 
 const About = async () => {
   const t = await getTranslations("ABOUT_SECTION");
@@ -69,7 +79,6 @@ const About = async () => {
         </div>
       </section>
       <TeamSection />
-     
     </>
   );
 };

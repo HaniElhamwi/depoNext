@@ -3,8 +3,37 @@ import EventImageSlider from "./event-image-slider";
 import Link from "next/link";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { Button } from "@/components/ui/button";
+import { cache } from "react";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
 
-async function getEvent(id: string) {
+export async function generateMetadata({
+  params,
+}: {
+  params: { documentId: string };
+}): Promise<Metadata> {
+  const t = await getTranslations("DEPARTMENTS_SECTION");
+  const { documentId: id } = await params;
+  const department = await getEvent(id);
+
+  return {
+    title: department.title + " | " + t("TITLE"),
+    description: department.description,
+    openGraph: {
+      title: department.title + " | " + t("TITLE"),
+      description: department.description,
+      images: [
+        {
+          url: department.images[0] || "/placeholder.svg",
+          width: 800,
+          height: 600,
+        },
+      ],
+    },
+  };
+}
+
+const getEvent = cache(async (id: string) => {
   try {
     const query = `/events?filters[documentId][$eq]=${id}&populate=images`;
     const res = await fetcher<any>(query);
@@ -30,7 +59,7 @@ async function getEvent(id: string) {
     console.error("Error fetching event:", err);
     throw new Error("Failed to fetch event");
   }
-}
+});
 
 export default async function EventDetail({
   params,

@@ -2,9 +2,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { fetcher } from "@/lib/fetch";
 import { Star } from "lucide-react";
+import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("REVIEWS_PAGE");
+
+  return {
+    title: t("TITLE"),
+    description: t("DESCRIPTION"),
+  };
+}
 
 export default async function ReviewsPage({
   searchParams,
@@ -14,7 +24,7 @@ export default async function ReviewsPage({
   const currentRating = Number(searchParams.rating || 0);
   const allReviews =
     (
-      await fetcher(
+      await fetcher<any>(
         `/reviews${
           currentRating > 0 ? `?filters[rating][$eq]=${currentRating}` : ""
         }`,

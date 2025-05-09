@@ -50,7 +50,9 @@
         "name": "Etkinlik Ofisi",
         "description": "Eğlence ve gelişimi bir araya getiren etkileşimli bir ortam sunuyoruz. Öğrencilerin ders dışı becerilerini geliştirmek için eğitim, eğlence, spor, teknik ve mesleki alanlarda çeşitli etkinlikler düzenlemeyi amaçlıyoruz."
       }
-    ]
+    ],
+    "TITLE": "Ana sayfa",
+    "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli Öğrenciler Birliği, Suriyeli öğrencilerin akademik yolculukları boyunca desteklenmesini amaçlar. 2020 yılında kurulan birliğimiz, akademik başarıyı, kişisel gelişimi ve kültürel etkileşimi teşvik eden etkinlikler düzenleyerek öğrencilere kaynak sağlamaktadır. Özverili ekibimizle birlikte, Karabük Üniversitesi'nde okuyan yüzlerce Suriyeli öğrencinin uyum sağlamasına ve başarılı olmasına gururla katkıda bulunuyoruz."
   },
   "STUDENT_TESTIMONIALS": {
     "TITLE": "Öğrencilerimiz Ne Diyor",
@@ -151,13 +153,17 @@
     "STUDENTS_REVIEWS": "Öğrenci Yorumları",
     "REVIEWS_DESCRIPTION": "Birliğimizin öğrencilerin akademik yolculuklarına nasıl katkı sağladığını öğrencilerden dinleyin.",
     "FILTER_BY_RATING": "Puana Göre Filtrele:",
-    "ALL_REVIEWS": "Tüm Yorumları Gör"
+    "ALL_REVIEWS": "Tüm Yorumları Gör",
+    "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli Öğrenciler Birliği tarafından sunulan hizmetler ve etkinlikler hakkında Suriyeli öğrencilerin deneyimlerini ve görüşlerini keşfedin.",
+    "TITLE": "Öğrenci Görüşleri ve Deneyimleri"
   },
   "FAQ_PAGE": {
     "FAQ_TITLE": "Sıkça Sorulan Sorular",
     "FAQ_DESCRIPTION": "Birliğimiz hakkında merak edilen soruların cevaplarını bulun.",
     "SEARCH_PLACEHOLDER": "Soruları ara...",
-    "VIEW_ALL_FAQ": "Tüm SSS'leri Gör"
+    "VIEW_ALL_FAQ": "Tüm SSS'leri Gör",
+    "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenciler Birliği Sıkça Sorulan Sorular sayfasında, kayıt, etkinlikler, akademik destek ve Türkiye'deki üniversite hayatı hakkında yanıtlar bulabilirsiniz.",
+    "TITLE": "SSS"
   },
   "FACULTIES_SECTION": {
     "TITLE": "Fakülteler"
