@@ -110,7 +110,7 @@ const Departments = async ({ searchParams }: any) => {
                 return (
                   <div
                     key={department.id}
-                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
+                    className="bg-white rounded-lg overflow-hidden shadow-md hover-effect flex flex-col">
                     <div className="h-56 overflow-hidden">
                       <Image
                         src={image}
@@ -120,59 +120,62 @@ const Departments = async ({ searchParams }: any) => {
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                       />
                     </div>
-                    <div className="p-6">
-                      {department?.category?.name && (
-                        <div className="flex items-center mb-2">
-                          <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
-                            {department?.category?.name}
-                          </span>
+                    <div className="p-6 flex-1 flex justify-between flex-col">
+                      <div>
+                        {department?.category?.name && (
+                          <div className="flex items-center mb-2">
+                            <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
+                              {department?.category?.name}
+                            </span>
+                          </div>
+                        )}
+                        <h3 className="text-xl font-bold mb-2">
+                          {department.title}
+                        </h3>
+                        <p className="text-gray-600 mb-4 line-clamp-2 text-ellipsis">
+                          {department.description}
+                        </p>
+
+                        {expert?.name && (
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-sm text-gray-500">
+                              {t("CONTACT_WITH_EXPERTS")} :{" "}
+                              <span className="text-ssu-orange font-bold">
+                                {expert.name}
+                              </span>
+                            </span>
+                          </div>
+                        )}
+                        <div className="flex gap-4 mb-6">
+                          {expert?.instagram && (
+                            <a
+                              href={expert?.instagram}
+                              target="_blank"
+                              rel="noopener noreferrer">
+                              <Instagram size={20} className="text-gray-500" />
+                            </a>
+                          )}
+                          {expert?.facebook && (
+                            <a
+                              href={expert?.facebook}
+                              target="_blank"
+                              rel="noopener noreferrer">
+                              <Facebook size={20} className="text-gray-500" />
+                            </a>
+                          )}
+                          {expert?.phone && (
+                            <a
+                              href={`tel:${expert?.phone}`}
+                              target="_blank"
+                              rel="noopener noreferrer">
+                              <Phone size={20} className="text-gray-500" />
+                            </a>
+                          )}
                         </div>
-                      )}
-                      <h3 className="text-xl font-bold mb-2">
-                        {department.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4 line-clamp-2 text-ellipsis">
-                        {department.description}
-                      </p>
-
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm text-gray-500">
-                          {t("CONTACT_WITH_EXPERTS")} :{" "}
-                          <span className="text-ssu-orange font-bold">
-                            {expert.name}
-                          </span>
-                        </span>
                       </div>
-                      <div className="flex gap-4 mb-6">
-                        {expert?.instagram && (
-                          <a
-                            href={expert?.instagram}
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <Instagram size={20} className="text-gray-500" />
-                          </a>
-                        )}
-                        {expert?.facebook && (
-                          <a
-                            href={expert?.facebook}
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <Facebook size={20} className="text-gray-500" />
-                          </a>
-                        )}
-                        {expert?.phone && (
-                          <a
-                            href={`tel:${expert?.phone}`}
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <Phone size={20} className="text-gray-500" />
-                          </a>
-                        )}
-                      </div>
-
                       <Link
                         href={`/departments/${department.documentId}`}
-                        className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
+                        className="block w-full mt-auto text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
                         {t("VIEW_DETAILS")}
                       </Link>
                     </div>

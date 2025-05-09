@@ -94,21 +94,21 @@ export default async function DepartmentDetail({
       </Link>
 
       <div className="flex flex-col md:flex-row items-start mt-6 gap-6">
-        <div>
+        <div className="relative max-w-[300px] w-full justify-center flex md:w-[800px]  h-[400px]">
           <Image
             src={department.image}
             alt={department.title}
-            width={800}
-            height={400}
-            className="rounded-lg "
-            priority
+            // width={800}
+            // height={400}
+            layout="fill"
+            className="rounded-lg w-full h-full  object-cover"
           />
         </div>
         <div>
           <h1 className="text-4xl font-bold mb-2 section-title">
-            {department.title}
+            {department?.title}
           </h1>
-          {department.content && (
+          {department?.content && (
             <BlocksRenderer content={department.content} />
           )}
         </div>
@@ -124,36 +124,34 @@ export default async function DepartmentDetail({
               {department.experts.map((expert) => (
                 <div
                   key={expert.id}
-                  className="p-4 border rounded-lg flex flex-col items-center text-center"
-                >
-                  <h3 className="text-xl font-semibold section-subtitle">
-                    {expert.name}
-                  </h3>
+                  className="p-4 border rounded-lg flex flex-col items-center text-center">
+                  {expert?.name && (
+                    <h3 className="text-xl font-semibold section-subtitle">
+                      {expert?.name}
+                    </h3>
+                  )}
                   <div className="flex gap-4 mt-2">
-                    {expert.instagram && (
+                    {expert?.instagram && (
                       <a
                         href={expert.instagram}
                         target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                        rel="noopener noreferrer">
                         <Instagram size={20} />
                       </a>
                     )}
-                    {expert.facebook && (
+                    {expert?.facebook && (
                       <a
                         href={expert.facebook}
                         target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                        rel="noopener noreferrer">
                         <Facebook size={20} />
                       </a>
                     )}
-                    {expert.phone && (
+                    {expert?.phone && (
                       <a
                         href={`tel:${expert.phone}`}
                         target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                        rel="noopener noreferrer">
                         <Phone size={20} />
                       </a>
                     )}
