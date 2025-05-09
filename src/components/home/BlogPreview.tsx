@@ -29,11 +29,10 @@ const BlogPreview = async () => {
           {posts?.map((post) => (
             <div
               key={post.id}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover-effect"
-            >
+              className="bg-white rounded-lg overflow-hidden shadow-md hover-effect">
               <div className="h-56 overflow-hidden">
                 <Image
-                  src={post.image?.[0]?.url || "/placeholder.jpg"}
+                  src={post.image?.url || "/placeholder.jpg"}
                   alt={post.title}
                   width={500}
                   height={300}
@@ -42,9 +41,11 @@ const BlogPreview = async () => {
               </div>
               <div className="p-6">
                 <div className="flex items-center mb-2 gap-2">
-                  <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
-                    {post.category}
-                  </span>
+                  {post.category && (
+                    <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
+                      {post.category}
+                    </span>
+                  )}
                   <span className="text-xs text-gray-500 ml-2">
                     {post.date}
                   </span>
@@ -61,8 +62,7 @@ const BlogPreview = async () => {
                   )}
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="text-ssu-orange flex items-center hover:underline"
-                  >
+                    className="text-ssu-orange flex items-center hover:underline">
                     {t("READ_MORE")} <ArrowRight size={16} className="ml-1" />
                   </Link>
                 </div>
@@ -75,8 +75,7 @@ const BlogPreview = async () => {
           <Button
             asChild
             variant="outline"
-            className="border-ssu-orange text-ssu-orange hover:bg-ssu-orange hover:text-white"
-          >
+            className="border-ssu-orange text-ssu-orange hover:bg-ssu-orange hover:text-white">
             <Link href="/blog">{t("VIEW_ALL_POSTS")}</Link>
           </Button>
         </div>
