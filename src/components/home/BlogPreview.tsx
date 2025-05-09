@@ -61,7 +61,7 @@ const BlogPreview = async () => {
                     </div>
                   )}
                   <Link
-                    href={`/blog/${post.slug}`}
+                    href={`/blog/${post.documentId}`}
                     className="text-ssu-orange flex items-center hover:underline">
                     {t("READ_MORE")} <ArrowRight size={16} className="ml-1" />
                   </Link>

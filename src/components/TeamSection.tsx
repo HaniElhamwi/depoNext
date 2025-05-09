@@ -32,13 +32,14 @@ const TeamSection = async () => {
           {teamMembers.map((member) => (
             <Card key={member.id} className="hover-effect">
               <CardContent className="p-0">
-                <div className=" overflow-hidden">
+                <div className="h-[300px] relative overflow-hidden">
                   <Image
                     src={member.image}
                     alt={member.name}
-                    width={400}
-                    height={200}
-                    className="w-full h-full object-cover rounded-t-md"
+                    // width={400}
+                    // height={200}
+                    layout="fill"
+                    className="w-full h-full object-cover object-[center_30%] rounded-t-md"
                   />
                 </div>
                 <div className="p-6">
