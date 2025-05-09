@@ -37,7 +37,10 @@ export default function BlogImageSwiper({ images }: { images: ImageType[] }) {
             <SwiperSlide key={index}>
               <div className="relative w-full h-full">
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${img.url}`}
+                  src={img.url}
+                  width={500}
+                  height={500}
+                  priority
                   alt={img.alternativeText || "blog image"}
                   fill
                   className="object-cover rounded-lg"

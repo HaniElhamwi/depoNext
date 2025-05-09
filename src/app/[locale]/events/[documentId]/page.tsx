@@ -14,10 +14,7 @@ async function getEvent(id: string) {
     }
 
     const e = res.data[0];
-    const images =
-      e?.images?.map(
-        (image: any) => `${process.env.NEXT_PUBLIC_BACKEND_URL}${image.url}`
-      ) || [];
+    const images = e?.images?.map((image: any) => image.url) || [];
 
     return {
       id: e.id,

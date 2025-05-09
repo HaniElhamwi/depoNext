@@ -2,6 +2,7 @@ import SearchBar from "@/components/blogs/SearchBar";
 import { Button } from "@/components/ui/button";
 import { fetcher } from "@/lib/fetch";
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import Link from "next/link";
 import qs from "qs";
 
@@ -102,9 +103,7 @@ const Blog = async ({ searchParams }: any) => {
           {posts?.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts?.map((event) => {
-                const firstImageUrl = event.image?.[0]?.url
-                  ? `${process.env.NEXT_PUBLIC_BACKEND_URL}${event.image[0].url}`
-                  : "/placeholder.jpg";
+                const firstImageUrl = event.image[0].url || "/placeholder.jpg";
                 console.log("catch error :", firstImageUrl);
                 return (
                   <div
@@ -112,9 +111,12 @@ const Blog = async ({ searchParams }: any) => {
                     className="bg-white rounded-lg overflow-hidden shadow-md hover-effect"
                   >
                     <div className="h-56 overflow-hidden">
-                      <img
+                      <Image
+                        width={500}
+                        height={300}
+                        priority
+                        unoptimized
                         src={firstImageUrl}
-                        // layout="fill"
                         alt={event.title}
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                       />
