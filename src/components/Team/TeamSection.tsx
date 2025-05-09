@@ -22,6 +22,7 @@ const TeamSection = async () => {
           bio: item.bio,
           image: item.image?.url ? `${item.image.url}` : "/placeholder.jpg",
           priority: item.priority,
+          instagram: item.instagram,
         }))
         .sort((a, b) => {
           if (a.priority && b.priority) {

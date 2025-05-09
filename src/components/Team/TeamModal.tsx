@@ -89,7 +89,7 @@ export default function TeamMemberModal({
                     <BlocksRenderer content={selectedMember.bio} />
                   </div>
                 )}
-
+                {/* 
                 {selectedMember.instagram && (
                   <div className="flex justify-end mt-auto">
                     <Link
@@ -99,7 +99,7 @@ export default function TeamMemberModal({
                       <Instagram size={16} />@{selectedMember.instagram}
                     </Link>
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           )}
