@@ -82,10 +82,12 @@ export default async function EventDetail({
         <Calendar size={16} />
         {event.date}
       </div>
-      <div className="text-gray-600 mb-4 flex gap-1 items-center">
-        <MapPin size={16} />
-        {event.location}
-      </div>
+      {event.location && (
+        <div className="text-gray-600 mb-4 flex gap-1 items-center">
+          <MapPin size={16} />
+          {event.location}
+        </div>
+      )}
 
       {event.content && <BlocksRenderer content={event.content} />}
     </div>

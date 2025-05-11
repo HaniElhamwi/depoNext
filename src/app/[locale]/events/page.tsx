@@ -4,9 +4,10 @@ import Link from "next/link";
 import SearchBar from "@/components/events/SearchBar";
 import { fetcher } from "@/lib/fetch";
 
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Metadata } from "next";
+import { formatDate } from "@/lib/date";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("ACTIVITIES_SECTION");
@@ -19,11 +20,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const Events = async ({ searchParams }: any) => {
   const t = await getTranslations("ACTIVITIES_SECTION");
+  const locale = await getLocale();
   const awaitedParams = await searchParams;
   const selectedCategory = awaitedParams.category || "All";
   const searchTerm = awaitedParams.search;
 
-  let query = `/events?populate[0]=images&populate[1]=category`;
+  let query = `/events?populate[0]=images&populate[1]=category&sort[0]=date:desc`;
 
   if (selectedCategory !== "All") {
     query += `&filters[category][documentId][$eq]=${selectedCategory}`;
@@ -133,9 +135,12 @@ const Events = async ({ searchParams }: any) => {
                         {event.description}
                       </p>
                       <div className="flex flex-col space-y-2 text-gray-500 mb-4">
-                        <div className="flex items-center">
+                        <div className="flex items-center gap-2">
                           <Calendar size={16} className="mr-2" />
-                          <span>{formatDate("2025-04-29")}</span>
+                          <span>
+                            {formatDate(event.date, locale) ||
+                              formatDate(event.createdAt , locale )}
+                          </span>
                         </div>
                         {event.location && (
                           <div className="flex items-center">
@@ -171,12 +176,3 @@ const Events = async ({ searchParams }: any) => {
 };
 
 export default Events;
-
-export const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  return new Intl.DateTimeFormat("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }).format(date);
-};

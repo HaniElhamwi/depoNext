@@ -44,7 +44,7 @@ const Blog = async ({ searchParams }: any) => {
 
   const [data = [], categoriesData = []]: any = await Promise.all([
     await fetcher(
-      `/posts?${queryString}&populate[0]=image&populate[1]=category`
+      `/posts?${queryString}&populate[0]=image&populate[1]=category&sort[0]=createdAt:desc`
     ),
     await fetcher("/categories?filters[pages][page][$eq]=posts"),
   ]);

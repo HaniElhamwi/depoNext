@@ -7,7 +7,7 @@ export async function fetcher<T>(
   options?: RequestInit
 ): Promise<T> {
   const locale = await getLocale();
-  const baseUrl = BACKEND_URL; // Replace with your base URL
+  const baseUrl = BACKEND_URL;
 
   const [path, queryString = ""] = url.split("?");
 
@@ -23,7 +23,8 @@ export async function fetcher<T>(
   const res = await fetch(fullUrl, {
     ...options,
     next: {
-      revalidate: 0,
+      revalidate: 3600,
+      tags: [queryString],
     },
   });
 

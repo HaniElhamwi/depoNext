@@ -8,7 +8,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "*", // Allow images from all domains
+        hostname: "*",
       },
     ],
   },
@@ -20,6 +20,7 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
+    
   },
 };
 
