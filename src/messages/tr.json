@@ -179,5 +179,11 @@
       "TITLE": "Şube yetkilileri"
     },
     "ALL": "Tüm"
+  },
+  "Pagination": {
+    "PREVIOUS_PAGE": "Önceki sayfa",
+    "PREVIOUS": "Öncesi",
+    "NEXT_PAGE": "Sonraki sayfa",
+    "NEXT": "Sonraki"
   }
 }
