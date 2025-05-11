@@ -1,4 +1,5 @@
 import SearchBar from "@/components/blogs/SearchBar";
+import PaginationControls from "@/components/PaginationControls";
 import { Button } from "@/components/ui/button";
 import { FRONTEND_URL } from "@/constants/env";
 import { fetcher } from "@/lib/fetch";
@@ -39,7 +40,8 @@ const Blog = async ({ searchParams }: any) => {
   const awaitedParams = await searchParams;
   const selectedCategory = awaitedParams.category || "All";
   const searchTerm = awaitedParams.search;
-
+  const currentPage = Number(awaitedParams.page) || 1; // Get current page from URL or default to 1
+  const pageSize = 25; // Number of items per page
   const queryParams = {
     filters: {
       ...(selectedCategory &&
@@ -62,12 +64,13 @@ const Blog = async ({ searchParams }: any) => {
 
   const [data = [], categoriesData = []]: any = await Promise.all([
     await fetcher(
-      `/posts?${queryString}&populate[0]=image&populate[1]=category&sort[0]=createdAt:desc`
+      `/posts?${queryString}&pagination[page]=${currentPage}&pagination[pageSize]=${pageSize}&populate[0]=image&populate[1]=category&sort[0]=createdAt:desc`
     ),
     await fetcher("/categories?filters[pages][page][$eq]=posts"),
   ]);
   const posts = data?.data || [];
   const categories = categoriesData?.data || [];
+  const pagination = data?.meta?.pagination || { page: 1, pageCount: 1 };
 
   categories.unshift({
     id: "all",
@@ -100,7 +103,8 @@ const Blog = async ({ searchParams }: any) => {
                       category: category.documentId,
                     },
                   }}
-                  key={category.id}>
+                  key={category.id}
+                >
                   <Button
                     variant={
                       selectedCategory === category.documentId
@@ -112,7 +116,8 @@ const Blog = async ({ searchParams }: any) => {
                       selectedCategory === category.documentId
                         ? "bg-ssu-blue hover:bg-ssu-blue/90 !font-tajawal"
                         : "!font-tajawal"
-                    }>
+                    }
+                  >
                     <span className="font-tajawal font-semibold">
                       {category?.name}
                     </span>
@@ -127,54 +132,63 @@ const Blog = async ({ searchParams }: any) => {
       <section className="py-12">
         <div className="container mx-auto px-4">
           {posts?.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts?.map((event) => {
-                const firstImageUrl = event.image?.url || "/placeholder.jpg";
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {posts?.map((event) => {
+                  const firstImageUrl = event.image?.url || "/placeholder.jpg";
 
-                return (
-                  <div
-                    key={event.id}
-                    className="bg-white rounded-lg group flex flex-col justify-between overflow-hidden shadow-md ">
-                    <div className="h-56 overflow-hidden">
-                      <Image
-                        width={500}
-                        height={300}
-                        priority
-                        unoptimized
-                        src={firstImageUrl}
-                        alt={event.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 hover:scale-105"
-                      />
-                    </div>
-                    <div className="p-6 flex justify-between flex-col h-max">
-                      <div>
-                        <div className="flex items-center mb-2">
-                          {event?.category?.name && (
-                            <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
-                              {event?.category?.name}
-                            </span>
-                          )}
-                        </div>
-                        <h3 className="text-xl font-bold mb-2 rtl:font-changa font-montserrat text-ssu-blue">
-                          {event.title}
-                        </h3>
-                        <p className="text-gray-600 mb-4">
-                          {event.description}
-                        </p>
+                  return (
+                    <div
+                      key={event.id}
+                      className="bg-white rounded-lg group flex flex-col justify-between overflow-hidden shadow-md "
+                    >
+                      <div className="h-56 overflow-hidden">
+                        <Image
+                          width={500}
+                          height={300}
+                          priority
+                          unoptimized
+                          src={firstImageUrl}
+                          alt={event.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 hover:scale-105"
+                        />
                       </div>
+                      <div className="p-6 flex justify-between flex-col h-max">
+                        <div>
+                          <div className="flex items-center mb-2">
+                            {event?.category?.name && (
+                              <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
+                                {event?.category?.name}
+                              </span>
+                            )}
+                          </div>
+                          <h3 className="text-xl font-bold mb-2 rtl:font-changa font-montserrat text-ssu-blue">
+                            {event.title}
+                          </h3>
+                          <p className="text-gray-600 mb-4">
+                            {event.description}
+                          </p>
+                        </div>
 
-                      <Link
-                        href={`/blog/${event.documentId}`}
-                        // blnk
+                        <Link
+                          href={`/blog/${event.documentId}`}
+                          // blnk
 
-                        className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
-                        {t("VIEW_DETAILS")}
-                      </Link>
+                          className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors"
+                        >
+                          {t("VIEW_DETAILS")}
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
+                  );
+                })}
+              </div>
+
+              <PaginationControls
+                currentPage={pagination.page}
+                pageCount={pagination.pageCount}
+              />
+            </>
           ) : (
             <div className="text-center py-12">
               <h3 className="text-xl font-medium text-gray-600">

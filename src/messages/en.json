@@ -141,5 +141,11 @@
     "EXPERTS_SECTION": {
       "TITLE": "Department officials"
     }
+  },
+  "Pagination": {
+    "PREVIOUS_PAGE": "Previous page",
+    "PREVIOUS": "Previous",
+    "NEXT_PAGE": "Next page",
+    "NEXT": "Next"
   }
 }

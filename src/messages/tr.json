@@ -301,15 +301,12 @@
         "TYPE": "website"
       }
     },
-    "TITLE": "Bölümler",
-    "DESCRIPTION": "Üniversitedeki bölümlerimizi ve uzmanlarını tanıyın",
-    "ALL": "Tümü",
-    "VIEW_DETAILS": "Detayları Görüntüle",
-    "NO_DEPARTMENTS_FOUND": "Bölüm Bulunamadı",
-    "NO_DEPARTMENTS_FOUND_DESCRIPTION": "Henüz hiç bölüm eklenmedi",
-    "CONTACT_WITH_EXPERTS": "Sorumlu",
-    "EXPERTS_SECTION": {
-      "TITLE": "Bölüm Sorumluları"
-    }
+    "ALL": "Tüm"
+  },
+  "Pagination": {
+    "PREVIOUS_PAGE": "Önceki sayfa",
+    "PREVIOUS": "Öncesi",
+    "NEXT_PAGE": "Sonraki sayfa",
+    "NEXT": "Sonraki"
   }
 }

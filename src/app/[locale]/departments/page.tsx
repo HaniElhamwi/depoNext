@@ -10,6 +10,7 @@ import { BiLogoWhatsapp } from "react-icons/bi";
 
 import { Metadata } from "next";
 import { FRONTEND_URL } from "@/constants/env";
+import PaginationControls from "@/components/PaginationControls";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("DEPARTMENTS_SECTION.METADATA");
@@ -42,8 +43,10 @@ const Departments = async ({ searchParams }: any) => {
   const awaitedParams = await searchParams;
   const selectedCategory = awaitedParams.category || "All";
   const searchTerm = awaitedParams.search;
+  const currentPage = Number(awaitedParams.page) || 1; // Get current page from URL or default to 1
+  const pageSize = 25; // Number of items per page
 
-  let query = `/departments?populate[0]=image&populate[1]=category&populate[2]=experts`;
+  let query = `/departments?pagination[page]=${currentPage}&pagination[pageSize]=${pageSize}&populate[0]=image&populate[1]=category&populate[2]=experts`;
 
   if (selectedCategory !== "All") {
     query += `&filters[category][documentId][$eq]=${selectedCategory}`;
@@ -61,6 +64,7 @@ const Departments = async ({ searchParams }: any) => {
 
   const departments = data?.data || [];
   const categories = categoriesData?.data || [];
+  const pagination = data?.meta?.pagination || { page: 1, pageCount: 1 };
 
   categories.unshift({
     id: "all",
@@ -95,7 +99,8 @@ const Departments = async ({ searchParams }: any) => {
                       category: category.documentId,
                     },
                   }}
-                  key={category.id}>
+                  key={category.id}
+                >
                   <Button
                     variant={
                       selectedCategory === category ? "default" : "outline"
@@ -105,7 +110,8 @@ const Departments = async ({ searchParams }: any) => {
                       selectedCategory === category.documentId
                         ? "bg-ssu-blue hover:bg-ssu-blue/90 !font-tajawal text-white hover:text-white"
                         : "!font-tajawal"
-                    }>
+                    }
+                  >
                     <span className="font-tajawal font-semibold">
                       {category?.name}
                     </span>
@@ -120,89 +126,104 @@ const Departments = async ({ searchParams }: any) => {
       <section className="py-12">
         <div className="container mx-auto px-4">
           {departments?.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {departments?.map((department) => {
-                const image = department.image?.url
-                  ? department.image?.url
-                  : "/placeholder.jpg";
-                const expert = department.experts?.[0];
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {departments?.map((department) => {
+                  const image = department.image?.url
+                    ? department.image?.url
+                    : "/placeholder.jpg";
+                  const expert = department.experts?.[0];
 
-                return (
-                  <div
-                    key={department.id}
-                    className="bg-white rounded-lg overflow-hidden group shadow-md flex flex-col">
-                    <div className="h-56 overflow-hidden">
-                      <Image
-                        src={image}
-                        width={500}
-                        height={300}
-                        alt={department.title}
-                        className="w-full h-full object-cover  group-hover:scale-110  transition-transform duration-500 hover:scale-105"
-                      />
-                    </div>
-                    <div className="p-6 flex-1 flex justify-between flex-col">
-                      <div>
-                        {department?.category?.name && (
-                          <div className="flex items-center mb-2">
-                            <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
-                              {department?.category?.name}
-                            </span>
-                          </div>
-                        )}
-                        <h3 className="text-xl font-bold mb-2">
-                          {department.title}
-                        </h3>
-                        <p className="text-gray-600 mb-4 line-clamp-1 text-ellipsis">
-                          {department.description}
-                        </p>
-
-                        {expert?.name && (
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="text-sm text-gray-500">
-                              {t("CONTACT_WITH_EXPERTS")} :{" "}
-                              <span className="text-ssu-orange font-bold">
-                                {expert.name}
-                              </span>
-                            </span>
-                          </div>
-                        )}
-                        <div className="flex gap-4 mb-6">
-                          {expert?.instagram && (
-                            <a
-                              href={expert?.instagram}
-                              target="_blank"
-                              rel="noopener noreferrer">
-                              <Instagram size={20} className="text-gray-500" />
-                            </a>
-                          )}
-                          {expert?.facebook && (
-                            <a
-                              href={expert?.facebook}
-                              target="_blank"
-                              rel="noopener noreferrer">
-                              <Facebook size={20} className="text-gray-500" />
-                            </a>
-                          )}
-                          {expert?.phone && (
-                            <a
-                              href={`https://wa.me/${expert?.phone}`}
-                              target="_blank"
-                              rel="noopener noreferrer">
-                              <BiLogoWhatsapp size={24} color="primary" />
-                            </a>
-                          )}
-                        </div>
+                  return (
+                    <div
+                      key={department.id}
+                      className="bg-white rounded-lg overflow-hidden group shadow-md flex flex-col"
+                    >
+                      <div className="h-56 overflow-hidden">
+                        <Image
+                          src={image}
+                          width={500}
+                          height={300}
+                          alt={department.title}
+                          className="w-full h-full object-cover  group-hover:scale-110  transition-transform duration-500 hover:scale-105"
+                        />
                       </div>
-                      <Link
-                        href={`/departments/${department.documentId}`}
-                        className="block w-full mt-auto text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
-                        {t("VIEW_DETAILS")}
-                      </Link>
+                      <div className="p-6 flex-1 flex justify-between flex-col">
+                        <div>
+                          {department?.category?.name && (
+                            <div className="flex items-center mb-2">
+                              <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
+                                {department?.category?.name}
+                              </span>
+                            </div>
+                          )}
+                          <h3 className="text-xl font-bold mb-2">
+                            {department.title}
+                          </h3>
+                          <p className="text-gray-600 mb-4 line-clamp-1 text-ellipsis">
+                            {department.description}
+                          </p>
+
+                          {expert?.name && (
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="text-sm text-gray-500">
+                                {t("CONTACT_WITH_EXPERTS")} :{" "}
+                                <span className="text-ssu-orange font-bold">
+                                  {expert.name}
+                                </span>
+                              </span>
+                            </div>
+                          )}
+                          <div className="flex gap-4 mb-6">
+                            {expert?.instagram && (
+                              <a
+                                href={expert?.instagram}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <Instagram
+                                  size={20}
+                                  className="text-gray-500"
+                                />
+                              </a>
+                            )}
+                            {expert?.facebook && (
+                              <a
+                                href={expert?.facebook}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <Facebook size={20} className="text-gray-500" />
+                              </a>
+                            )}
+                            {expert?.phone && (
+                              <a
+                                href={`https://wa.me/${expert?.phone}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <BiLogoWhatsapp size={24} color="primary" />
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                        <Link
+                          href={`/departments/${department.documentId}`}
+                          className="block w-full mt-auto text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors"
+                        >
+                          {t("VIEW_DETAILS")}
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
+                  );
+                })}
+              </div>
+
+              <PaginationControls
+                currentPage={pagination.page}
+                pageCount={pagination.pageCount}
+              />
+            </>
           ) : (
             <div className="text-center py-12">
               <h3 className="text-xl font-medium text-gray-600">

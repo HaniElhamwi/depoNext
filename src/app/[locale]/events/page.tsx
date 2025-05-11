@@ -9,6 +9,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { formatDate } from "@/lib/date";
 import { FRONTEND_URL } from "@/constants/env";
+import PaginationControls from "@/components/PaginationControls";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("ACTIVITIES_SECTION.METADATA");
@@ -41,8 +42,9 @@ const Events = async ({ searchParams }: any) => {
   const awaitedParams = await searchParams;
   const selectedCategory = awaitedParams.category || "All";
   const searchTerm = awaitedParams.search;
+  const currentPage = Number(awaitedParams.page) || 1; // Get current page from URL or default to 1
 
-  let query = `/events?populate[0]=images&populate[1]=category&sort[0]=date:desc`;
+  let query = `/events?pagination[page]=${currentPage}&pagination[pageSize]=25&populate[0]=images&populate[1]=category&sort[0]=date:desc`;
 
   if (selectedCategory !== "All") {
     query += `&filters[category][documentId][$eq]=${selectedCategory}`;
@@ -60,6 +62,7 @@ const Events = async ({ searchParams }: any) => {
 
   const events = data?.data || [];
   const categories = categoriesData?.data || [];
+  const pagination = data?.meta?.pagination || { page: 1, pageCount: 1 };
 
   categories.unshift({
     id: "all",
@@ -120,62 +123,72 @@ const Events = async ({ searchParams }: any) => {
       <section className="py-12">
         <div className="container mx-auto px-4">
           {events?.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {events?.map((event) => {
-                const image = event.images?.[0]?.url || "/placeholder.jpg";
-                return (
-                  <div
-                    key={event.id}
-                    className="bg-white rounded-lg overflow-hidden shadow-md  group ">
-                    <div className="h-56 overflow-hidden ">
-                      <Image
-                        src={image}
-                        width={500}
-                        height={500}
-                        // layout="fill"
-                        alt={event.title}
-                        className="w-full h-full object-cover group-hover:scale-110  transition-transform duration-500 hover:scale-105"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-center mb-2">
-                        {event?.category?.name && (
-                          <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
-                            {event?.category?.name}
-                          </span>
-                        )}
-                      </div>
-                      <h3 className="text-xl font-bold mb-2">{event.title}</h3>
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {events?.map((event) => {
+                  const image = event.images?.[0]?.url || "/placeholder.jpg";
 
-                      {/* max 3 lines */}
-                      <p className="text-gray-600 mb-4 line-clamp-3 text-ellipsis">
-                        {event.description}
-                      </p>
-                      <div className="flex flex-col space-y-2 text-gray-500 mb-4">
-                        <div className="flex items-center gap-2">
-                          <Calendar size={16} className="mr-2" />
-                          <span>
-                            {formatDate(event.date) ||
-                              formatDate(event.createdAt)}
-                          </span>
-                        </div>
-                        {event.location && (
-                          <div className="flex items-center">
-                            <MapPin size={16} className="mr-2" />
-                            <span>{event.location} </span>
-                          </div>
-                        )}
+                  return (
+                    <div
+                      key={event.id}
+                      className="bg-white rounded-lg overflow-hidden shadow-md  group ">
+                      <div className="h-56 overflow-hidden ">
+                        <Image
+                          src={image}
+                          width={500}
+                          height={500}
+                          // layout="fill"
+                          alt={event.title}
+                          className="w-full h-full object-cover group-hover:scale-110  transition-transform duration-500 hover:scale-105"
+                        />
                       </div>
-                      <Link
-                        href={`/events/${event.documentId}`}
-                        className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
-                        {t("VIEW_DETAILS")}
-                      </Link>
+                      <div className="p-6">
+                        <div className="flex items-center mb-2">
+                          {event?.category?.name && (
+                            <span className="text-xs font-semibold bg-ssu-blue/10 text-ssu-blue px-2 py-1 rounded">
+                              {event?.category?.name}
+                            </span>
+                          )}
+                        </div>
+                        <h3 className="text-xl font-bold mb-2">
+                          {event.title}
+                        </h3>
+
+                        {/* max 3 lines */}
+                        <p className="text-gray-600 mb-4 line-clamp-3 text-ellipsis">
+                          {event.description}
+                        </p>
+                        <div className="flex flex-col space-y-2 text-gray-500 mb-4">
+                          <div className="flex items-center gap-2">
+                            <Calendar size={16} className="mr-2" />
+                            <span>
+                              {formatDate(event.date) ||
+                                formatDate(event.createdAt)}
+                            </span>
+                          </div>
+                          {event.location && (
+                            <div className="flex items-center">
+                              <MapPin size={16} className="mr-2" />
+                              <span>{event.location} </span>
+                            </div>
+                          )}
+                        </div>
+                        <Link
+                          href={`/events/${event.documentId}`}
+                          className="block w-full text-center bg-ssu-blue text-white py-2 rounded hover:bg-ssu-blue/90 transition-colors">
+                          {t("VIEW_DETAILS")}
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
+                  );
+                })}
+              </div>
+
+              <PaginationControls
+                currentPage={pagination.page}
+                pageCount={pagination.pageCount}
+              />
+            </>
           ) : (
             <div className="text-center py-12">
               <h3 className="text-xl font-medium text-gray-600">

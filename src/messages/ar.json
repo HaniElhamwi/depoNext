@@ -311,5 +311,11 @@
     "EXPERTS_SECTION": {
       "TITLE": "مسؤولين الفرع"
     }
+  },
+  "Pagination": {
+    "PREVIOUS_PAGE": "الصفحة السابقة",
+    "PREVIOUS": "سابق",
+    "NEXT_PAGE": "الصفحة التالية",
+    "NEXT": "التالي"
   }
 }
