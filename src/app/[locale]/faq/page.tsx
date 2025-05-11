@@ -1,3 +1,4 @@
+import { FRONTEND_URL } from "@/constants/env";
 import FaqContent from "../faq/FaqContent";
 import { fetcher } from "@/lib/fetch";
 import { Metadata } from "next";
@@ -5,11 +6,28 @@ import { getTranslations } from "next-intl/server";
 import qs from "qs";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("FAQ_PAGE");
+  const t = await getTranslations("FAQ_PAGE.METADATA");
+
+  const keywords = t.raw("KEYWORDS");
 
   return {
     title: t("TITLE"),
     description: t("DESCRIPTION"),
+    keywords: keywords,
+    openGraph: {
+      title: t("TITLE"),
+      description: t("DESCRIPTION"),
+      url: FRONTEND_URL,
+      siteName: FRONTEND_URL,
+      images: [
+        {
+          url: `https://res.cloudinary.com/dgx53rnli/image/upload/v1746999250/333330449_222467423509608_534902053517746262_n_hxlk8d.jpg`,
+          width: 1200,
+          height: 630,
+          alt: t("TITLE"),
+        },
+      ],
+    },
   };
 }
 

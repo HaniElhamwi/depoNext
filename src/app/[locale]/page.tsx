@@ -10,12 +10,14 @@ import { getTranslations } from "next-intl/server";
 import { FRONTEND_URL } from "@/constants/env";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("HOME_PAGE");
+  const t = await getTranslations("HOME_PAGE.METADATA");
+
+  const keywords = t.raw("KEYWORDS");
 
   return {
     title: t("TITLE"),
     description: t("DESCRIPTION"),
-    keywords: t("KEYWORDS"),
+    keywords: keywords,
     openGraph: {
       title: t("TITLE"),
       description: t("DESCRIPTION"),
@@ -23,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: FRONTEND_URL,
       images: [
         {
-          url: `${FRONTEND_URL}/images/og-image.png`,
+          url: `https://res.cloudinary.com/dgx53rnli/image/upload/v1746999913/WhatsApp_Image_2025-05-12_at_00.26.19_d8b486d8_o8m7yq.jpg`,
           width: 1200,
           height: 630,
           alt: t("TITLE"),

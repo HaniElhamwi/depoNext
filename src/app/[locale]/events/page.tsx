@@ -4,23 +4,40 @@ import Link from "next/link";
 import SearchBar from "@/components/events/SearchBar";
 import { fetcher } from "@/lib/fetch";
 
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Metadata } from "next";
 import { formatDate } from "@/lib/date";
+import { FRONTEND_URL } from "@/constants/env";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("ACTIVITIES_SECTION");
+  const t = await getTranslations("ACTIVITIES_SECTION.METADATA");
+
+  const keywords = t.raw("KEYWORDS");
 
   return {
     title: t("TITLE"),
     description: t("DESCRIPTION"),
+    keywords: keywords,
+    openGraph: {
+      title: t("TITLE"),
+      description: t("DESCRIPTION"),
+      url: FRONTEND_URL,
+      siteName: FRONTEND_URL,
+      images: [
+        {
+          url: `https://res.cloudinary.com/dgx53rnli/image/upload/v1746999250/333330449_222467423509608_534902053517746262_n_hxlk8d.jpg`,
+          width: 1200,
+          height: 630,
+          alt: t("TITLE"),
+        },
+      ],
+    },
   };
 }
 
 const Events = async ({ searchParams }: any) => {
   const t = await getTranslations("ACTIVITIES_SECTION");
-  const locale = await getLocale();
   const awaitedParams = await searchParams;
   const selectedCategory = awaitedParams.category || "All";
   const searchTerm = awaitedParams.search;
@@ -138,8 +155,8 @@ const Events = async ({ searchParams }: any) => {
                         <div className="flex items-center gap-2">
                           <Calendar size={16} className="mr-2" />
                           <span>
-                            {formatDate(event.date, locale) ||
-                              formatDate(event.createdAt , locale )}
+                            {formatDate(event.date) ||
+                              formatDate(event.createdAt)}
                           </span>
                         </div>
                         {event.location && (

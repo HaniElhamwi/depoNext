@@ -19,7 +19,7 @@ export async function generateMetadata({
     title: department.title + " | " + t("TITLE"),
     description: department.description,
     openGraph: {
-      title: department.title + " | " + t("TITLE"),
+      title: department.description + " | " + t("TITLE"),
       description: department.description,
       images: [
         {

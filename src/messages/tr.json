@@ -1,183 +1,315 @@
 {
   "HOME_PAGE": {
+    "METADATA": {
+      "TITLE": "Ana Sayfa | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
+      "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği, 2020'den bu yana Türkiye'deki Suriyeli öğrencilerin akademik yolculuklarında onları desteklemeye kendini adamıştır. Birlik, akademik mükemmelliği, kişisel gelişimi ve kültürel alışverişi teşvik eden yararlı kaynaklar ve etkinlikler sunarak uyumlu ve başarılı bir öğrenci topluluğu oluşturulmasına katkıda bulunur.",
+      "KEYWORDS": [
+        "Suriyeli Öğrenci Birliği",
+        "Karabük Üniversitesi",
+        "Türkiye'deki Suriyeli Öğrenciler",
+        "Akademik Destek",
+        "Öğrenci Etkinlikleri",
+        "Türkiye'deki Arap Öğrenciler",
+        "Karabük'teki Suriyeli Öğrenciler"
+      ],
+      "CANONICAL": "https://kbusyogr.com",
+      "OPENGRAPH": {
+        "TITLE": "Ana Sayfa | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
+        "DESCRIPTION": "2020'den beri Karabük Üniversitesi Suriyeli Öğrenci Birliği, eğitim ve sosyal etkinlikler aracılığıyla Suriyeli öğrencilere destek ve yardım sağlamaktadır.",
+        "URL": "https://kbusyogr.com",
+        "SITENAME": "Suriyeli Öğrenci Birliği - Karabük",
+        "LOCALE": "tr",
+        "TYPE": "website"
+      }
+    },
     "HOME": "Ana Sayfa",
     "ABOUT": "Hakkımızda",
     "EVENTS": "Etkinlikler",
     "BLOG": "Blog",
-    "REVIEWS": "Yorumlar",
+    "REVIRES": "İncelemeler",
     "FAQ": "SSS",
     "CONTACT_US": "Bize Ulaşın",
-    "HERO_TITLE": "Karabük Üniversitesi Suriyeli Öğrenciler Birliği'ne Hoş Geldiniz",
-    "HERO_DESCRIPTION": "Topluluk, kaynaklar ve gelişim fırsatları ile Suriyeli öğrencilere destek veriyoruz.",
+    "HERO_TITLE": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'ne Hoş Geldiniz",
+    "HERO_DESCRIPTION": "Suriyeli öğrencileri topluluk, kaynaklar ve büyüme fırsatlarıyla destekliyoruz.",
     "LEARN_MORE": "Daha Fazla Bilgi",
     "VIEW_ACTIVITIES": "Etkinlikleri Görüntüle",
     "KARABUK_UNIVERSITY": "Karabük Üniversitesi",
     "ACTIVITY_TITLE": "Son Etkinliklerimiz",
-    "ACTIVITY_DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrencileri desteklemeyi, bağ kurmayı ve güçlendirmeyi amaçlayan etkinliklerimizi keşfedin.",
-    "VIEW_ALL_ACTIVITIES": "Tüm Etkinlikleri Gör",
-    "SSU": "Suriyeli Öğrenciler Birliği",
-    "REVIRES": "Yorumlar",
-    "DEPARTMENTS": "Bölümler",
-    "CART_TITLE": "Karabük Üniversitesi Suriyeli Öğrenci Birliği Ofisi",
+    "ACTIVITY_DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrencileri desteklemek, birbirine bağlamak ve güçlendirmek amacıyla düzenlediğimiz son etkinlikleri keşfedin.",
+    "VIEW_ALL_ACTIVITIES": "Tüm Etkinlikleri Görüntüle",
+    "SSU": "Suriyeli Öğrenci Birliği",
+    "CART_TITLE": "Karabük Üniversitesi Suriyeli Öğrenci Birliği Ofisleri",
     "OFFICES": [
       {
         "id": "1",
         "name": "Kültür Ofisi",
-        "description": "Birliğin kültürel, bilimsel ve ahlaki düzeyde öğrenciyi zenginleştiren bir ortam oluşturmasını sağlamayı amaçlıyoruz. Edebi kullanarak aydınlatıcı anlatımı geliştirmeyi ve Suriye kimliğini güçlendirmeyi hedefliyoruz."
+        "description": "Öğrencinin entelektüel, bilimsel ve değerler düzeyini zenginleştiren bir kültürel ortam yaratmaya çalışıyoruz. Aydınlatıcı anlatıyı geliştirmek ve Suriye kimliğini güçlendirmek için edebiyatı kullanmaya çalışıyoruz."
       },
       {
         "id": "2",
         "name": "Bilim Ofisi",
-        "description": "Öğrencilerin akademik ihtiyaçlarını karşılamaya odaklanan ve eğitim çıktılarının kalitesini garanti altına alan bütünleşik eğitim hizmetleri sunmayı hedefliyoruz. Ayrıca öğrencilerin teknik projelerdeki potansiyellerini geliştirerek bilim ofisini üretkenlik ve başarıyı teşvik eden etkili bir platform haline getirmeyi amaçlıyoruz."
+        "description": "Öğrencilerin akademik ihtiyaçlarını karşılamaya odaklanan, eğitim çıktılarının kalitesini ve seviyelerini geliştiren entegre eğitim hizmetleri sunmayı amaçlıyoruz. Ayrıca, öğrencilerin teknik projelerdeki potansiyellerini geliştirerek, yaratıcılığı ve başarıyı teşvik eden, mükemmel bir akademik ve profesyonel gelecek inşa etme kavramını güçlendiren etkili bir platform olmayı hedefliyoruz."
       },
       {
         "id": "3",
-        "name": "Kız Öğrenciler Ofisi",
-        "description": "Kız öğrenciler için güvenli bir üniversite ortamı oluşturarak, birliğin sunduğu özel hizmetler aracılığıyla onların ihtiyaçlarını karşılamayı amaçlıyoruz. Ayrıca akademik olarak gelişimlerini desteklemek ve öğrenci programlarının uygulanmasını kolaylaştırmak için gerekli desteği sağlıyoruz."
+        "name": "Kız Öğrenci Ofisi",
+        "description": "Birliğin sunduğu özel hizmetlerle kız öğrenciler için güvenli bir üniversite ortamı sağlıyoruz. Temel olarak akademik becerilerini geliştirmeyi ve güçlendirmeyi, eğitim programlarını kolaylaştırmayı ve öğrenci etkinliklerini ve girişimlerini desteklemeyi amaçlıyoruz."
       },
       {
         "id": "4",
         "name": "Hizmet Ofisi",
-        "description": "Üniversite ortamını iyileştirerek ve etkili iletişimi kolaylaştırarak öğrencilerin ihtiyaçlarını karşılamaya çalışıyoruz. Özellikle yeni öğrenciler için gerekli temel bilgileri sağlayarak üniversite ortamına başarılı entegrasyonlarını desteklemeye odaklanıyoruz."
-      },
-      {
-        "id": "5",
-        "name": "Medya Ofisi",
-        "description": "Suriyeli öğrencilerin kimliğini yansıtan ve seslerini net bir şekilde duyuran etkili bir medya yapısı kurmak istiyoruz. Birlik ile öğrenciler arasında iletişimi güçlendirerek anlamlı içerikler sunmayı hedefliyoruz."
+        "description": "Üniversite ortamını iyileştirerek, etkili iletişimi kolaylaştırarak ve destek sağlayarak öğrencilerin ihtiyaçlarını karşılıyoruz. Özellikle yeni öğrencilerin üniversite ortamına başarılı bir şekilde entegre olmalarını sağlamak için temel bilgilerle donatılmalarına odaklanıyoruz."
       },
       {
         "id": "6",
         "name": "Etkinlik Ofisi",
-        "description": "Eğlence ve gelişimi bir araya getiren etkileşimli bir ortam sunuyoruz. Öğrencilerin ders dışı becerilerini geliştirmek için eğitim, eğlence, spor, teknik ve mesleki alanlarda çeşitli etkinlikler düzenlemeyi amaçlıyoruz."
+        "description": "Eğlence ve gelişimi bir araya getiren dinamik bir etkileşim ortamı sunuyoruz. Öğrencilerin ders dışı becerilerini geliştiren eğitimsel, eğlenceli, sportif, teknik ve mesleki etkinlikler düzenlemeyi hedefliyoruz."
+      },
+      {
+        "id": "5",
+        "name": "Medya Ofisi",
+        "description": "Suriyeli öğrencilerin kimliğini yansıtan ve seslerini net bir şekilde duyuran etkili bir medya oluşturuyoruz. Birlik ile öğrenciler arasındaki iletişimi güçlendirerek, kavramlarını ve başarılarını öne çıkaran anlamlı içerikler sunuyoruz."
       }
     ],
-    "TITLE": "Ana sayfa",
-    "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli Öğrenciler Birliği, Suriyeli öğrencilerin akademik yolculukları boyunca desteklenmesini amaçlar. 2020 yılında kurulan birliğimiz, akademik başarıyı, kişisel gelişimi ve kültürel etkileşimi teşvik eden etkinlikler düzenleyerek öğrencilere kaynak sağlamaktadır. Özverili ekibimizle birlikte, Karabük Üniversitesi'nde okuyan yüzlerce Suriyeli öğrencinin uyum sağlamasına ve başarılı olmasına gururla katkıda bulunuyoruz."
+    "DEPARTMENTS": "Bölümler"
   },
   "STUDENT_TESTIMONIALS": {
-    "TITLE": "Öğrencilerimiz Ne Diyor",
-    "DESCRIPTION": "Suriyeli öğrencilerin birliğimizle olan deneyimlerini ve bu deneyimlerin akademik yolculuklarına nasıl katkı sağladığını keşfedin.",
-    "TESTIMONIAL": "Türkiye'de yeni bir öğrenci olarak, birliğin düzenlediği tanıtım etkinlikleri üniversite prosedürlerini anlamama ve kampüs yaşamına uyum sağlamama yardımcı oldu. Destekleri için minnettarım!",
-    "STUDENT_NAME": "Muhammed Al-Raymi",
+    "TITLE": "Öğrencilerimiz Ne Diyor?",
+    "DESCRIPTION": "Suriyeli öğrencilerin Birlik ile olan deneyimlerini ve akademik yolculuklarında nasıl yardımcı olduğumuzu dinleyin.",
+    "TESTIMONIAL": "Türkiye'de yeni bir öğrenci olarak, Birliğin düzenlediği oryantasyon etkinlikleri sayesinde üniversite prosedürlerini anlamam ve üniversite hayatına hızla uyum sağlamam kolaylaştı. Desteğiniz için minnettarım!",
+    "STUDENT_NAME": "Muhammed er-Reymi",
     "STUDENT_DEPARTMENT": "Bilgisayar Mühendisliği, 3. Sınıf"
   },
   "BLOG_SECTION": {
     "TITLE": "Blogumuzdan Son Yazılar",
-    "DESCRIPTION": "Suriyeli öğrenciler için en son etkinlikler, duyurular ve rehberlerle güncel kalın.",
-    "READ_MORE": "Devamını Oku",
-    "VIEW_ALL_POSTS": "Tüm Yazıları Gör",
-    "VIEW_DETAILS": "Detayları Gör",
-    "BLOGS_AND_NEWS": "Bloglar ve Haberler",
-    "BLOG_DESCRIPTION": "Kampüs yaşamı, kaynaklar ve etkinlikler hakkında yazılar için blogumuzu keşfedin.",
-    "ALL": "Hepsi",
-    "NO_BLOGS_FOUND_DESCRIPTION": "Henüz yazı bulunamadı. Lütfen daha sonra tekrar kontrol edin.",
+    "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrenciler için son etkinlikler, duyurular ve yararlı rehberler hakkında bilgi edinin.",
+    "READ_MORE": "Daha Fazla Oku",
+    "VIEW_ALL_POSTS": "Tüm Yazıları Görüntüle",
+    "VIEW_DETAILS": "Detayları Görüntüle",
+    "BLOGS_AND_NEWS": "Blog ve Haberler",
+    "BLOG_DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrenciler için üniversite hayatı, kaynaklar ve etkinlikler hakkında makaleler, ipuçları ve haberler için blogumuzu keşfedin.",
+    "ALL": "Tümü",
     "NO_BLOGS_FOUND": "Yazı Bulunamadı",
-    "BY": "Yazan"
+    "NO_BLOGS_FOUND_DESCRIPTION": "Henüz hiç yazı eklenmedi. Lütfen daha sonra tekrar kontrol edin.",
+    "BY": "Yazar"
   },
   "FAQ_SECTION": {
     "TITLE": "Sıkça Sorulan Sorular",
-    "DESCRIPTION": "Suriyeli Öğrenciler Birliği ve hizmetlerimiz hakkında sık sorulan sorulara göz atın.",
-    "VIEW_ALL_FAQ": "Tüm SSS'leri Gör"
+    "DESCRIPTION": "Suriyeli Öğrenci Birliği ve hizmetlerimiz hakkında sıkça sorulan soruların cevaplarını keşfedin.",
+    "VIEW_ALL_FAQ": "Tüm SSS'leri Görüntüle"
   },
   "JOIN_SECTION": {
     "TITLE": "Topluluğumuza Bugün Katılın",
-    "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenciler Birliği'nin bir parçası olun, kaynaklara ulaşın ve etkinliklere katılın.",
+    "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'nin bir parçası olun, arkadaşlarınızla bağlantı kurun, kaynaklardan yararlanın ve faydalı etkinliklere katılın.",
     "LEARN_ABOUT": "Daha Fazla Bilgi",
     "EXPLORE_ACTIVITIES": "Etkinlikleri Keşfet"
   },
   "FOOTER": {
-    "SUPPORT_TEXT": "Karabük Üniversitesi'ndeki Suriyeli öğrencilere topluluk, kaynaklar ve etkinliklerle destek sağlıyoruz.",
+    "SUPPORT_TEXT": "Karabük Üniversitesi'ndeki Suriyeli öğrencileri topluluk, kaynaklar ve etkinliklerle destekliyoruz.",
     "QUICK_LINKS": "Hızlı Bağlantılar",
     "CONTACT_US": "Bize Ulaşın",
     "UNIVERSITY": "Karabük Üniversitesi",
     "ADDRESS": "Karabük, Türkiye",
-    "EMAIL": "iletisim@ssukarabuk.com",
+    "EMAIL": "contact@ssukarabuk.com",
     "PHONE": "+90 555 555 55 55",
-    "SITE_NAME": "Suriyeli Öğrenciler Birliği",
-    "COPYRIGHT": "Karabük Üniversitesi Suriyeli Öğrenciler Birliği. Tüm hakları saklıdır.",
+    "SITE_NAME": "Suriyeli Öğrenci Birliği",
+    "COPYRIGHT": "Karabük Üniversitesi Suriyeli Öğrenci Birliği. Tüm hakları saklıdır.",
     "ABOUT": "Hakkımızda",
     "EVENTS": "Etkinlikler",
     "BLOG": "Blog",
-    "REVIEWS": "Yorumlar",
+    "REVIRES": "İncelemeler",
     "FAQ": "SSS",
-    "REVIRES": "Yorumlar",
-    "DEPARTMENTS": "Bölümler"
+    "CONTACT_FORM": "Bize Ulaşın"
   },
   "ACTIVITIES_SECTION": {
+    "METADATA": {
+      "TITLE": "Etkinlikler | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
+      "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği tarafından düzenlenen son etkinlikleri ve faaliyetleri takip edin. Öğrencileri desteklemek ve üniversite topluluğu içinde iletişimi artırmak amacıyla eğitimsel, kültürel ve sosyal etkinlikler sunuyoruz.",
+      "KEYWORDS": [
+        "Birlik Etkinlikleri",
+        "Öğrenci Etkinlikleri",
+        "Üniversite Etkinlikleri",
+        "Kültürel Etkinlikler",
+        "Suriyeli Öğrenci Birliği",
+        "Karabük Üniversitesi Öğrencileri",
+        "Türkiye'deki Suriyeli Öğrenciler"
+      ],
+      "CANONICAL": "https://kbusyogr.com/events",
+      "OPENGRAPH": {
+        "TITLE": "Etkinlikler | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
+        "DESCRIPTION": "Suriyeli Öğrenci Birliği'nin üniversite hayatını ve kültürel iletişimi güçlendirmek için düzenlediği çeşitli etkinlikleri keşfedin.",
+        "URL": "https://kbusyogr.com/events",
+        "SITENAME": "Suriyeli Öğrenci Birliği - Karabük",
+        "LOCALE": "tr",
+        "TYPE": "website"
+      }
+    },
     "TITLE": "Etkinlikler ve Faaliyetler",
-    "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrenciler için düzenlenen geçmiş ve gelecek etkinlikleri keşfedin.",
+    "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrencilerin deneyimlerini desteklemek, birbirine bağlamak ve zenginleştirmek için tasarlanmış geçmiş ve gelecek etkinliklerimizi keşfedin.",
     "Social": "Sosyal",
     "Language": "Dil",
     "Academic": "Akademik",
     "Cultural": "Kültürel",
     "Career": "Kariyer",
     "Orientation": "Oryantasyon",
-    "All": "Hepsi",
+    "All": "Tümü",
     "SEARCH_PLACEHOLDER": "Etkinlik ara...",
-    "VIEW_DETAILS": "Detayları Gör",
-    "ALL": "Hepsi",
+    "VIEW_DETAILS": "Detayları Görüntüle",
+    "ALL": "Tümü",
     "NO_EVENTS_FOUND": "Etkinlik Bulunamadı",
-    "NO_EVENTS_FOUND_DESCRIPTION": "Henüz etkinlik bulunamadı. Lütfen daha sonra tekrar kontrol edin.",
-    "CONTACT_US": "Bizi içer",
-    "SEND": "Göndermek",
-    "LEAVE_COMMENT": "Serleme Yorumu",
+    "NO_EVENTS_FOUND_DESCRIPTION": "Henüz hiç etkinlik eklenmedi. Lütfen daha sonra tekrar kontrol edin.",
+    "CONTACT_US": "Bize Ulaşın",
+    "SEND": "Gönder",
+    "LEAVE_COMMENT": "Mesajınızı Bırakın",
     "YOUR_MESSAGE": "Mesajınız",
-    "LET_US_KNOW_HOW_WE_CAN_HELP_YOU": "Size nasıl yardımcı olabileceğimizi bize bildirin.",
-    "YOUR_EMAIL": "E -postanız"
+    "SUBJECT": "Konu",
+    "LET_US_KNOW_HOW_WE_CAN_HELP_YOU": "Size nasıl yardımcı olabileceğimizi bize bildirin",
+    "YOUR_EMAIL": "E-posta Adresiniz"
   },
   "ABOUT_SECTION": {
+    "METADATA": {
+      "TITLE": "Hakkımızda | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
+      "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'ni, öğrenci girişimlerinin ve çeşitli etkinliklerin arkasındaki ekibi tanıyın. Birlik, farklı fakültelerden ve bölümlerden üyelerden oluşur ve yeni öğrencilere yardımcı olmak ve destekleyici, etkileşimli bir üniversite ortamı sağlamak için çalışır.",
+      "KEYWORDS": [
+        "Suriyeli Öğrenci Birliği",
+        "Birlik Ekibi",
+        "Birlik Üyeleri",
+        "Birlik Bölümleri",
+        "Yeni Öğrencilere Yardım",
+        "Karabük Üniversitesi Öğrencileri",
+        "Türkiye'deki Suriyeli Öğrenciler"
+      ],
+      "CANONICAL": "https://kbusyogr.com/about",
+      "OPENGRAPH": {
+        "TITLE": "Hakkımızda | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
+        "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği ekibini ve öğrencilere hizmet etmeyi ve üniversite yaşamına uyum sağlamalarına yardımcı olmayı amaçlayan farklı bölümleri tanıyın.",
+        "URL": "https://kbusyogr.com/about",
+        "SITENAME": "Suriyeli Öğrenci Birliği - Karabük",
+        "LOCALE": "tr",
+        "TYPE": "website"
+      }
+    },
     "TITLE": "Hakkımızda",
-    "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenciler Birliği hakkında daha fazla bilgi edinin: misyonumuz, vizyonumuz, tarihçemiz ve ekibimiz.",
+    "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'ni, misyonumuzu, vizyonumuzu, tarihimizi ve Suriyeli öğrencileri destekleyen ekibimizi tanıyın.",
     "VISION_TITLE": "Vizyonumuz",
-    "VISION_DESCRIPTION_1": "Her Suriyeli öğrencinin akademik, mesleki ve kişisel başarısı için gereken destek ve fırsatlara erişebildiği bir topluluk hayal ediyoruz.",
-    "VISION_DESCRIPTION_2": "Suriyeli öğrenciler ile üniversite topluluğu arasında kültürel anlayış ve kalıcı ilişkiler kurmayı hedefliyoruz.",
+    "VISION_DESCRIPTION_1": "Üniversite çapında aktif bir öğrenci birliği olarak, Suriye kimliğini ifade eden ve öğrencilerin beklentilerini yansıtan kültürel ve sosyal programlar ve hizmetler sunarak yaratıcılığı ve iletişimi teşvik eden bir üniversite ortamı oluşturmayı hedefliyoruz.",
+    "VISION_DESCRIPTION_2": "Suriyeli öğrenciler ile daha geniş üniversite topluluğu arasında bir köprü olarak kültürel anlayışı artırmayı ve kalıcı ilişkiler kurmayı amaçlıyoruz.",
     "MISSION_TITLE": "Misyonumuz",
-    "MISSION_DESCRIPTION_1": "Karabük Üniversitesi Suriyeli Öğrenciler Birliği olarak, öğrencilerin akademik yolculuklarında onlara destek olmayı taahhüt ediyoruz. Misyonumuz, akademik başarıyı, kişisel gelişimi ve kültürel etkileşimi teşvik eden sıcak bir ortam yaratmaktır.",
-    "MISSION_DESCRIPTION_2": "Öğrencilerin Türkiye’deki üniversite yaşamına uyum sağlamaları ve başarılı olmaları için kaynak sağlıyor, etkinlikler düzenliyor ve bağlantılar kurmalarına yardımcı oluyoruz.",
-    "HISTORY_TITLE": "Tarihçemiz",
-    "HISTORY_DESCRIPTION_1": "2020 yılında, arkadaşlarını desteklemek isteyen küçük bir Suriyeli öğrenci grubu tarafından kuruldu.",
-    "HISTORY_DESCRIPTION_2": "Başlangıçta yeni öğrencilerin üniversiteye uyum sağlamasına yardımcı olmak için düzenlenen toplantılar, zamanla organize bir birliğe dönüştü.",
-    "HISTORY_DESCRIPTION_3": "Bugün, oryantasyon etkinlikleri, akademik atölyeler, kültürel kutlamalar ve kariyer geliştirme fırsatlarıyla yüzlerce öğrenciye hizmet veriyoruz.",
+    "MISSION_DESCRIPTION_1": "Karabük Üniversitesi, Türkiye'de en fazla Suriyeli öğrenciye ev sahipliği yapan üniversitelerden biridir. Farklı bölümlerde 3000'den fazla Suriyeli öğrenci bulunmaktadır. Bu büyük sayı ile birlikte, kampüste Suriyeli öğrencilerin birçok akademik, kültürel ve sosyal etkinliğe katıldığı önemli bir öğrenci etkileşimi gözlemlenmektedir.",
+    "MISSION_DESCRIPTION_2": "Buradan hareketle, Karabük Üniversitesi Suriyeli Öğrenci Birliği olarak öğrenciler arasındaki bağları güçlendirmeyi, akademik ve sosyal destek sağlamayı ve üniversite yolculuklarında becerilerini ve deneyimlerini geliştirmelerine katkıda bulunacak etkinlikler düzenlemeyi hedefliyoruz.",
+    "HISTORY_TITLE": "Tarihimiz",
+    "HISTORY_DESCRIPTION_1": "Karabük Üniversitesi Suriyeli Öğrenci Birliği, 2020 yılında akranlarına destek sistemine ihtiyaç duyan küçük bir grup Suriyeli öğrenci tarafından kurulmuştur.",
+    "HISTORY_DESCRIPTION_2": "Yeni öğrencilerin üniversite yaşamına uyum sağlamalarına yardımcı olmak için yapılan gayri resmi toplantılar, hızla organize bir birliğe dönüşmüş ve üniversitedeki büyüyen Suriyeli öğrenci topluluğunu desteklemek için net bir mesaj taşımaktadır.",
+    "HISTORY_DESCRIPTION_3": "Yıllar geçtikçe, faaliyetlerimizi oryantasyon etkinlikleri, akademik çalıştaylar, kültürel kutlamalar ve mesleki gelişim fırsatlarını içerecek şekilde genişlettik. Bugün, Türkiye'deki eğitim yolculuklarında yüzlerce Suriyeli öğrenciye hizmet vermekten gurur duyuyoruz.",
     "TEAM_TITLE": "Ekibimizle Tanışın",
-    "ALL": "Hepsi",
+    "ALL": "Tümü",
     "MEET_OUR_TEAM": "Ekibimizle Tanışın"
   },
   "COMMON": {
-    "READ_MORE": "Devamını Oku",
+    "READ_MORE": "Daha Fazla Oku",
     "BACK": "Geri"
   },
   "ABOUT_PAGE": {
     "OUR_MISSION": ""
   },
+  "BLOGS": {
+    "METADATA": {
+      "TITLE": "Blog | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
+      "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'nin Türkiye'deki Suriyeli öğrenciler için akademik, kültürel ve rehberlik konularını kapsayan blog yazılarını okuyun. Öğrencilerin üniversite yolculuklarını geliştirmelerine ve farkındalıklarını artırmalarına yardımcı olacak deneyimler ve ipuçları paylaşıyoruz.",
+      "KEYWORDS": [
+        "Birlik Blogu",
+        "Öğrenci Yazıları",
+        "Çalışma İpuçları",
+        "Öğrenci Deneyimleri",
+        "Karabük Üniversitesi Öğrencileri",
+        "Türkiye'deki Suriyeli Öğrenciler",
+        "Suriyeli Öğrenci Birliği"
+      ],
+      "CANONICAL": "https://kbusyogr.com/blogs",
+      "OPENGRAPH": {
+        "TITLE": "Blog | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
+        "DESCRIPTION": "Suriyeli Öğrenci Birliği'nin Türkiye'deki Suriyeli öğrenciler için öğrenci deneyimlerini, çalışma ipuçlarını ve yararlı bilgileri vurgulayan blog yazılarını keşfedin.",
+        "URL": "https://kbusyogr.com/blogs",
+        "SITENAME": "Suriyeli Öğrenci Birliği - Karabük",
+        "LOCALE": "tr",
+        "TYPE": "website"
+      }
+    }
+  },
   "REVIEWS_PAGE": {
     "STUDENTS_REVIEWS": "Öğrenci Yorumları",
-    "REVIEWS_DESCRIPTION": "Birliğimizin öğrencilerin akademik yolculuklarına nasıl katkı sağladığını öğrencilerden dinleyin.",
-    "FILTER_BY_RATING": "Puana Göre Filtrele:",
-    "ALL_REVIEWS": "Tüm Yorumları Gör",
-    "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli Öğrenciler Birliği tarafından sunulan hizmetler ve etkinlikler hakkında Suriyeli öğrencilerin deneyimlerini ve görüşlerini keşfedin.",
-    "TITLE": "Öğrenci Görüşleri ve Deneyimleri"
+    "REVIEWS_DESCRIPTION": "Suriyeli öğrencilerin Birlik ile olan deneyimlerini ve akademik yolculuklarında nasıl yardımcı olduğumuzu dinleyin.",
+    "FILTER_BY_RATING": "Puanlamaya Göre Filtrele:",
+    "ALL_REVIEWS": "Tüm Yorumları Görüntüle",
+    "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrencilerin, Suriyeli Öğrenci Birliği'nin sunduğu hizmetler ve etkinlikler hakkındaki deneyimlerini ve görüşlerini öğrenin.",
+    "TITLE": "Öğrencilerimizin Görüşleri ve Deneyimleri"
   },
   "FAQ_PAGE": {
+    "METADATA": {
+      "TITLE": "Sıkça Sorulan Sorular | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
+      "DESCRIPTION": "Karabük Üniversitesi'ndeki yeni Suriyeli öğrencilerin üniversite kaydı, konaklama ve yasal işlemler gibi konularla ilgili tüm sorularına net ve doğrudan cevaplar bulmak için SSS sayfamızı ziyaret edin.",
+      "KEYWORDS": [
+        "Sıkça Sorulan Sorular",
+        "Öğrenci Yardımı",
+        "Üniversite Kaydı",
+        "Öğrenci Konaklama",
+        "Yasal İşlemler",
+        "Suriyeli Öğrenciler",
+        "Karabük Üniversitesi"
+      ],
+      "CANONICAL": "https://kbusyogr.com/faq",
+      "OPENGRAPH": {
+        "TITLE": "Sıkça Sorulan Sorular | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
+        "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrencilerin üniversite ve idari yaşamları hakkında en çok sorulan soruların cevapları.",
+        "URL": "https://kbusyogr.com/faq",
+        "SITENAME": "Suriyeli Öğrenci Birliği - Karabük",
+        "LOCALE": "tr",
+        "TYPE": "website"
+      }
+    },
     "FAQ_TITLE": "Sıkça Sorulan Sorular",
-    "FAQ_DESCRIPTION": "Birliğimiz hakkında merak edilen soruların cevaplarını bulun.",
+    "FAQ_DESCRIPTION": "Suriyeli Öğrenci Birliği ve hizmetlerimiz hakkında sıkça sorulan soruların cevaplarını keşfedin.",
     "SEARCH_PLACEHOLDER": "Soruları ara...",
-    "VIEW_ALL_FAQ": "Tüm SSS'leri Gör",
-    "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenciler Birliği Sıkça Sorulan Sorular sayfasında, kayıt, etkinlikler, akademik destek ve Türkiye'deki üniversite hayatı hakkında yanıtlar bulabilirsiniz.",
-    "TITLE": "SSS"
+    "VIEW_ALL_FAQ": "Tüm SSS'leri Görüntüle",
+    "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'nin kayıt, etkinlikler, akademik destek ve Türkiye'deki üniversite yaşamı hakkındaki sıkça sorulan soruların cevapları için SSS bölümümüzü ziyaret edin.",
+    "TITLE": "Sıkça Sorulan Sorular"
   },
   "FACULTIES_SECTION": {
-    "TITLE": "Fakülteler"
+    "TITLE": "Fakülteler",
+    "DESCRIPTION": "Üniversitedeki fakültelerimiz ve uzman öğrenciler"
   },
   "DEPARTMENTS_SECTION": {
-    "TITLE": "Bölümler",
-    "DESCRIPTION": "Üniversitenin dalları ve uzmanları hakkında bilgi edinin",
-    "VIEW_DETAILS": "Ayrıntıları Görüntüle",
-    "NO_DEPARTMENTS_FOUND": "Departman bulunamadı",
-    "NO_DEPARTMENTS_FOUND_DESCRIPTION": "Henüz ekleme eklentisi yok",
-    "CONTACT_WITH_EXPERTS": "Bir yetkiliyle iletişime geçin",
-    "EXPERTS_SECTION": {
-      "TITLE": "Şube yetkilileri"
+    "METADATA": {
+      "TITLE": "Bölümler | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
+      "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'nin bölümlerini tanıyın. Her bölümde, yeni öğrencilere yardımcı olan ve farklı disiplinlerde akademik rehberlik ve etkili iletişim sağlayan Suriyeli öğrenciler bulunmaktadır.",
+      "KEYWORDS": [
+        "Birlik Bölümleri",
+        "Üniversite Bölümleri",
+        "Akademik Rehberlik",
+        "Suriyeli Öğrenciler",
+        "Karabük Üniversitesi",
+        "Yeni Öğrencilere Yardım",
+        "Suriyeli Öğrenci Birliği"
+      ],
+      "CANONICAL": "https://kbusyogr.com/departments",
+      "OPENGRAPH": {
+        "TITLE": "Bölümler | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
+        "DESCRIPTION": "Suriyeli Öğrenci Birliği'nin farklı bölümlerini keşfedin ve Suriyeli öğrencileri desteklemeye ve yönlendirmeye katkıda bulunan bölüm temsilcilerini tanıyın.",
+        "URL": "https://kbusyogr.com/departments",
+        "SITENAME": "Suriyeli Öğrenci Birliği - Karabük",
+        "LOCALE": "tr",
+        "TYPE": "website"
+      }
     },
-    "ALL": "Tüm"
+    "TITLE": "Bölümler",
+    "DESCRIPTION": "Üniversitedeki bölümlerimizi ve uzmanlarını tanıyın",
+    "ALL": "Tümü",
+    "VIEW_DETAILS": "Detayları Görüntüle",
+    "NO_DEPARTMENTS_FOUND": "Bölüm Bulunamadı",
+    "NO_DEPARTMENTS_FOUND_DESCRIPTION": "Henüz hiç bölüm eklenmedi",
+    "CONTACT_WITH_EXPERTS": "Sorumlu",
+    "EXPERTS_SECTION": {
+      "TITLE": "Bölüm Sorumluları"
+    }
   }
 }
