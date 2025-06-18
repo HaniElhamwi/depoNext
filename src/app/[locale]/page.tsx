@@ -8,6 +8,11 @@ import OfficeSwiper from "@/components/home/OfficeSwiper";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { FRONTEND_URL } from "@/constants/env";
+import Period from "@/components/home/Period";
+import Stats from "@/components/home/Stats";
+import TestimonialSlider from "@/components/home/Testimonial";
+import About from "@/components/home/About";
+import DistrictsSection from "@/components/home/DistrictsSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("HOME_PAGE.METADATA");
@@ -35,18 +40,22 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const Index = async () => {
-  return (
-    <>
-      <HeroSection />
-      <ActivitiesPreview />
-      <OfficeSwiper />
-      {/* <TestimonialsSection /> */}
-      <BlogPreview />
-      <CallToAction />
-      <FaqPreview />
-    </>
-  );
-};
+const Index = async () => (
+  <>
+    <HeroSection />
+    <Period />
+    <Stats />
+    <TestimonialSlider />
+    <About />
+    <DistrictsSection />
+    {/* <ActivitiesPreview /> */}
+
+    {/* <OfficeSwiper /> */}
+    {/* <TestimonialsSection /> */}
+    {/* <BlogPreview /> */}
+    {/* <CallToAction /> */}
+    <FaqPreview />
+  </>
+);
 
 export default Index;

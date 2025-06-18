@@ -10,11 +10,13 @@ import { Link } from "@/i18n/navigation";
 const navItems = [
   { name: "HOME", path: "/" },
   { name: "ABOUT", path: "/about" },
-  { name: "EVENTS", path: "/events" },
-  { name: "BLOG", path: "/blog" },
-  { name: "DEPARTMENTS", path: "/departments" },
-  // { name: "REVIRES", path: "/reviews" },
-  { name: "FAQ", path: "/faq" },
+  { name: "SERVICES", path: "/services" },
+  { name: "PRICING", path: "/pricing" },
+  { name: "CONTACT", path: "/contact" },
+  // { name: "EVENTS", path: "/events" },
+  // { name: "BLOG", path: "/blog" },
+  // { name: "DEPARTMENTS", path: "/departments" },
+  // { name: "FAQ", path: "/faq" },
 ];
 
 const Header = () => {
@@ -30,19 +32,22 @@ const Header = () => {
             {/* <div className="h-10 w-10 bg-ssu-blue rounded-full flex items-center justify-center">
               <span className="text-white font-bold">SSU</span>
             </div> */}
-            <Image
-              src="/images/logo.png"
-              alt="SSU Logo"
-              width={100}
-              height={100}
-              className="h-10 w-10 rounded-full"
-            />
+            <div>
+              {/* <Image
+                src="/images/logo.png"
+                alt="SSU Logo"
+                // layout="fill"
+                width={100}
+                height={60}
+                className="object-cover rounded-full"
+              /> */}
+            </div>
             <div className="hidden md:block">
               <h1 className="text-lg font-bold text-ssu-blue rtl:font-changa ltr:font-montserrat">
                 {t("SSU")}
               </h1>
-              <p className="text-xs text-[#e8791d] rtl:font-changa ltr:font-montserrat">
-                {t("KARABUK_UNIVERSITY")}
+              <p className="text-xs text-ssu-orange rtl:font-changa ltr:font-montserrat">
+                {t("LOGO_TEXT")}
               </p>
             </div>
           </Link>
@@ -53,7 +58,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.path}
-                className="text-gray-800 hover:text-ssu-blue !font-semi transition-colors font-tajawal">
+                className="text-gray-800 font-semibold hover:text-ssu-blue !font-semi transition-colors font-tajawal">
                 {t(item.name)}
               </Link>
             ))}
@@ -65,7 +70,7 @@ const Header = () => {
               </Button>
             </Link>
 
-            <LangaugeSelector />
+            {/* <LangaugeSelector /> */}
           </nav>
 
           {/* Mobile menu button */}

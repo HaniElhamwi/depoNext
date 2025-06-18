@@ -67,9 +67,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+
         ssu: {
-          blue: "#0a9baf",
-          orange: "#ea7b15",
+          blue: "#409961",
+          orange: "#2b3439",
           "light-blue": "#3b82f6",
           "light-orange": "#fb923c",
         },
@@ -80,6 +81,10 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "spin-once": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
         "accordion-down": {
           from: {
             height: "0",
@@ -111,6 +116,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
+        "spin-once": "spin-once 0.7s ease-out 1 forwards", // 1 forwards means it stops at the end
       },
     },
   },

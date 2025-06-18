@@ -30,42 +30,57 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const About = async () => {
-  const t = await getTranslations("ABOUT_SECTION");
   return (
     <>
       {/* Hero Section */}
       <section className="bg-ssu-blue text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="h1 mb-6 rtl:font-changa ltr:font-montserrat">
-            {t("TITLE")}
+            Hakkımızda
           </h1>
-          <p className="text-lg max-w-3xl mx-auto text-gray-100 font-semibold">
-            {t("DESCRIPTION")}
+          <p className="text-[16px] max-w-3xl mx-auto text-gray-200 font-semibold">
+            Kişiye özel depo kiralama alanında, eşyalarınıza değer veren çözüm
+            ortağınızız. Alan sıkıntısı mı yaşıyorsunuz? Taşınıyor musunuz? Ya
+            da sadece ekstra depolama alanına mı ihtiyacınız var? İşte biz tam
+            da bunun için buradayız! Size ihtiyaçlarınıza özel, güvenli ve esnek
+            depolama alanları sunuyoruz. Eşyalarınız modern güvenlik
+            sistemlerimizle 7/24 güvende. Üstelik dilediğiniz zaman eşyalarınıza
+            kolayca erişebilirsiniz. Amacımız, size sadece bir depo değil; daha
+            fazla alan, daha az stres ve daha fazla özgürlük sunmak.
+            Eşyalarınızı güvenle bize emanet edin, gerisini düşünmeyin!
           </p>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="h2 text-ssu-blue mb-6 rtl:font-changa ltr:font-montserrat">
-                {t("MISSION_TITLE")}
-              </h2>
-              <p className="text-gray-600 mb-4 font-semibold">
-                {t("MISSION_DESCRIPTION_1")}
-              </p>
-              <p className="text-gray-600 font-semibold">
-                {t("MISSION_DESCRIPTION_2")}
+      <section className="bg-gray-50">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 rounded-lg">
+          <div className="space-y-8 lg:grid lg:grid-cols-2 sm:gap-12 lg:space-y-0 rounded-lg">
+            {/* Misyon Bölümü */}
+            <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <h3 className="section-title !text-2xl mb-2">Misyonumuz</h3>
+              <p className="text-sm font-light  font-montserrat text-gray-600">
+                Müşterilerimizin değişen depolama ihtiyaçlarını anlayarak,
+                onlara kişiye özel, esnek ve güvenli depolama çözümleri sunmak.
+                Teknolojiyi ve müşteri odaklı hizmet anlayışımızı birleştirerek,
+                depolama sürecini kolay, şeffaf ve sorunsuz hale getirmek. Her
+                bir müşterimiz için maksimum memnuniyet sağlamak, eşyalarına
+                kendi eşyamız gibi özen göstermek ve bu süreçte onlara güvenilir
+                bir ortak olmaktır
               </p>
             </div>
-            <div>
-              <h2 className="h2 text-ssu-green mb-6 text-ssu-blue rtl:font-changa ltr:font-montserrat">
-                {t("VISION_TITLE")}
-              </h2>
-              <p className="text-gray-600 mb-4 font-semibold">
-                {t("VISION_DESCRIPTION_1")}
+
+            {/* Vizyon Bölümü */}
+            <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <h3 className="section-title !text-2xl mb-2">Vizyonumuz</h3>
+              <p className="text-sm font-light  font-montserrat text-gray-600">
+                İnsanların eşyalarını sadece bir depoya değil, güvende ve
+                erişilebilir bir çözüme emanet ettikleri bir gelecek inşa etmek.
+                Kişiye özel depolama alanlarımızla, her bireyin benzersiz
+                ihtiyaçlarına kusursuzca uyum sağlayan, esnek ve güvenilir
+                depolama deneyimleri sunarak sektörde lider ve ilham veren bir
+                marka olmayı hedefliyoruz. Eşyaların ötesinde, müşterilerimizin
+                hayatında yer açan ve onlara huzur veren bir çözüm ortağı olmak
+                için çalışıyoruz.
               </p>
             </div>
           </div>

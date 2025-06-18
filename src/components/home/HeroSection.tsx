@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
 
 const HeroSection = () => {
@@ -8,7 +9,7 @@ const HeroSection = () => {
   return (
     <section className="relative text-white py-20 md:py-32 overflow-hidden">
       {/* Background Video */}
-      <video
+      {/* <video
         autoPlay
         muted
         loop
@@ -19,10 +20,18 @@ const HeroSection = () => {
           type="video/mp4"
         />
         Your browser does not support the video tag.
-      </video>
-
+      </video> */}
+      {/* hero-image.jpg */}
+      <Image
+        src="/images/hero-image.jpg"
+        alt="Hero Background"
+        // className="absolute inset-0 w-full object-cover h-full z-0 opacity-50"
+        className="object-cover"
+        layout="fill"
+        priority
+      />
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-ssu-blue/90 to-ssu-orange/80 z-1"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-ssu-blue/80 to-ssu-orange/80 z-1"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center">
@@ -39,17 +48,17 @@ const HeroSection = () => {
                 size="lg"
                 className="bg-white hover:bg-gray-200 text-ssu-blue">
                 <Link href="/about" className="text-ssu-blue font-medium">
-                  {t("LEARN_MORE")}
+                  {t("TAKE_OFFER")}
                 </Link>
               </Button>
-              <Button
+              {/* <Button
                 asChild
                 size="lg"
                 className="bg-white hover:bg-gray-200 text-ssu-blue">
                 <Link href="/events" className="text-ssu-blue font-medium">
                   {t("VIEW_ACTIVITIES")}
                 </Link>
-              </Button>
+              </Button> */}
             </div>
           </div>
 
@@ -57,9 +66,11 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center overflow-hidden">
                 <div className="text-center p-6">
-                  <div className="text-5xl font-bold">KBUSYOGR</div>
-                  <div className="text-xl mt-2">{t("KARABUK_UNIVERSITY")}</div>
-                  <div className="text-sm mt-1 opacity-80">Est. 02.11.2025</div>
+                  <div className="text-5xl font-bold">DepoNext</div>
+                  <div className="text-xl mt-2">{t("LOGO_TEXT")}</div>
+                  <div className="text-3xl font-bold mt-1 opacity-80 ">
+                    7/24
+                  </div>
                 </div>
               </div>
               <div className="absolute -bottom-3 -right-3 w-24 h-24 rounded-full bg-ssu-orange"></div>

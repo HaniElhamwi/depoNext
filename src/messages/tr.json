@@ -1,43 +1,25 @@
 {
   "HOME_PAGE": {
-    "METADATA": {
-      "TITLE": "Ana Sayfa | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
-      "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği, 2020'den bu yana Türkiye'deki Suriyeli öğrencilerin akademik yolculuklarında onları desteklemeye kendini adamıştır. Birlik, akademik mükemmelliği, kişisel gelişimi ve kültürel alışverişi teşvik eden yararlı kaynaklar ve etkinlikler sunarak uyumlu ve başarılı bir öğrenci topluluğu oluşturulmasına katkıda bulunur.",
-      "KEYWORDS": [
-        "Suriyeli Öğrenci Birliği",
-        "Karabük Üniversitesi",
-        "Türkiye'deki Suriyeli Öğrenciler",
-        "Akademik Destek",
-        "Öğrenci Etkinlikleri",
-        "Türkiye'deki Arap Öğrenciler",
-        "Karabük'teki Suriyeli Öğrenciler"
-      ],
-      "CANONICAL": "https://kbusyogr.com",
-      "OPENGRAPH": {
-        "TITLE": "Ana Sayfa | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
-        "DESCRIPTION": "2020'den beri Karabük Üniversitesi Suriyeli Öğrenci Birliği, eğitim ve sosyal etkinlikler aracılığıyla Suriyeli öğrencilere destek ve yardım sağlamaktadır.",
-        "URL": "https://kbusyogr.com",
-        "SITENAME": "Suriyeli Öğrenci Birliği - Karabük",
-        "LOCALE": "tr",
-        "TYPE": "website"
-      }
-    },
     "HOME": "Ana Sayfa",
     "ABOUT": "Hakkımızda",
     "EVENTS": "Etkinlikler",
+    "CONTACT": "İletişim",
+    "PRICING": "Fiyatlar",
+    "SERVICES": "Hizmetler",
     "BLOG": "Blog",
     "REVIRES": "İncelemeler",
+    "TAKE_OFFER": "Heme Teklifi Al",
     "FAQ": "SSS",
     "CONTACT_US": "Bize Ulaşın",
-    "HERO_TITLE": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'ne Hoş Geldiniz",
-    "HERO_DESCRIPTION": "Suriyeli öğrencileri topluluk, kaynaklar ve büyüme fırsatlarıyla destekliyoruz.",
+    "HERO_TITLE": "Eşyalarınız İçin Güvenli ve Kolay Depolama Çözümü",
+    "HERO_DESCRIPTION": "Kendinize Özel Depolama Alanınızı Oluşturun",
     "LEARN_MORE": "Daha Fazla Bilgi",
     "VIEW_ACTIVITIES": "Etkinlikleri Görüntüle",
-    "KARABUK_UNIVERSITY": "Karabük Üniversitesi",
+    "LOGO_TEXT": "Kişiye Özel Depo Kiralama",
     "ACTIVITY_TITLE": "Son Etkinliklerimiz",
     "ACTIVITY_DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrencileri desteklemek, birbirine bağlamak ve güçlendirmek amacıyla düzenlediğimiz son etkinlikleri keşfedin.",
     "VIEW_ALL_ACTIVITIES": "Tüm Etkinlikleri Görüntüle",
-    "SSU": "Suriyeli Öğrenci Birliği",
+    "SSU": "Depo Next",
     "CART_TITLE": "Karabük Üniversitesi Suriyeli Öğrenci Birliği Ofisleri",
     "OFFICES": [
       {

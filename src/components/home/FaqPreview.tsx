@@ -11,9 +11,39 @@ import { fetcher } from "@/lib/fetch";
 
 const FaqPreview = async () => {
   const t = await getTranslations("FAQ_SECTION");
-  const faqs: any =
-    (await fetcher<any>(`/faqs?pagination[limit]=6&sort[0]=createdAt:desc`))
-      .data || [];
+
+  const data = [
+    {
+      id: 1,
+      question: "Eşyalarım nasıl taşınıyor?",
+      answer:
+        "Eşyalarınız profesyonel ekibimiz tarafından güvenli bir şekilde paketlenir ve uygun araçlarla depolama alanına taşınır.",
+    },
+    {
+      id: 2,
+      question: "Depolama süresi ne kadar olabilir?",
+      answer:
+        "Depolama süresi tamamen sizin ihtiyacınıza göre belirlenebilir. Kısa ya da uzun vadeli depolama seçeneklerimiz mevcuttur.",
+    },
+    {
+      id: 3,
+      question: "Depo alanları güvenli mi?",
+      answer:
+        "Evet. Tüm depo alanlarımız 7/24 güvenlik kameraları ile izlenmekte ve yangın alarm sistemleri ile donatılmıştır.",
+    },
+    {
+      id: 4,
+      question: "Depolama ücretleri nasıl belirleniyor?",
+      answer:
+        "Ücretlendirme; eşyaların hacmine, depolama süresine ve taşıma mesafesine göre belirlenir. Size özel teklifler sunulmaktadır.",
+    },
+    {
+      id: 5,
+      question: "Depolanan eşyaları tekrar nasıl alabilirim?",
+      answer:
+        "Bize en az 24 saat önceden haber verdiğinizde, eşyalarınızı size en kısa sürede teslim ediyoruz.",
+    },
+  ];
 
   return (
     <section className="py-16 bg-gray-50">
@@ -29,9 +59,8 @@ const FaqPreview = async () => {
           <Accordion
             type="single"
             collapsible
-            className="bg-white rounded-lg shadow-md p-6"
-          >
-            {faqs?.map((item) => (
+            className="bg-white rounded-lg shadow-md p-6">
+            {data?.map((item) => (
               <AccordionItem key={item.id} value={`item-${item.id}`}>
                 <AccordionTrigger className="text-left font-bold">
                   {item.question}
@@ -48,8 +77,7 @@ const FaqPreview = async () => {
               <Button
                 asChild
                 variant="outline"
-                className="border-ssu-blue text-ssu-blue hover:bg-ssu-blue hover:text-white"
-              >
+                className="border-ssu-blue text-ssu-blue hover:bg-ssu-blue hover:text-white">
                 {t("VIEW_ALL_FAQ")}
               </Button>
             </Link>

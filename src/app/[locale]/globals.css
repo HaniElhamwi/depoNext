@@ -13,10 +13,12 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 215 90% 24%;
+    /* primary: "#409961", */
+    /* secondary: "#2b3439", */
+    --primary: 142 41% 43%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 142 75% 29%;
+    --secondary: 201 14% 20%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
@@ -180,4 +182,67 @@
     transform: scale(4);
     opacity: 0;
   }
+}
+
+.custom-bullet {
+  position: relative;
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 0.5em;
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+
+.custom-bullet-active {
+  background: #419b62 !important;
+  width: 30px !important;
+  border-radius: 5px !important;
+}
+
+.swiper-pagination {
+  margin-top: 70px !important;
+}
+
+/* Custom Swiper Styles */
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "" !important;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "" !important;
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+/* Swiper Active Slide Styles (handled with direct CSS or Tailwind variants) */
+.swiper-slide.swiper-slide-active {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(79 70 229 / var(--tw-border-opacity)) !important;
+}
+
+.swiper-slide.swiper-slide-active > .swiper-slide-active\:text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
+.swiper-slide.swiper-slide-active
+  > .flex
+  .grid
+  .swiper-slide-active\:text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
 }

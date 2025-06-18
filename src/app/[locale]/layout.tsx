@@ -2,6 +2,7 @@ import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { Changa, Montserrat, Tajawal } from "next/font/google";
 import MainLayout from "@/components/layout/MainLayout";
+import FloatingButtons from "@/components/FloatingButtonts";
 
 const changa = Changa({
   weight: "700",
@@ -23,7 +24,10 @@ export default async function RootLayout({ children, params }: any) {
     <html lang={locale} dir={direction}>
       <body className={`font-tajawal ${tajwal.className} `}>
         <NextIntlClientProvider>
-          <MainLayout params={awaitedParams}>{children}</MainLayout>
+          <MainLayout params={awaitedParams}>
+            <FloatingButtons />
+            {children}
+          </MainLayout>
         </NextIntlClientProvider>
       </body>
     </html>

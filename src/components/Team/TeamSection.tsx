@@ -6,43 +6,42 @@ import { Link } from "@/i18n/navigation";
 import { Instagram } from "lucide-react";
 import TeamMemberModal from "./TeamModal";
 
+const teamMembers = [
+  {
+    id: "1",
+    name: "Hüseyin Eş",
+    role: "Genel Müdür",
+    image:
+      "https://masterpiecer-images.s3.yandex.net/81780f45717911eea202badf81d486ab:upscaled", // Replace with actual image paths
+    instagram: "ayse_dev",
+    bio: "Ayşe is a seasoned developer with a passion for building scalable web applications. She specializes in front-end technologies and enjoys exploring new frameworks in her free time.",
+  },
+  {
+    id: "2",
+    name: "Burhan Eren",
+    role: "Satış Danışmanı",
+    image:
+      "https://i.pinimg.com/564x/7b/6d/18/7b6d18cca0fbf52900aa0733073bf59a.jpg", // Replace with actual image paths
+    instagram: "can_designs",
+    bio: "Can is a creative UI/UX designer known for his intuitive and visually appealing designs. He thrives on user-centered design principles and enjoys bringing ideas to life.",
+  },
+  {
+    id: "3",
+    name: "Enes Eş",
+    role: "Nakliye Uzmanı",
+    image:
+      "https://i.pinimg.com/564x/7c/24/3e/7c243e43ffa2ab0840025ea56122d9f0.jpg", // Replace with actual image paths
+    instagram: null,
+    bio: "Deniz is an experienced project manager who excels at leading cross-functional teams and ensuring projects are delivered on time and within budget. He is a master of organization.",
+  },
+];
+
 const TeamSection = async () => {
-  const t = await getTranslations();
-
-  let teamMembers = [];
-
-  try {
-    const res: any = await fetcher("/team-members?populate=image");
-    teamMembers =
-      res?.data
-        ?.map((item: any) => ({
-          id: item.id,
-          name: item.name,
-          role: item.position,
-          bio: item.bio,
-          image: item.image?.url ? `${item.image.url}` : "/placeholder.jpg",
-          priority: item.priority,
-          instagram: item.instagram,
-        }))
-        .sort((a, b) => {
-          if (a.priority && b.priority) {
-            return a.priority - b.priority;
-          } else if (a.priority) {
-            return -1;
-          } else if (b.priority) {
-            return 1;
-          }
-          return 0;
-        }) ?? [];
-  } catch (error) {
-    console.error("Error loading team members:", error);
-  }
-
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
         <h2 className="h2 text-ssu-blue mb-8 text-center section-title">
-          {t("ABOUT_SECTION.MEET_OUR_TEAM")}
+          Ekibimizle Tanışın
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member) => (
@@ -69,7 +68,7 @@ const TeamSection = async () => {
                   </div>
                   <div className="flex justify-between mb-3 items-center">
                     {/* {member.instagram && ( */}
-                    {member.instagram && (
+                    {/* {member.instagram && (
                       <Link
                         target="_blank"
                         href={
@@ -82,15 +81,15 @@ const TeamSection = async () => {
                           size={18}
                         />
                       </Link>
-                    )}
+                    )} */}
                     {/* )} */}
                     {/* <div className="text-ssu-orange cursor-pointer underline flex items-center hover:underline group-hover:text-ssu-blue transition-colors duration-300 ease-in-out">
                       {t("COMMON.READ_MORE")}
                     </div> */}
-                    <TeamMemberModal
+                    {/* <TeamMemberModal
                       members={teamMembers}
                       memberId={member.id}
-                    />
+                    /> */}
                   </div>
                 </div>
               </CardContent>
