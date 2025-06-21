@@ -40,31 +40,34 @@ const data = [
 const Period = () => {
   return (
     <section className="relative text-white py-20 md:py-32 overflow-hidden">
-      <div className="container mx-auto px-4">
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          spaceBetween={50}
-          slidesPerView={1}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-          pagination={{
-            clickable: true,
-            bulletClass: "swiper-pagination-bullet custom-bullet",
-            bulletActiveClass:
-              "swiper-pagination-bullet-active custom-bullet-active",
-          }}>
-          {data.map((step, index) => (
-            <SwiperSlide key={step.id}>
-              <div className="flex flex-col md:flex-row gap-10">
-                <div className="flex-1 flex items-center justify-center">
-                  <Image
-                    src="/images/period.jpg"
-                    alt="Period Image"
-                    width={500}
-                    height={300}
-                    className=""
-                  />
-                </div>
-                <div className="flex-1 flex flex-col">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
+        {/* Static Image */}
+        <div className="flex-1 flex justify-center">
+          <Image
+            src="/images/period.jpg"
+            alt="Period Image"
+            width={500}
+            height={300}
+            className="rounded-lg object-cover"
+          />
+        </div>
+
+        {/* Swiper with only text */}
+        <div className="flex-1 max-w-xl w-full">
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={50}
+            slidesPerView={1}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            pagination={{
+              clickable: true,
+              bulletClass: "swiper-pagination-bullet custom-bullet",
+              bulletActiveClass:
+                "swiper-pagination-bullet-active custom-bullet-active",
+            }}>
+            {data.map((step, index) => (
+              <SwiperSlide key={step.id}>
+                <div className="flex flex-col">
                   <p className="bg-secondary py-1 px-2 text-sm font-montserrat mb-8 font-semibold text-white max-w-max rounded-full">
                     Aşama 0{index + 1}
                   </p>
@@ -78,10 +81,10 @@ const Period = () => {
                     {step.description}
                   </p>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   );

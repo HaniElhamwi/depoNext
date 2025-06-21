@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useEffect } from "react";
-import Swiper from "swiper";
-import "swiper/swiper-bundle.css"; // Import Swiper styles
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const testimonialsData = [
   {
@@ -41,7 +43,7 @@ const testimonialsData = [
 
 const StarIcon = () => (
   <svg
-    className="w-5 h-5"
+    className="w-5 h-5 text-amber-500"
     viewBox="0 0 18 17"
     fill="none"
     xmlns="http://www.w3.org/2000/svg">
@@ -85,106 +87,68 @@ const NavArrowRight = () => (
 );
 
 const TestimonialCard = ({ testimonial }) => (
-  <div
-    key={testimonial.id}
-    className="swiper-slide group bg-white border border-solid h-auto border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-primary">
-    <div className="flex items-center mb-9 gap-2 text-amber-500 transition-all duration-500 group-hover:text-primary">
+  <div className="bg-white border border-gray-300 rounded-2xl p-6 w-full hover:border-primary transition duration-300">
+    <div className="flex items-center mb-4 gap-1 text-amber-500">
       {Array.from({ length: testimonial.rating }).map((_, i) => (
         <StarIcon key={i} />
       ))}
     </div>
-    <p className="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9 group-hover:text-gray-800">
-      {testimonial.text}
-    </p>
+    <p className="text-gray-600 mb-6 min-h-[96px]">{testimonial.text}</p>
     <div className="flex items-center gap-5">
       <img
-        className="rounded-full object-cover"
+        className="rounded-full w-14 h-14 object-cover"
         src={testimonial.avatar}
-        alt="avatar"
+        alt={`${testimonial.name} avatar`}
       />
-      <div className="grid gap-1">
-        <h5 className="text-gray-900 font-medium transition-all duration-500 group-hover:text-primary">
-          {testimonial.name}
-        </h5>
-        <span className="text-sm leading-6 text-gray-500">
-          {testimonial.title}
-        </span>
+      <div>
+        <h5 className="font-semibold text-gray-900">{testimonial.name}</h5>
+        <p className="text-sm text-gray-500">{testimonial.title}</p>
       </div>
     </div>
   </div>
 );
 
 const TestimonialSlider = () => {
-  useEffect(() => {
-    const swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      navigation: {
-        nextEl: "#slider-button-right",
-        prevEl: "#slider-button-left",
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      },
-      on: {
-        slideChange: function () {
-          // Remove active classes from all slides
-          document.querySelectorAll(".swiper-slide").forEach((slide) => {
-            slide.classList.remove("swiper-slide-active");
-            slide.classList.remove("slide-active:border-primary"); // Ensure this is handled by Tailwind's JIT or CSS
-            slide
-              .querySelectorAll(".swiper-slide-active\\:text-primary")
-              .forEach((el) => {
-                el.classList.remove("swiper-slide-active:text-primary"); // Remove the dynamic class
-                el.classList.remove("text-primary"); // Manually remove the Tailwind class if needed
-              });
-          });
-
-          // Add active classes to the current active slide
-          const activeSlide = this.slides[this.activeIndex];
-          if (activeSlide) {
-            activeSlide.classList.add("swiper-slide-active");
-            // For the Tailwind dynamic classes, you might need a more robust solution
-            // This example assumes Tailwind's JIT handles group-hover/etc. correctly
-            // For swiper-slide-active specific styles, see the global CSS section below.
-          }
-        },
-      },
-    });
-  }, []);
-
   return (
-    <section className="py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-14 flex flex-col justify-center items-center sm:flex-row sm:items-center sm:justify-between max-sm:gap-8">
-          <h2 className="text-4xl section-title lg:text-left">
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="flex justify-between items-center mb-12">
+          <h2 className="text-4xl font-bold section-title">
             Müşteri Yorumları
           </h2>
-          <div className="flex items-center gap-8">
+          <div className="flex gap-6">
             <button
-              id="slider-button-left"
-              className="swiper-button-prev group flex justify-center items-center border border-solid border-primary w-12 h-12 transition-all duration-500 rounded-full hover:bg-primary">
+              aria-label="Previous Slide"
+              className="swiper-button-prev group flex justify-center items-center border border-primary w-12 h-12 rounded-full hover:bg-primary transition">
               <NavArrowLeft />
             </button>
             <button
-              id="slider-button-right"
-              className="swiper-button-next group flex justify-center items-center border border-solid border-primary  transition-all duration-500 rounded-full hover:bg-primary">
+              aria-label="Next Slide"
+              className="swiper-button-next group flex justify-center items-center border border-primary w-12 h-12 rounded-full hover:bg-primary transition">
               <NavArrowRight />
             </button>
           </div>
         </div>
-        <div className="lg:flex grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-8 swiper mySwiper">
-          <div className="swiper-wrapper">
-            {testimonialsData.map((testimonial) => (
-              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-            ))}
-          </div>
-        </div>
+
+        <Swiper
+          modules={[Navigation]}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+          spaceBetween={30}
+          slidesPerView={1}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="pb-8">
+          {testimonialsData.map((testimonial) => (
+            <SwiperSlide key={testimonial.id}>
+              <TestimonialCard testimonial={testimonial} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

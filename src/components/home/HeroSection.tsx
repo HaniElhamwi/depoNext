@@ -7,7 +7,7 @@ const HeroSection = () => {
   const t = useTranslations("HOME_PAGE");
 
   return (
-    <section className="relative text-white py-20 md:py-32 overflow-hidden">
+    <section className="relative text-white py-20 md:py-32 overflow-hidden ">
       {/* Background Video */}
       {/* <video
         autoPlay
@@ -33,7 +33,7 @@ const HeroSection = () => {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-ssu-blue/80 to-ssu-orange/80 z-1"></div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 animate-fadeIn">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0 md:pr-10 space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight rtl:font-changa ltr:font-montserrat">
@@ -66,7 +66,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center overflow-hidden">
                 <div className="text-center p-6">
-                  <div className="text-5xl font-bold">DepoNext</div>
+                  <div className="text-5xl font-bold ">DepoNext</div>
                   <div className="text-xl mt-2">{t("LOGO_TEXT")}</div>
                   <div className="text-3xl font-bold mt-1 opacity-80 ">
                     7/24

@@ -20,7 +20,9 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
-    
+  },
+  experimental: {
+    viewTransition: true,
   },
 };
 

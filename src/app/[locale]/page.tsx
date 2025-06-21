@@ -13,6 +13,7 @@ import Stats from "@/components/home/Stats";
 import TestimonialSlider from "@/components/home/Testimonial";
 import About from "@/components/home/About";
 import DistrictsSection from "@/components/home/DistrictsSection";
+import Map from "@/components/home/Map";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("HOME_PAGE.METADATA");
@@ -44,6 +45,7 @@ const Index = async () => (
   <>
     <HeroSection />
     <Period />
+    <Map />
     <Stats />
     <TestimonialSlider />
     <About />
