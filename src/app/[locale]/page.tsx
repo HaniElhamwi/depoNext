@@ -49,12 +49,6 @@ const Index = async () => {
       <TestimonialSlider />
       <About />
       <DistrictsSection />
-      {/* <ActivitiesPreview /> */}
-
-      {/* <OfficeSwiper /> */}
-      {/* <TestimonialsSection /> */}
-      {/* <BlogPreview /> */}
-      {/* <CallToAction /> */}
       <FaqPreview />
     </>
   );

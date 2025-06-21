@@ -206,6 +206,19 @@
     ]
   },
   "PRICING_PAGE": {
+    "PRICE_TITLE": "Affordable Storage Solutions",
+    "METADATA": {
+      "TITLE": "Storage Options Tailored to Your Needs | Depo Next",
+      "DESCRIPTION": "We offer flexible and affordable storage solutions tailored to your needs.",
+      "KEYWORDS": [
+        "Depo Next",
+        "storage pricing",
+        "storage options",
+        "affordable storage",
+        "flexible storage rental",
+        "secure storage"
+      ]
+    },
     "TITLE": "Storage Options to Suit Your Needs",
     "DESCRIPTION": "We offer affordable and flexible solutions for your storage needs.",
     "STARTING_FROM": "Starting from",
@@ -346,5 +359,20 @@
     "VIEW_ALL_FAQ": "View All FAQs",
     "DESCRIPTION": "Answers to frequently asked questions about reservations, pricing, and storage usage with Depo Next.",
     "TITLE": "Frequently Asked Questions"
+  },
+  "SERVICES": {
+    "METADATA": {
+      "TITLE": "Services | Depo Next - Secure and Flexible Storage Solutions",
+      "DESCRIPTION": "Discover Depo Next’s wide range of secure and affordable storage services tailored to your needs. From personal storage to business solutions, we ensure your belongings are safe and accessible.",
+      "KEYWORDS": [
+        "Depo Next",
+        "storage services",
+        "secure storage",
+        "flexible storage solutions",
+        "affordable storage",
+        "warehouse rental",
+        "storage space"
+      ]
+    }
   }
 }

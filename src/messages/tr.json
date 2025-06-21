@@ -206,6 +206,19 @@
     ]
   },
   "PRICING_PAGE": {
+    "PRICE_TITLE": "Depo Fiyatları",
+    "METADATA": {
+      "TITLE": "İhtiyacınıza Uygun Depolama Seçenekleri | Depo Next",
+      "DESCRIPTION": "Depolama ihtiyaçlarınıza göre uygun fiyatlı ve esnek çözümler sunuyoruz.",
+      "KEYWORDS": [
+        "Depo Next",
+        "depo fiyatları",
+        "depolama seçenekleri",
+        "uygun fiyatlı depo",
+        "esnek depo kiralama",
+        "güvenli depolama"
+      ]
+    },
     "TITLE": "İhtiyacınıza Uygun Depolama Seçenekleri",
     "DESCRIPTION": "Depolama ihtiyaçlarınıza göre uygun fiyatlı ve esnek çözümler sunuyoruz.",
     "STARTING_FROM": "Başlayan fiyatlarla",
@@ -349,5 +362,20 @@
     "VIEW_ALL_FAQ": "Tüm SSS'leri Görüntüle",
     "DESCRIPTION": "Depo Next ile ilgili rezervasyon, fiyatlandırma ve depo kullanımı hakkında sıkça sorulan soruların yanıtları.",
     "TITLE": "Sıkça Sorulan Sorular"
+  },
+  "SERVICES": {
+    "METADATA": {
+      "TITLE": "Hizmetler | Depo Next - Güvenli ve Esnek Depolama Çözümleri",
+      "DESCRIPTION": "Depo Next’in ihtiyaçlarınıza özel güvenli ve uygun fiyatlı geniş depolama hizmetlerini keşfedin. Kişisel depolamadan iş çözümlerine kadar eşyalarınız güvende ve erişilebilir.",
+      "KEYWORDS": [
+        "Depo Next",
+        "depolama hizmetleri",
+        "güvenli depo",
+        "esnek depolama çözümleri",
+        "uygun fiyatlı depo",
+        "depo kiralama",
+        "depolama alanı"
+      ]
+    }
   }
 }

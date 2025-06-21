@@ -1,9 +1,11 @@
 "use client";
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import Image from "next/image";
 
 const navItems = [
   { name: "HOME", path: "/" },
@@ -11,95 +13,91 @@ const navItems = [
   { name: "SERVICES", path: "/services" },
   { name: "PRICING", path: "/pricing" },
   { name: "CONTACT", path: "/contact" },
-  // { name: "EVENTS", path: "/events" },
-  // { name: "BLOG", path: "/blog" },
-  // { name: "DEPARTMENTS", path: "/departments" },
-  // { name: "FAQ", path: "/faq" },
 ];
 
 const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const [mobileOpen, setMobileOpen] = useState(false);
   const t = useTranslations("HOME_PAGE");
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            {/* <div className="h-10 w-10 bg-ssu-blue rounded-full flex items-center justify-center">
-              <span className="text-white font-bold">SSU</span>
-            </div> */}
-            <div>
-              {/* <Image
-                src="/images/logo.png"
-                alt="SSU Logo"
-                // layout="fill"
-                width={100}
-                height={60}
-                className="object-cover rounded-full"
-              /> */}
-            </div>
-            <div className="hidden md:block">
-              <h1 className="text-lg font-bold text-ssu-blue rtl:font-changa ltr:font-montserrat">
-                {t("SITE_NAME")}
-              </h1>
-              <p className="text-xs text-ssu-orange rtl:font-changa ltr:font-montserrat">
-                {t("LOGO_TEXT")}
-              </p>
-            </div>
-          </Link>
+    <header className="sticky top-0 z-50 bg-white shadow-md backdrop-blur-sm">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/images/logo.png"
+            alt="Depo Next Logo"
+            width={120}
+            height={50}
+            priority
+          />
+        </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
-            {navItems?.map((item) => (
-              <Link
-                key={item.name}
-                href={item.path}
-                className="text-gray-700 font-medium text-sm hover:text-ssu-blue !font-semi transition-colors font-tajawal">
-                {t(item.name)}
-              </Link>
-            ))}
-            <Link href={"https://wa.me/+905373234343"} target="_blank">
-              <Button
-                variant="default"
-                className="bg-ssu-blue hover:bg-ssu-blue/90">
-                {t("CONTACT_US")}
-              </Button>
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.path}
+              className="text-gray-700 hover:text-primary transition-colors font-medium text-sm">
+              {t(item.name)}
             </Link>
-
-            {/* <LangaugeSelector /> */}
-          </nav>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 rounded-md text-gray-700 focus:outline-none"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <nav className="md:hidden pt-4 pb-2 space-y-3">
-            {navItems?.map((item) => (
-              <Link
-                key={item.name}
-                href={item.path}
-                className="block text-gray-700 hover:text-ssu-blue font-medium py-2 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}>
-                {t(item.name)}
-              </Link>
-            ))}
-            <Button
-              variant="default"
-              className="w-full mt-2 bg-ssu-blue hover:bg-ssu-blue/90"
-              onClick={() => setMobileMenuOpen(false)}>
+          ))}
+          <Link href="https://wa.me/+905373234343" target="_blank">
+            <Button className="bg-primary hover:bg-primary/90 transition-all">
               {t("CONTACT_US")}
             </Button>
-          </nav>
-        )}
+          </Link>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMobileOpen(true)}
+          className="md:hidden p-2 text-gray-700"
+          aria-label="Open menu">
+          <Menu size={24} />
+        </button>
       </div>
+
+      {/* Mobile Drawer Menu */}
+      {mobileOpen && (
+        <div className="fixed inset-0 bg-black/40 z-50">
+          <div className="fixed right-0 top-0 w-72 h-full bg-white shadow-lg px-6 py-6 z-50 flex flex-col">
+            <div className="flex justify-between items-center mb-6">
+              <Image
+                src="/images/logo.png"
+                alt="Depo Next Logo"
+                width={100}
+                height={50}
+              />
+              <button
+                onClick={() => setMobileOpen(false)}
+                aria-label="Close menu">
+                <X size={24} />
+              </button>
+            </div>
+
+            <nav className="flex flex-col gap-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.path}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-gray-700 text-base hover:text-primary transition-colors">
+                  {t(item.name)}
+                </Link>
+              ))}
+              <Link href="https://wa.me/+905373234343" target="_blank">
+                <Button
+                  onClick={() => setMobileOpen(false)}
+                  className="mt-4 w-full bg-primary hover:bg-primary/90">
+                  {t("CONTACT_US")}
+                </Button>
+              </Link>
+            </nav>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

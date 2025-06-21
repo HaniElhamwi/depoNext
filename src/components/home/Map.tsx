@@ -9,9 +9,9 @@ const Map = async () => {
 
   return (
     <MotionSection className="text-gray-800 bg-gray-50 body-font relative">
-      <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap gap-10">
-        {/* Map & Contact Info */}
-        <div className="lg:w-2/3 md:w-1/2 w-full bg-gray-200 rounded-2xl overflow-hidden relative shadow-lg">
+      <div className="container px-5 py-24 mx-auto flex flex-wrap gap-10 sm:flex-nowrap">
+        {/* Map */}
+        <div className="lg:w-2/3 md:w-1/2 w-full bg-gray-200 rounded-2xl overflow-hidden relative shadow-lg min-h-[300px] md:min-h-[auto]">
           <iframe
             width="100%"
             height="100%"
@@ -22,7 +22,8 @@ const Map = async () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.998308947094!2d29.003818015537917!3d41.06556737929538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7d4f7af3937%3A0xec6f288f2f21ebdb!2sCam%20Pak%20otopark%20ve%20y%C4%B1kama!5e0!3m2!1str!2str!4v1687364546074!5m2!1str!2str"
             style={{ minHeight: "100%" }}
           />
-          <div className="relative z-10 bg-white p-6 rounded-xl m-6 shadow-md backdrop-blur-sm bg-opacity-90">
+          {/* Contact Info Overlay (visible on larger screens) */}
+          <div className="relative z-10 bg-white p-6 rounded-xl m-6 shadow-md backdrop-blur-sm bg-opacity-90 hidden md:block">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <h3 className="text-sm font-semibold text-secondary font-montserrat">
@@ -66,6 +67,47 @@ const Map = async () => {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Contact Info (visible on small screens only, separated) */}
+        <div className="w-full bg-white p-8 rounded-2xl shadow-lg md:hidden">
+          <h2 className="text-center font-bold mb-4 text-lg">
+            {t("CONTACT_TITLE")}
+          </h2>
+          <div className="space-y-4">
+            <div className="flex items-start gap-2 text-sm text-secondary font-montserrat">
+              <MapPin size={18} className="text-primary mt-1" />
+              <div>
+                <h3 className="font-semibold">{t("ADDRESS_TITLE")}</h3>
+                <p>{t("ADDRESS_TEXT")}</p>
+              </div>
+            </div>
+            <Link
+              href={"mailto:info@deponext.com"}
+              className="flex items-center gap-2 text-sm text-secondary font-montserrat group hover:text-secondary transition-colors duration-200">
+              <Mail size={18} className="text-primary" />
+              <span className="underline group-hover:no-underline">
+                {t("EMAIL")}
+              </span>
+            </Link>
+            <Link
+              href="tel:+905373234343"
+              className="flex items-center gap-2 text-sm text-secondary font-montserrat group hover:text-secondary transition-colors duration-200">
+              <Phone size={18} className="text-primary" />
+              <span className="underline group-hover:no-underline">
+                {t("PHONE")}
+              </span>
+            </Link>
+            <Link
+              target="_blank"
+              href="https://www.google.com.tr/maps/place/Cam+Pak..."
+              className="flex items-center gap-2 text-sm text-secondary font-montserrat group hover:text-secondary transition-colors duration-200">
+              <MapPin size={18} className="text-primary" />
+              <span className="underline group-hover:no-underline">
+                {t("VIEW_MAP")}
+              </span>
+            </Link>
           </div>
         </div>
 
