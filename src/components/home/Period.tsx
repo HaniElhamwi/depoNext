@@ -5,41 +5,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import MotionSection from "../MotionSection";
 
-const data = [
-  {
-    id: 1,
-    title: "Beklentiler dinlenir,",
-    subTitle: "operasyon hakkında bilgilendirilir.",
-    description:
-      "Depolanacak eşya veya ürünlerin detayına göre operasyon hakkında bilgilendirilir. Eşya veya ürünlerin nasıl taşınacağı, depolama alanı gibi detaylar konuşulur",
-  },
-  {
-    id: 2,
-    title: "İhtiyaca uygun,",
-    subTitle: "teklif verilir.",
-    description:
-      "Depolanacak eşyaların veya ürünlerin durumu göz önünde bulundurularak teklif verilir. Teklifte hem depo ücreti hem de taşıma ücreti belirtilir",
-  },
-  {
-    id: 3,
-    title: "Eşyalar taşınmaya ve,",
-    subTitle: "depolanmaya hazır.",
-    description:
-      "Eşyalar belirtildiği gibi paketlenir ve depoya taşınır. Eşyaların depolanma sürecinde paketleme malzemeleri eşyaların üzerinde kalır.",
-  },
-  {
-    id: 4,
-    title: "Eşyalarınız size özel,",
-    subTitle: "oda deponuzda güvende.",
-    description:
-      "Eşyalarınızı görebileceğiniz, size özel bir alana yerleştirildi ve güvende. İçiniz rahat olabilir. Konteyner çözümünde de size özel bir alanda eşyalarınız muhafaza edilmektedir.",
-  },
-];
-
-const Period = () => {
+const Period = ({ data }) => {
   return (
-    <section className="relative text-white py-20 md:py-32 overflow-hidden">
+    <MotionSection className="relative text-white py-20 md:py-32 overflow-hidden">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
         {/* Static Image */}
         <div className="flex-1 flex justify-center">
@@ -65,11 +35,11 @@ const Period = () => {
               bulletActiveClass:
                 "swiper-pagination-bullet-active custom-bullet-active",
             }}>
-            {data.map((step, index) => (
+            {data.map((step) => (
               <SwiperSlide key={step.id}>
                 <div className="flex flex-col">
                   <p className="bg-secondary py-1 px-2 text-sm font-montserrat mb-8 font-semibold text-white max-w-max rounded-full">
-                    Aşama 0{index + 1}
+                    {step.STEP}
                   </p>
                   <h3 className="text-primary font-extrabold text-4xl font-montserrat">
                     {step.title}
@@ -86,7 +56,7 @@ const Period = () => {
           </Swiper>
         </div>
       </div>
-    </section>
+    </MotionSection>
   );
 };
 

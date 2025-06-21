@@ -47,14 +47,14 @@ const TeamSection = async () => {
           {teamMembers.map((member) => (
             <Card key={member.id} className="">
               <CardContent className="p-0 group ">
-                <div className="h-[300px] relative overflow-hidden">
-                  <Image
+                {/* <div className="h-[300px] relative overflow-hidden"> */}
+                {/* <Image
                     src={member.image}
                     alt={member.name}
                     layout="fill"
                     className="w-full h-full  object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out"
-                  />
-                </div>
+                  /> */}
+                {/* </div> */}
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="text-xl font-bold rtl:font-changa font-montserrat text-ssu-blue">

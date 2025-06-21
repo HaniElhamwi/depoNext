@@ -1,10 +1,6 @@
 import HeroSection from "@/components/home/HeroSection";
-import ActivitiesPreview from "@/components/home/ActivitiesPreview";
-import BlogPreview from "@/components/home/BlogPreview";
 // import TestimonialsSection from "@/components/home/TestimonialsSection";
 import FaqPreview from "@/components/home/FaqPreview";
-import CallToAction from "@/components/home/CallToAction";
-import OfficeSwiper from "@/components/home/OfficeSwiper";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { FRONTEND_URL } from "@/constants/env";
@@ -41,23 +37,27 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const Index = async () => (
-  <>
-    <HeroSection />
-    <Period />
-    <Map />
-    <Stats />
-    <TestimonialSlider />
-    <About />
-    <DistrictsSection />
-    {/* <ActivitiesPreview /> */}
+const Index = async () => {
+  const t = await getTranslations("HOME_PAGE");
+  const periodData = t.raw("PERIOD_DATA");
+  return (
+    <>
+      <HeroSection />
+      <Period data={periodData} />
+      <Map />
+      <Stats />
+      <TestimonialSlider />
+      <About />
+      <DistrictsSection />
+      {/* <ActivitiesPreview /> */}
 
-    {/* <OfficeSwiper /> */}
-    {/* <TestimonialsSection /> */}
-    {/* <BlogPreview /> */}
-    {/* <CallToAction /> */}
-    <FaqPreview />
-  </>
-);
+      {/* <OfficeSwiper /> */}
+      {/* <TestimonialsSection /> */}
+      {/* <BlogPreview /> */}
+      {/* <CallToAction /> */}
+      <FaqPreview />
+    </>
+  );
+};
 
 export default Index;

@@ -47,7 +47,10 @@ const HeroSection = () => {
                 asChild
                 size="lg"
                 className="bg-white hover:bg-gray-200 text-ssu-blue">
-                <Link href="/about" className="text-ssu-blue font-medium">
+                <Link
+                  href="https://wa.me/+905373234343"
+                  className="text-ssu-blue font-medium"
+                  target="_blank">
                   {t("TAKE_OFFER")}
                 </Link>
               </Button>

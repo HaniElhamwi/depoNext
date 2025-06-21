@@ -15,7 +15,7 @@ function FloatingButtons() {
   };
 
   return (
-    <>
+    <div>
       <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end">
         {/*
           Conditionally apply Tailwind classes based on isVisible state.
@@ -46,7 +46,7 @@ function FloatingButtons() {
           {isVisible ? <RiCloseFill /> : <IoMdContact />}
         </a>
       </div>
-    </>
+    </div>
   );
 }
 

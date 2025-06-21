@@ -1,6 +1,6 @@
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { Changa, Montserrat, Tajawal } from "next/font/google";
+import { Changa, Montserrat, Poppins } from "next/font/google";
 import MainLayout from "@/components/layout/MainLayout";
 import FloatingButtons from "@/components/FloatingButtonts";
 
@@ -8,7 +8,7 @@ const changa = Changa({
   weight: "700",
   subsets: ["arabic"],
 });
-const tajwal = Tajawal({ weight: "300", subsets: ["arabic", "latin"] }); // Light for both Arabic & English
+const tajwal = Poppins({ weight: "300", subsets: ["latin"] }); // Light for both Arabic & English
 
 const montserrat = Montserrat({ weight: "700", subsets: ["latin"] }); // Bold for English
 
@@ -25,7 +25,7 @@ export default async function RootLayout({ children, params }: any) {
       <body className={`font-tajawal ${tajwal.className} `}>
         <NextIntlClientProvider>
           <MainLayout params={awaitedParams}>
-            <FloatingButtons />
+            {/* <FloatingButtons /> */}
             {children}
           </MainLayout>
         </NextIntlClientProvider>

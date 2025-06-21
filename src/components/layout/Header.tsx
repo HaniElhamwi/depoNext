@@ -2,9 +2,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import LangaugeSelector from "../LanguageSelector";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 
 const navItems = [
@@ -44,7 +42,7 @@ const Header = () => {
             </div>
             <div className="hidden md:block">
               <h1 className="text-lg font-bold text-ssu-blue rtl:font-changa ltr:font-montserrat">
-                {t("SSU")}
+                {t("SITE_NAME")}
               </h1>
               <p className="text-xs text-ssu-orange rtl:font-changa ltr:font-montserrat">
                 {t("LOGO_TEXT")}
@@ -58,11 +56,11 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.path}
-                className="text-gray-800 font-semibold hover:text-ssu-blue !font-semi transition-colors font-tajawal">
+                className="text-gray-700 font-medium text-sm hover:text-ssu-blue !font-semi transition-colors font-tajawal">
                 {t(item.name)}
               </Link>
             ))}
-            <Link href={"/contact-us"}>
+            <Link href={"https://wa.me/+905373234343"} target="_blank">
               <Button
                 variant="default"
                 className="bg-ssu-blue hover:bg-ssu-blue/90">

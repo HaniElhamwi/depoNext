@@ -1,151 +1,350 @@
 {
   "HOME_PAGE": {
+    "METADATA": {
+      "TITLE": "Homepage | Depo Next - Secure Storage Solutions",
+      "DESCRIPTION": "Depo Next offers modern and flexible storage spaces for you to store your belongings safely and easily. We aim to provide you with the best service through economical and secure storage solutions tailored to your needs.",
+      "KEYWORDS": [
+        "Depo Next",
+        "secure storage",
+        "item storage",
+        "easy storage rental",
+        "flexible storage spaces",
+        "store",
+        "storage services"
+      ],
+      "SITE_NAME": "Depo Next",
+      "CANONICAL": "https://deponext.com",
+      "OPENGRAPH": {
+        "TITLE": "Homepage | Depo Next - Secure Storage Solutions",
+        "DESCRIPTION": "Store your belongings safely, easily, and economically with Depo Next. Optimize your space with modern storage solutions.",
+        "URL": "https://deponext.com",
+        "SITENAME": "Depo Next",
+        "LOCALE": "en",
+        "TYPE": "website"
+      }
+    },
+    "MAP": {
+      "ADDRESS_TITLE": "ADDRESS",
+      "ADDRESS_TEXT": "Gayrettepe, Vefabey Sokağı 25/1, 34349 Beşiktaş/Istanbul",
+      "CONTACT_TITLE": "CONTACT",
+      "EMAIL": "info@deponext.com",
+      "PHONE": "+90 537 323 43 43",
+      "VIEW_MAP": "View on Map",
+      "HEADING": "Centrally Located, Easy Access!",
+      "PARAGRAPH_1": "Our warehouse is located in the heart of Istanbul, at Gayrettepe Mahallesi, Vefabey Sokak, Say Apartmanı B Blok No:25 İç Kapı No:1, Beşiktaş.",
+      "PARAGRAPG_2": "We are very close to important centers of Istanbul such as Zorlu Center, Kanyon AVM, Levent, Şişli, and Mecidiyeköy.",
+      "PARAGRAPH_3": "Thanks to our easily accessible location by public transport, you can always access your belongings quickly and effortlessly.",
+      "PARAGRAPH_4": "If you are looking for a secure and easily accessible location for your storage rental process, you are in the right place!"
+    },
+    "STATS": {
+      "TITLE": "We have earned our customers' trust",
+      "DESCRIPTION": "We provide secure storage and transportation services to thousands of individuals and businesses across Turkey.",
+      "STATS": {
+        "MOVE_SUCCESS": "Successful moves",
+        "STORAGE_SPACE": "Active storage space (m²)",
+        "CUSTOMER_SATISFACTION": "Customer satisfaction",
+        "CITIES_SERVICE": "In-city service"
+      },
+      "VALUES": {
+        "MOVE_SUCCESS": "5.000+",
+        "STORAGE_SPACE": "12.000",
+        "CUSTOMER_SATISFACTION": "98%",
+        "CITIES_SERVICE": "25+"
+      }
+    },
+    "DISTRICTS": {
+      "TITLE": "Istanbul Districts Where Our Warehouses Are Located",
+      "DESCRIPTION": "We offer secure and modern storage services in districts all over Istanbul.",
+      "DISTRICTS": ["Beşiktaş"]
+    },
+    "FAQ_SECTION": {
+      "TITLE": "Frequently Asked Questions",
+      "DESCRIPTION": "Here you can find answers to the most frequently asked questions about the storage process.",
+      "VIEW_ALL_FAQ": "View All Questions",
+      "QUESTIONS": [
+        {
+          "question": "How are my belongings transported?",
+          "answer": "Your belongings are securely packed by our professional team and transported to the storage area with appropriate vehicles."
+        },
+        {
+          "question": "How long can the storage period be?",
+          "answer": "The storage period can be determined entirely according to your needs. We offer both short-term and long-term storage options."
+        },
+        {
+          "question": "Are the storage areas secure?",
+          "answer": "Yes. All our storage areas are monitored 24/7 with security cameras and equipped with fire alarm systems."
+        },
+        {
+          "question": "How are storage fees determined?",
+          "answer": "Pricing is determined by the volume of belongings, storage duration, and transport distance. Special offers are provided for you."
+        },
+        {
+          "question": "How can I retrieve my stored belongings?",
+          "answer": "When you notify us at least 24 hours in advance, we deliver your belongings to you as soon as possible."
+        }
+      ]
+    },
+    "FOOTER": {
+      "BRAND_DESCRIPTION": "Store your belongings safely with us through secure, clean, and modern storage solutions.",
+      "NAVIGATION": {
+        "TITLE": "Quick Links",
+        "HOME": "Homepage",
+        "SERVICES": "Services",
+        "ABOUT": "About Us",
+        "FAQ": "FAQs",
+        "CONTACT": "Contact"
+      },
+      "CONTACT": {
+        "TITLE": "Contact",
+        "LOCATION": "Istanbul, Turkey",
+        "EMAIL": "info@deponext.com",
+        "PHONE": "+90 537 323 43 43"
+      },
+      "FOLLOW_US": "Follow Us",
+      "COPYRIGHT": "All rights reserved."
+    },
+    "ABOUT_SECTION": {
+      "TITLE": "About DepoNext",
+      "HEADING_LINE1": "We've thought of",
+      "HEADING_HIGHLIGHT1": "everything for you.",
+      "HEADING_LINE2": "You can",
+      "HEADING_HIGHLIGHT2": "breathe a sigh of relief.",
+      "DESCRIPTION": "Dismantling, packing, transporting, and storing items; we are with you with turnkey storage solutions.",
+      "BUTTON_TEXT": "Learn More"
+    },
+    "TESTIMONIALS": {
+      "TITLE": "Customer Reviews",
+      "TESTIMONIALS": [
+        {
+          "id": 1,
+          "rating": 5,
+          "text": "Our belongings were picked up on time and professionally placed in storage. Everything was perfect!",
+          "avatar": "https://pagedone.io/asset/uploads/1696229969.png",
+          "name": "Ayşe Yılmaz",
+          "title": "Istanbul"
+        },
+        {
+          "id": 2,
+          "rating": 5,
+          "text": "I was informed at every stage throughout the storage process. A very reassuring service.",
+          "avatar": "https://pagedone.io/asset/uploads/1696229994.png",
+          "name": "Mehmet Kara",
+          "title": "Ankara"
+        },
+        {
+          "id": 3,
+          "rating": 5,
+          "text": "They completely eliminated the stress of moving. The team's attention and professionalism were fantastic.",
+          "avatar": "https://pagedone.io/asset/uploads/1696230027.png",
+          "name": "Elif Demir",
+          "title": "İzmir"
+        },
+        {
+          "id": 4,
+          "rating": 5,
+          "text": "The storage areas were clean and secure. My belongings were stored without any problems.",
+          "avatar": "https://pagedone.io/asset/uploads/1696229969.png",
+          "name": "Burak Şahin",
+          "title": "Bursa"
+        }
+      ]
+    },
+    "PERIOD_DATA": [
+      {
+        "id": 1,
+        "title": "Expectations are listened to,",
+        "subTitle": "and informed about the operation.",
+        "description": "Information about the operation is provided according to the details of the items or products to be stored. Details such as how the items or products will be transported and the storage area are discussed.",
+        "STEP": "Step 1"
+      },
+      {
+        "id": 2,
+        "title": "A suitable offer is given,",
+        "subTitle": "for the needs.",
+        "description": "An offer is given considering the condition of the items or products to be stored. The offer specifies both the storage fee and the transport fee.",
+        "STEP": "Step 2"
+      },
+      {
+        "id": 3,
+        "title": "Items are ready for transport and,",
+        "subTitle": "storage.",
+        "description": "Items are packed as specified and transported to the warehouse. Packaging materials remain on the items during the storage process.",
+        "STEP": "Step 3"
+      },
+      {
+        "id": 4,
+        "title": "Your belongings are safe in your",
+        "subTitle": "private room storage.",
+        "description": "Your belongings have been placed in a private area where you can see them, and they are safe. You can be at ease. In the container solution, your belongings are also kept in a private area for you.",
+        "STEP": "Step 4"
+      }
+    ],
+    "SITE_NAME": "Depo Next",
     "HOME": "Home",
     "ABOUT": "About Us",
-    "EVENTS": "Events",
+    "SERVICES": "Services",
+    "PRICING": "Pricing",
+    "CONTACT": "Contact",
     "BLOG": "Blog",
     "REVIEWS": "Reviews",
-    "FAQ": "Frequently Asked Questions",
+    "TAKE_OFFER": "Get Offer",
+    "FAQ": "FAQ",
     "CONTACT_US": "Contact Us",
-    "HERO_TITLE": "Welcome to the Syrian Students Union at Karabuk University",
-    "HERO_DESCRIPTION": "We support Syrian students through community, resources, and opportunities for growth.",
+    "HERO_TITLE": "Secure and Easy Storage Solution for Your Belongings",
+    "HERO_DESCRIPTION": "Create Your Own Private Storage Space",
     "LEARN_MORE": "Learn More",
-    "VIEW_ACTIVITIES": "View Activities",
-    "KARABUK_UNIVERSITY": "Karabuk University",
-    "ACTIVITY_TITLE": "Our Recent Activities",
-    "ACTIVITY_DESCRIPTION": "Discover our recent events and activities aimed at supporting, connecting, and empowering Syrian students at Karabuk University.",
-    "VIEW_ALL_ACTIVITIES": "View All Activities",
-    "SSU": "Syrian Students Union",
-    "REVIRES": "Reviews",
-    "DEPARTMENTS": "Departments",
-    "TITLE": "Home",
-    "DESCRIPTION": "The Syrian Student Union at Karabuk University is dedicated to supporting Syrian students throughout their academic journey in Turkey. Established in 2020, the union has been providing resources and organizing activities that promote academic excellence, personal growth, and cultural exchange. Thanks to our committed team, we proudly contribute to the success and integration of hundreds of Syrian students at Karabuk University."
+    "VIEW_SERVICES": "View Our Services",
+    "LOGO_TEXT": "Personalized Storage Rental",
+    "FEATURES_TITLE": "Why Depo Next?",
+    "FEATURES_DESCRIPTION": "Our storage spaces offer customized solutions with security, accessibility, and affordable price guarantee.",
+    "FEATURES": [
+      "24/7 Security Cameras and Alarm System",
+      "Easy and Fast Online Reservation",
+      "Storage Spaces of Different Sizes",
+      "Flexible Rental Periods",
+      "Customer Support Services"
+    ]
   },
-  "STUDENT_TESTIMONIALS": {
-    "TITLE": "What Our Students Say",
-    "DESCRIPTION": "Hear from Syrian students about their experiences with the union and how it has helped them in their academic journey.",
-    "TESTIMONIAL": "As a new student in Turkey, the orientation events organized by the union helped me understand university procedures and adapt to campus life quickly. I'm grateful for their support!",
-    "STUDENT_NAME": "Mohammad Al-Raymi",
-    "STUDENT_DEPARTMENT": "Computer Engineering, 3rd Year"
-  },
-  "BLOG_SECTION": {
-    "TITLE": "Latest from Our Blog",
-    "DESCRIPTION": "Stay updated with the latest events, announcements, and helpful guides for Syrian students.",
-    "READ_MORE": "Read More",
-    "VIEW_ALL_POSTS": "View All Posts",
-    "VIEW_DETAILS": "View Details",
-    "BLOGS_AND_NEWS": "Blogs and News",
-    "BLOG_DESCRIPTION": "Explore our blog for articles, tips, and news about campus life, resources, and events for Syrian students at Karabuk University.",
-    "ALL": "All"
+  "PRICING_PAGE": {
+    "TITLE": "Storage Options to Suit Your Needs",
+    "DESCRIPTION": "We offer affordable and flexible solutions for your storage needs.",
+    "STARTING_FROM": "Starting from",
+    "BUTTON_TEXT": "Get Offer",
+    "PLANS": [
+      {
+        "NAME": "Small Scale Storage",
+        "DESCRIPTION": "Ideal solution for personal items between 0-10 m³.",
+        "PRICE": "₺3.999"
+      },
+      {
+        "NAME": "Medium Scale Storage",
+        "DESCRIPTION": "Suitable for users with a volume range of 10-15 m³.",
+        "PRICE": "₺6.999"
+      },
+      {
+        "NAME": "Large Scale Storage",
+        "DESCRIPTION": "Large space solutions for items over 15 m³.",
+        "PRICE": "₺9.999"
+      }
+    ],
+    "FEATURES": [
+      "Insurance",
+      "Central location",
+      "Optional transport service",
+      "Cleaning & Pest Control",
+      "Security",
+      "24/7 reception",
+      "Communication support"
+    ]
   },
   "FAQ_SECTION": {
     "TITLE": "Frequently Asked Questions",
-    "DESCRIPTION": "Find answers to common questions about the Syrian Students Union and our services.",
+    "DESCRIPTION": "Frequently asked questions and answers about Depo Next services.",
     "VIEW_ALL_FAQ": "View All FAQs"
   },
   "JOIN_SECTION": {
-    "TITLE": "Join Our Community Today",
-    "DESCRIPTION": "Become a part of the Syrian Students Union at Karabuk University, connect with fellow students, access resources, and participate in beneficial activities.",
+    "TITLE": "Join the Depo Next Family",
+    "DESCRIPTION": "Benefit from our secure and easy storage services with Depo Next, and store your belongings comfortably.",
     "LEARN_ABOUT": "Learn More",
-    "EXPLORE_ACTIVITIES": "Explore Activities"
-  },
-  "FOOTER": {
-    "SUPPORT_TEXT": "Supporting Syrian students at Karabuk University through community, resources, and activities.",
-    "QUICK_LINKS": "Quick Links",
-    "CONTACT_US": "Contact Us",
-    "UNIVERSITY": "Karabuk University",
-    "ADDRESS": "Karabuk, Turkey",
-    "EMAIL": "contact@ssukarabuk.com",
-    "PHONE": "+90 555 555 55 55",
-    "SITE_NAME": "Syrian Students Union",
-    "COPYRIGHT": "Syrian Students Union at Karabuk University. All rights reserved.",
-    "ABOUT": "About Us",
-    "EVENTS": "Events",
-    "BLOG": "Blog",
-    "REVIEWS": "Reviews",
-    "FAQ": "FQA",
-    "CONTACT_FORM": "Contact Us"
+    "EXPLORE_SERVICES": "Explore Our Services"
   },
   "ACTIVITIES_SECTION": {
-    "TITLE": "Activities and Events",
-    "DESCRIPTION": "Discover our past and upcoming activities designed to support, connect, and enrich the experience of Syrian students at Karabuk University.",
-    "Social": "Social",
-    "Language": "Language",
-    "Academic": "Academic",
-    "Cultural": "Cultural",
-    "Career": "Career",
-    "Orientation": "Orientation",
-    "All": "All",
-    "SEARCH_PLACEHOLDER": "Search activities...",
+    "CONTACT_US": "Contact Us",
+    "METADATA": {
+      "TITLE": "News & Announcements | Depo Next",
+      "DESCRIPTION": "Follow Depo Next's new services, campaigns, and important announcements.",
+      "KEYWORDS": [
+        "Depo Next News",
+        "Storage Campaigns",
+        "Storage Announcements",
+        "Storage Services",
+        "Secure Storage",
+        "Easy Storage"
+      ],
+      "CANONICAL": "https://deponext.com/news",
+      "OPENGRAPH": {
+        "TITLE": "News & Announcements | Depo Next",
+        "DESCRIPTION": "Discover Depo Next's latest news and campaigns.",
+        "URL": "https://deponext.com/news",
+        "SITENAME": "Depo Next",
+        "LOCALE": "en",
+        "TYPE": "website"
+      }
+    },
+    "TITLE": "News and Announcements",
+    "DESCRIPTION": "Innovations, campaigns, and customer information at Depo Next.",
+    "SEARCH_PLACEHOLDER": "Search for news...",
     "VIEW_DETAILS": "View Details",
-    "ALL": "All",
-    "CONTACT_US": "Contect us",
-    "SEND": "Send",
-    "YOUR_MESSAGE": "Your message",
-    "LEAVE_COMMENT": "Leav comment",
-    "SUBJECT": "Subject",
-    "LET_US_KNOW_HOW_WE_CAN_HELP_YOU": "Let us know how we can help you.",
-    "YOUR_EMAIL": "Your email"
+    "NO_EVENTS_FOUND": "No Announcements Found",
+    "NO_EVENTS_FOUND_DESCRIPTION": "No announcements have been made yet. Please check again later."
   },
   "ABOUT_SECTION": {
+    "METADATA": {
+      "TITLE": "About Us | Depo Next",
+      "DESCRIPTION": "Discover Depo Next, our mission, vision, and experience in the storage sector. We provide secure and high-quality storage services to our customers.",
+      "KEYWORDS": [
+        "About Depo Next",
+        "Storage Services",
+        "Secure Storage",
+        "Mission and Vision",
+        "Storage Solutions"
+      ],
+      "CANONICAL": "https://deponext.com/about",
+      "OPENGRAPH": {
+        "TITLE": "About Us | Depo Next",
+        "DESCRIPTION": "Get detailed information about the Depo Next team and services.",
+        "URL": "https://deponext.com/about",
+        "SITENAME": "Depo Next",
+        "LOCALE": "en",
+        "TYPE": "website"
+      }
+    },
     "TITLE": "About Us",
-    "DESCRIPTION": "Learn about the Syrian Students Union at Karabuk University, our mission, vision, history, and the team supporting Syrian students.",
+    "DESCRIPTION": "At Depo Next, we offer our customers secure, easy, and flexible storage solutions.",
     "VISION_TITLE": "Our Vision",
-    "VISION_DESCRIPTION_1": "We envision a community where every Syrian student at Karabuk University has access to the support, resources, and opportunities needed to succeed academically, professionally, and personally.",
-    "VISION_DESCRIPTION_2": "We aim to be a bridge between Syrian students and the broader university community, fostering cultural understanding and building lasting relationships.",
+    "VISION_DESCRIPTION_1": "To become a pioneering and innovative service provider in the storage sector by maximizing customer satisfaction.",
+    "VISION_DESCRIPTION_2": "To produce flexible and reliable solutions tailored to our customers' needs.",
     "MISSION_TITLE": "Our Mission",
-    "MISSION_DESCRIPTION_1": "The Syrian Students Union at Karabuk University is committed to supporting Syrian students throughout their academic journey. We strive to create a welcoming community that promotes academic excellence, personal growth, and cultural exchange.",
-    "MISSION_DESCRIPTION_2": "Our mission is to provide resources, organize activities, and facilitate connections to help Syrian students succeed in their studies and adapt to university life in Turkey.",
+    "MISSION_DESCRIPTION_1": "To provide high-quality storage spaces that ensure the safe keeping of your belongings.",
+    "MISSION_DESCRIPTION_2": "To provide the best standards in technology and customer service, offering support at every step.",
     "HISTORY_TITLE": "Our History",
-    "HISTORY_DESCRIPTION_1": "Founded in 2020 by a small group of dedicated Syrian students who recognized the need for a support system for their peers.",
-    "HISTORY_DESCRIPTION_2": "Initial informal meetings to assist new students in adapting to university life quickly evolved into an organized union with a clear mission to support the growing Syrian student community at the university.",
-    "HISTORY_DESCRIPTION_3": "Over the years, we have expanded our activities to include orientation events, academic workshops, cultural celebrations, and professional development opportunities. Today, we proudly serve hundreds of Syrian students, aiding them in their educational journey in Turkey.",
-    "TEAM_TITLE": "Meet Our Team",
-    "ALL": "All",
-    "MEET_OUR_TEAM": "Meet Our Team"
+    "HISTORY_DESCRIPTION_1": "Depo Next was established in 2023 and has quickly become a trusted name in the sector.",
+    "HISTORY_DESCRIPTION_2": "We are a fast-growing storage solution provider with a customer-focused service approach.",
+    "TEAM_TITLE": "Our Team",
+    "MEET_OUR_TEAM": "Meet our professional and experienced team",
+    "ALL": "All"
   },
   "COMMON": {
     "READ_MORE": "Read More",
     "BACK": "Back"
   },
-  "ABOUT_PAGE": {
-    "OUR_MISSION": ""
-  },
-  "REVIEWS_PAGE": {
-    "STUDENTS_REVIEWS": "Student Reviews",
-    "REVIEWS_DESCRIPTION": "Hear from Syrian students about their experiences with the union and how it has helped them in their academic journey.",
-    "FILTER_BY_RATING": "Filter by Rating:",
-    "ALL_REVIEWS": "View All Reviews",
-    "DESCRIPTION": "Explore student reviews and experiences from Syrian students at Karabuk University about the services and activities provided by the Syrian Student Union.",
-    "TITLE": "Student Reviews & Testimonials"
-  },
   "FAQ_PAGE": {
+    "METADATA": {
+      "TITLE": "Frequently Asked Questions | Depo Next",
+      "DESCRIPTION": "Find answers to frequently asked questions about Depo Next services, reservations, and storage.",
+      "KEYWORDS": [
+        "FAQ",
+        "Storage Rental Questions",
+        "Storage Service Help",
+        "Depo Next Support",
+        "Secure Storage",
+        "Easy Storage"
+      ],
+      "CANONICAL": "https://deponext.com/faq",
+      "OPENGRAPH": {
+        "TITLE": "Frequently Asked Questions | Depo Next",
+        "DESCRIPTION": "Visit Depo Next's frequently asked questions and answers page.",
+        "URL": "https://deponext.com/faq",
+        "SITENAME": "Depo Next",
+        "LOCALE": "en",
+        "TYPE": "website"
+      }
+    },
     "FAQ_TITLE": "Frequently Asked Questions",
-    "FAQ_DESCRIPTION": "Find answers to common questions about the Syrian Students Union and our services.",
+    "FAQ_DESCRIPTION": "Find answers to your questions about Depo Next services.",
     "SEARCH_PLACEHOLDER": "Search questions...",
     "VIEW_ALL_FAQ": "View All FAQs",
-    "DESCRIPTION": "Find answers to common questions about registration, events, academic support, and university life in Turkey on the FAQ page of the Syrian Student Union at Karabuk University.",
-    "TITLE": "FAQ"
-  },
-  "FACULTIES_SECTION": {
-    "TITLE": "Faculties"
-  },
-  "DEPARTMENTS_SECTION": {
-    "TITLE": "Departments",
-    "DESCRIPTION": "Learn about the university's branches and experts",
-    "ALL": "All",
-    "VIEW_DETAILS": "View details",
-    "NO_DEPARTMENTS_FOUND": "No departments found",
-    "NO_DEPARTMENTS_FOUND_DESCRIPTION": "There is no departments add yet",
-    "CONTACT_WITH_EXPERTS": "Contact an official",
-    "EXPERTS_SECTION": {
-      "TITLE": "Department officials"
-    }
-  },
-  "Pagination": {
-    "PREVIOUS_PAGE": "Previous page",
-    "PREVIOUS": "Previous",
-    "NEXT_PAGE": "Next page",
-    "NEXT": "Next"
+    "DESCRIPTION": "Answers to frequently asked questions about reservations, pricing, and storage usage with Depo Next.",
+    "TITLE": "Frequently Asked Questions"
   }
 }

@@ -1,7 +1,9 @@
+import MotionSection from "@/components/MotionSection";
 import { Button } from "@/components/ui/button";
 import React from "react";
+import { getTranslations } from "next-intl/server";
+import Link from "next/link";
 
-// Checkmark SVG icon component
 const CheckIcon = () => (
   <svg
     className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
@@ -15,130 +17,62 @@ const CheckIcon = () => (
   </svg>
 );
 
-const App = () => {
-  const pricingPlans = [
-    {
-      name: "Küçük Ölçekli Depolar",
-      description:
-        "Bireysel kullanımlar ve küçük projeleriniz için en iyi seçenek.",
-      price: "₺29",
-      duration: "/ay",
-      features: [
-        "Bireysel yapılandırma",
-        "Kurulum veya gizli ücret yok",
-        <span>
-          Kullanıcı sayısı: <span className="font-semibold">1 kullanıcı</span>
-        </span>,
-        <span>
-          Depolama alanı: <span className="font-semibold">100 GB</span>
-        </span>,
-        <span>
-          Premium destek: <span className="font-semibold">6 ay</span>
-        </span>,
-        <span>
-          Ücretsiz güncellemeler: <span className="font-semibold">6 ay</span>
-        </span>,
-      ],
-      buttonText: "Başlayın",
-    },
-    {
-      name: "Orta Ölçekli Depolar",
-      description: "Birden fazla kullanıcı ve genişletilmiş destek için ideal.",
-      price: "₺99",
-      duration: "/ay",
-      features: [
-        "Gelişmiş yapılandırma",
-        "Kesinlikle gizli ücret yok",
-        <span>
-          Kullanıcı sayısı: <span className="font-semibold">5 kullanıcı</span>
-        </span>,
-        <span>
-          Depolama alanı: <span className="font-semibold">1 TB</span>
-        </span>,
-        <span>
-          Premium destek: <span className="font-semibold">12 ay</span>
-        </span>,
-        <span>
-          Ücretsiz güncellemeler: <span className="font-semibold">12 ay</span>
-        </span>,
-      ],
-      buttonText: "Başlayın",
-    },
-    {
-      name: "Büyük Ölçekli Depolar",
-      description:
-        "Büyük ölçekli işletmeler ve kapsamlı depolama ihtiyaçları için.",
-      price: "₺499",
-      duration: "/ay",
-      features: [
-        "Tamamen özelleştirilebilir yapılandırma",
-        "Sıfır kurulum veya gizli ücret",
-        <span>
-          Kullanıcı sayısı:{" "}
-          <span className="font-semibold">Sınırsız kullanıcı</span>
-        </span>,
-        <span>
-          Depolama alanı: <span className="font-semibold">10 TB</span>
-        </span>,
-        <span>
-          7/24 Özel destek: <span className="font-semibold">24 ay</span>
-        </span>,
-        <span>
-          Ücretsiz güncellemeler: <span className="font-semibold">24 ay</span>
-        </span>,
-      ],
-      buttonText: "Başlayın",
-    },
-  ];
+const App = async () => {
+  const t = await getTranslations("PRICING_PAGE");
+
+  const plans = t.raw("PLANS");
+  const features = t.raw("FEATURES");
 
   return (
-    <section className="bg-white dark:bg-gray-900 font-sans">
-      {" "}
-      {/* Added font-sans for Inter */}
+    <MotionSection className="bg-white dark:bg-gray-900 font-sans">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 rounded-lg">
         <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-          <h2 className="section-title !font-extrabold">
-            İhtiyaçlarınıza Özel Kişisel Depolama Çözümleri
-          </h2>
-          <p className="mb-4 text-gray-600 text-lg  font-medium">
-            Kişisel veya iş odaklı tüm depolama ihtiyaçlarınız için esnek ve
-            güvenli çözümler sunuyoruz.
+          <h2 className="section-title !font-extrabold">{t("TITLE")}</h2>
+          <p className="mb-4 text-gray-600 text-lg font-medium">
+            {t("DESCRIPTION")}
           </p>
         </div>
+
         <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0 rounded-lg">
-          {pricingPlans.map((plan, index) => (
+          {plans.map((plan, index) => (
             <div
               key={index}
               className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
               <h3 className="section-title !text-gray-800 !text-2xl">
-                {plan.name}
+                {plan.NAME}
               </h3>
               <p className="text-sm text-gray-600 font-medium">
-                {plan.description}
+                {plan.DESCRIPTION}
               </p>
               <div className="flex justify-center items-baseline my-8">
-                <span className="mr-2 text-5xl font-extrabold rounded-lg text-primary">
-                  {plan.price}
-                </span>
-                <span className="text-gray-500 dark:text-gray-400 rounded-lg">
-                  {plan.duration}
-                </span>
+                <div className="flex flex-col">
+                  <span className="mr-2 text-5xl font-extrabold text-primary">
+                    {plan.PRICE}
+                  </span>
+                  <span className="text-sm text-secondary">
+                    {t("STARTING_FROM")}
+                  </span>
+                </div>
               </div>
               <ul role="list" className="mb-8 space-y-4 text-left rounded-lg">
-                {plan.features.map((feature, i) => (
+                {features.map((feature: string, i: number) => (
                   <li key={i} className="flex items-center space-x-3">
                     <CheckIcon />
-                    <span className="rounded-lg">{feature}</span>
+                    <span>{feature}</span>
                   </li>
                 ))}
               </ul>
-
-              <Button>{plan.buttonText}</Button>
+              <Link
+                href="https://wa.me/+905373234343"
+                target="_blank"
+                className="w-full block">
+                <Button className="w-full block">{t("BUTTON_TEXT")}</Button>
+              </Link>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </MotionSection>
   );
 };
 

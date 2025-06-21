@@ -1,294 +1,353 @@
 {
   "HOME_PAGE": {
-    "HOME": "Ana Sayfa",
-    "ABOUT": "Hakkımızda",
-    "EVENTS": "Etkinlikler",
-    "CONTACT": "İletişim",
-    "PRICING": "Fiyatlar",
-    "SERVICES": "Hizmetler",
-    "BLOG": "Blog",
-    "REVIRES": "İncelemeler",
-    "TAKE_OFFER": "Heme Teklifi Al",
-    "FAQ": "SSS",
-    "CONTACT_US": "Bize Ulaşın",
-    "HERO_TITLE": "Eşyalarınız İçin Güvenli ve Kolay Depolama Çözümü",
-    "HERO_DESCRIPTION": "Kendinize Özel Depolama Alanınızı Oluşturun",
-    "LEARN_MORE": "Daha Fazla Bilgi",
-    "VIEW_ACTIVITIES": "Etkinlikleri Görüntüle",
-    "LOGO_TEXT": "Kişiye Özel Depo Kiralama",
-    "ACTIVITY_TITLE": "Son Etkinliklerimiz",
-    "ACTIVITY_DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrencileri desteklemek, birbirine bağlamak ve güçlendirmek amacıyla düzenlediğimiz son etkinlikleri keşfedin.",
-    "VIEW_ALL_ACTIVITIES": "Tüm Etkinlikleri Görüntüle",
-    "SSU": "Depo Next",
-    "CART_TITLE": "Karabük Üniversitesi Suriyeli Öğrenci Birliği Ofisleri",
-    "OFFICES": [
-      {
-        "id": "1",
-        "name": "Kültür Ofisi",
-        "description": "Öğrencinin entelektüel, bilimsel ve değerler düzeyini zenginleştiren bir kültürel ortam yaratmaya çalışıyoruz. Aydınlatıcı anlatıyı geliştirmek ve Suriye kimliğini güçlendirmek için edebiyatı kullanmaya çalışıyoruz."
-      },
-      {
-        "id": "2",
-        "name": "Bilim Ofisi",
-        "description": "Öğrencilerin akademik ihtiyaçlarını karşılamaya odaklanan, eğitim çıktılarının kalitesini ve seviyelerini geliştiren entegre eğitim hizmetleri sunmayı amaçlıyoruz. Ayrıca, öğrencilerin teknik projelerdeki potansiyellerini geliştirerek, yaratıcılığı ve başarıyı teşvik eden, mükemmel bir akademik ve profesyonel gelecek inşa etme kavramını güçlendiren etkili bir platform olmayı hedefliyoruz."
-      },
-      {
-        "id": "3",
-        "name": "Kız Öğrenci Ofisi",
-        "description": "Birliğin sunduğu özel hizmetlerle kız öğrenciler için güvenli bir üniversite ortamı sağlıyoruz. Temel olarak akademik becerilerini geliştirmeyi ve güçlendirmeyi, eğitim programlarını kolaylaştırmayı ve öğrenci etkinliklerini ve girişimlerini desteklemeyi amaçlıyoruz."
-      },
-      {
-        "id": "4",
-        "name": "Hizmet Ofisi",
-        "description": "Üniversite ortamını iyileştirerek, etkili iletişimi kolaylaştırarak ve destek sağlayarak öğrencilerin ihtiyaçlarını karşılıyoruz. Özellikle yeni öğrencilerin üniversite ortamına başarılı bir şekilde entegre olmalarını sağlamak için temel bilgilerle donatılmalarına odaklanıyoruz."
-      },
-      {
-        "id": "6",
-        "name": "Etkinlik Ofisi",
-        "description": "Eğlence ve gelişimi bir araya getiren dinamik bir etkileşim ortamı sunuyoruz. Öğrencilerin ders dışı becerilerini geliştiren eğitimsel, eğlenceli, sportif, teknik ve mesleki etkinlikler düzenlemeyi hedefliyoruz."
-      },
-      {
-        "id": "5",
-        "name": "Medya Ofisi",
-        "description": "Suriyeli öğrencilerin kimliğini yansıtan ve seslerini net bir şekilde duyuran etkili bir medya oluşturuyoruz. Birlik ile öğrenciler arasındaki iletişimi güçlendirerek, kavramlarını ve başarılarını öne çıkaran anlamlı içerikler sunuyoruz."
-      }
-    ],
-    "DEPARTMENTS": "Bölümler"
-  },
-  "STUDENT_TESTIMONIALS": {
-    "TITLE": "Öğrencilerimiz Ne Diyor?",
-    "DESCRIPTION": "Suriyeli öğrencilerin Birlik ile olan deneyimlerini ve akademik yolculuklarında nasıl yardımcı olduğumuzu dinleyin.",
-    "TESTIMONIAL": "Türkiye'de yeni bir öğrenci olarak, Birliğin düzenlediği oryantasyon etkinlikleri sayesinde üniversite prosedürlerini anlamam ve üniversite hayatına hızla uyum sağlamam kolaylaştı. Desteğiniz için minnettarım!",
-    "STUDENT_NAME": "Muhammed er-Reymi",
-    "STUDENT_DEPARTMENT": "Bilgisayar Mühendisliği, 3. Sınıf"
-  },
-  "BLOG_SECTION": {
-    "TITLE": "Blogumuzdan Son Yazılar",
-    "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrenciler için son etkinlikler, duyurular ve yararlı rehberler hakkında bilgi edinin.",
-    "READ_MORE": "Daha Fazla Oku",
-    "VIEW_ALL_POSTS": "Tüm Yazıları Görüntüle",
-    "VIEW_DETAILS": "Detayları Görüntüle",
-    "BLOGS_AND_NEWS": "Blog ve Haberler",
-    "BLOG_DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrenciler için üniversite hayatı, kaynaklar ve etkinlikler hakkında makaleler, ipuçları ve haberler için blogumuzu keşfedin.",
-    "ALL": "Tümü",
-    "NO_BLOGS_FOUND": "Yazı Bulunamadı",
-    "NO_BLOGS_FOUND_DESCRIPTION": "Henüz hiç yazı eklenmedi. Lütfen daha sonra tekrar kontrol edin.",
-    "BY": "Yazar"
-  },
-  "FAQ_SECTION": {
-    "TITLE": "Sıkça Sorulan Sorular",
-    "DESCRIPTION": "Suriyeli Öğrenci Birliği ve hizmetlerimiz hakkında sıkça sorulan soruların cevaplarını keşfedin.",
-    "VIEW_ALL_FAQ": "Tüm SSS'leri Görüntüle"
-  },
-  "JOIN_SECTION": {
-    "TITLE": "Topluluğumuza Bugün Katılın",
-    "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'nin bir parçası olun, arkadaşlarınızla bağlantı kurun, kaynaklardan yararlanın ve faydalı etkinliklere katılın.",
-    "LEARN_ABOUT": "Daha Fazla Bilgi",
-    "EXPLORE_ACTIVITIES": "Etkinlikleri Keşfet"
-  },
-  "FOOTER": {
-    "SUPPORT_TEXT": "Karabük Üniversitesi'ndeki Suriyeli öğrencileri topluluk, kaynaklar ve etkinliklerle destekliyoruz.",
-    "QUICK_LINKS": "Hızlı Bağlantılar",
-    "CONTACT_US": "Bize Ulaşın",
-    "UNIVERSITY": "Karabük Üniversitesi",
-    "ADDRESS": "Karabük, Türkiye",
-    "EMAIL": "contact@ssukarabuk.com",
-    "PHONE": "+90 555 555 55 55",
-    "SITE_NAME": "Suriyeli Öğrenci Birliği",
-    "COPYRIGHT": "Karabük Üniversitesi Suriyeli Öğrenci Birliği. Tüm hakları saklıdır.",
-    "ABOUT": "Hakkımızda",
-    "EVENTS": "Etkinlikler",
-    "BLOG": "Blog",
-    "REVIRES": "İncelemeler",
-    "FAQ": "SSS",
-    "CONTACT_FORM": "Bize Ulaşın"
-  },
-  "ACTIVITIES_SECTION": {
     "METADATA": {
-      "TITLE": "Etkinlikler | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
-      "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği tarafından düzenlenen son etkinlikleri ve faaliyetleri takip edin. Öğrencileri desteklemek ve üniversite topluluğu içinde iletişimi artırmak amacıyla eğitimsel, kültürel ve sosyal etkinlikler sunuyoruz.",
+      "TITLE": "Anasayfa | Depo Next - Güvenli Depolama Çözümleri",
+      "DESCRIPTION": "Depo Next, eşyalarınızı güvenle ve kolaylıkla depolamanız için modern ve esnek depolama alanları sunar. İhtiyacınıza uygun, ekonomik ve güvenli depolama çözümleri ile size en iyi hizmeti vermeyi amaçlıyoruz.",
       "KEYWORDS": [
-        "Birlik Etkinlikleri",
-        "Öğrenci Etkinlikleri",
-        "Üniversite Etkinlikleri",
-        "Kültürel Etkinlikler",
-        "Suriyeli Öğrenci Birliği",
-        "Karabük Üniversitesi Öğrencileri",
-        "Türkiye'deki Suriyeli Öğrenciler"
+        "Depo Next",
+        "güvenli depo",
+        "eşya depolama",
+        "kolay depo kiralama",
+        "esnek depolama alanları",
+        "depola",
+        "depo hizmetleri"
       ],
-      "CANONICAL": "https://kbusyogr.com/events",
+      "SITE_NAME": "Depo Next",
+      "CANONICAL": "https://deponext.com",
       "OPENGRAPH": {
-        "TITLE": "Etkinlikler | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
-        "DESCRIPTION": "Suriyeli Öğrenci Birliği'nin üniversite hayatını ve kültürel iletişimi güçlendirmek için düzenlediği çeşitli etkinlikleri keşfedin.",
-        "URL": "https://kbusyogr.com/events",
-        "SITENAME": "Suriyeli Öğrenci Birliği - Karabük",
+        "TITLE": "Anasayfa | Depo Next - Güvenli Depolama Çözümleri",
+        "DESCRIPTION": "Depo Next ile eşyalarınızı güvenli, kolay ve ekonomik şekilde depolayın. Modern depo çözümleri ile alanınızı optimize edin.",
+        "URL": "https://deponext.com",
+        "SITENAME": "Depo Next",
         "LOCALE": "tr",
         "TYPE": "website"
       }
     },
-    "TITLE": "Etkinlikler ve Faaliyetler",
-    "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrencilerin deneyimlerini desteklemek, birbirine bağlamak ve zenginleştirmek için tasarlanmış geçmiş ve gelecek etkinliklerimizi keşfedin.",
-    "Social": "Sosyal",
-    "Language": "Dil",
-    "Academic": "Akademik",
-    "Cultural": "Kültürel",
-    "Career": "Kariyer",
-    "Orientation": "Oryantasyon",
-    "All": "Tümü",
-    "SEARCH_PLACEHOLDER": "Etkinlik ara...",
-    "VIEW_DETAILS": "Detayları Görüntüle",
-    "ALL": "Tümü",
-    "NO_EVENTS_FOUND": "Etkinlik Bulunamadı",
-    "NO_EVENTS_FOUND_DESCRIPTION": "Henüz hiç etkinlik eklenmedi. Lütfen daha sonra tekrar kontrol edin.",
+    "MAP": {
+      "ADDRESS_TITLE": "ADRES",
+      "ADDRESS_TEXT": "Gayrettepe, Vefabey Sokağı 25/1, 34349 Beşiktaş/İstanbul",
+      "CONTACT_TITLE": "İLETİŞİM",
+      "EMAIL": "info@deponext.com",
+      "PHONE": "+90 537 323 43 43",
+      "VIEW_MAP": "Harita'dan gör",
+      "HEADING": "Merkezî Konumda, Kolay Erişim!",
+      "PARAGRAPH_1": "Depomuz, İstanbul’un kalbinde yer alan Gayrettepe Mahallesi, Vefabey Sokak, Say Apartmanı B Blok No:25 İç Kapı No:1, Beşiktaş adresindedir.",
+      "PARAGRAPH_2": "Zorlu Center, Kanyon AVM, Levent, Şişli ve Mecidiyeköy gibi İstanbul’un önemli merkezlerine oldukça yakın konumda bulunuyoruz.",
+      "PARAGRAPH_3": "Toplu taşıma araçlarıyla kolayca ulaşılabilen lokasyonumuz sayesinde, eşyalarınıza her zaman hızlı ve zahmetsiz bir şekilde erişebilirsiniz.",
+      "PARAGRAPH_4": "Depo kiralama sürecinde hem güvenli hem de ulaşımı kolay bir lokasyon arıyorsanız, doğru yerdesiniz!"
+    },
+    "STATS": {
+      "TITLE": "Müşterilerimizin güvenini kazandık",
+      "DESCRIPTION": "Türkiye genelinde binlerce kişi ve işletmeye güvenli depolama ve taşıma hizmeti sağlıyoruz.",
+      "STATS": {
+        "MOVE_SUCCESS": "Başarılı taşınma",
+        "STORAGE_SPACE": "Aktif depo alanı (m²)",
+        "CUSTOMER_SATISFACTION": "Müşteri memnuniyeti",
+        "CITIES_SERVICE": "Şehirler içi hizmet"
+      },
+      "VALUES": {
+        "MOVE_SUCCESS": "5.000+",
+        "STORAGE_SPACE": "12.000",
+        "CUSTOMER_SATISFACTION": "%98",
+        "CITIES_SERVICE": "25+"
+      }
+    },
+    "DISTRICTS": {
+      "TITLE": "Depolarımızın Bulunduğu İstanbul İlçeleri",
+      "DESCRIPTION": "İstanbul’un dört bir yanındaki ilçelerde güvenli ve modern depolama hizmeti sunuyoruz.",
+      "DISTRICTS": ["Beşiktaş"]
+    },
+    "FAQ_SECTION": {
+      "TITLE": "Sıkça Sorulan Sorular",
+      "DESCRIPTION": "Depolama süreciyle ilgili en çok merak edilen soruların yanıtlarını burada bulabilirsiniz.",
+      "VIEW_ALL_FAQ": "Tüm Soruları Gör",
+      "QUESTIONS": [
+        {
+          "question": "Eşyalarım nasıl taşınıyor?",
+          "answer": "Eşyalarınız profesyonel ekibimiz tarafından güvenli bir şekilde paketlenir ve uygun araçlarla depolama alanına taşınır."
+        },
+        {
+          "question": "Depolama süresi ne kadar olabilir?",
+          "answer": "Depolama süresi tamamen sizin ihtiyacınıza göre belirlenebilir. Kısa ya da uzun vadeli depolama seçeneklerimiz mevcuttur."
+        },
+        {
+          "question": "Depo alanları güvenli mi?",
+          "answer": "Evet. Tüm depo alanlarımız 7/24 güvenlik kameraları ile izlenmekte ve yangın alarm sistemleri ile donatılmıştır."
+        },
+        {
+          "question": "Depolama ücretleri nasıl belirleniyor?",
+          "answer": "Ücretlendirme; eşyaların hacmine, depolama süresine ve taşıma mesafesine göre belirlenir. Size özel teklifler sunulmaktadır."
+        },
+        {
+          "question": "Depolanan eşyaları tekrar nasıl alabilirim?",
+          "answer": "Bize en az 24 saat önceden haber verdiğinizde, eşyalarınızı size en kısa sürede teslim ediyoruz."
+        }
+      ]
+    },
+    "FOOTER": {
+      "BRAND_DESCRIPTION": "Güvenli, temiz ve modern depolama çözümleri ile eşyalarınızı bizimle güven içinde saklayın.",
+      "NAVIGATION": {
+        "TITLE": "Hızlı Linkler",
+        "HOME": "Anasayfa",
+        "SERVICES": "Hizmetler",
+        "ABOUT": "Hakkımızda",
+        "FAQ": "Sık Sorulanlar",
+        "CONTACT": "İletişim"
+      },
+      "CONTACT": {
+        "TITLE": "İletişim",
+        "LOCATION": "İstanbul, Türkiye",
+        "EMAIL": "info@deponext.com",
+        "PHONE": "+90 537 323 43 43"
+      },
+      "FOLLOW_US": "Bizi Takip Edin",
+      "COPYRIGHT": "Tüm hakları saklıdır."
+    },
+    "ABOUT_SECTION": {
+      "TITLE": "DepoNext Hakkında",
+      "HEADING_LINE1": "Sizler için",
+      "HEADING_HIGHLIGHT1": "her şeyi düşündük.",
+      "HEADING_LINE2": "Siz",
+      "HEADING_HIGHLIGHT2": "rahat bir nefes alabilirsiniz.",
+      "DESCRIPTION": "Eşyaların demontesi, paketlenmesi, taşınması ve depolanması; anahtar teslim depolama çözümleri ile yanınızdayız.",
+      "BUTTON_TEXT": "Daha Fazla Öğren"
+    },
+    "TESTIMONIALS": {
+      "TITLE": "Müşteri Yorumları",
+      "TESTIMONIALS": [
+        {
+          "id": 1,
+          "rating": 5,
+          "text": "Eşyalarımız zamanında alındı ve profesyonelce depoya yerleştirildi. Her şey mükemmeldi!",
+          "avatar": "https://pagedone.io/asset/uploads/1696229969.png",
+          "name": "Ayşe Yılmaz",
+          "title": "İstanbul"
+        },
+        {
+          "id": 2,
+          "rating": 5,
+          "text": "Depolama süreci boyunca her aşamada bilgilendirildim. Çok güven verici bir hizmet.",
+          "avatar": "https://pagedone.io/asset/uploads/1696229994.png",
+          "name": "Mehmet Kara",
+          "title": "Ankara"
+        },
+        {
+          "id": 3,
+          "rating": 5,
+          "text": "Taşınma stresini tamamen ortadan kaldırdılar. Ekibin ilgisi ve profesyonelliği harikaydı.",
+          "avatar": "https://pagedone.io/asset/uploads/1696230027.png",
+          "name": "Elif Demir",
+          "title": "İzmir"
+        },
+        {
+          "id": 4,
+          "rating": 5,
+          "text": "Depolama alanları temiz ve güvenliydi. Eşyalarım sorunsuz şekilde saklandı.",
+          "avatar": "https://pagedone.io/asset/uploads/1696229969.png",
+          "name": "Burak Şahin",
+          "title": "Bursa"
+        }
+      ]
+    },
+    "PERIOD_DATA": [
+      {
+        "id": 1,
+        "title": "Beklentiler dinlenir,",
+        "subTitle": "operasyon hakkında bilgilendirilir.",
+        "description": "Depolanacak eşya veya ürünlerin detayına göre operasyon hakkında bilgilendirilir. Eşya veya ürünlerin nasıl taşınacağı, depolama alanı gibi detaylar konuşulur",
+        "STEP": "Aşama 1"
+      },
+      {
+        "id": 2,
+        "title": "İhtiyaca uygun,",
+        "subTitle": "teklif verilir.",
+        "description": "Depolanacak eşyaların veya ürünlerin durumu göz önünde bulundurularak teklif verilir. Teklifte hem depo ücreti hem de taşıma ücreti belirtilir",
+        "STEP": "Aşama 2"
+      },
+      {
+        "id": 3,
+        "title": "Eşyalar taşınmaya ve,",
+        "subTitle": "depolanmaya hazır.",
+        "description": "Eşyalar belirtildiği gibi paketlenir ve depoya taşınır. Eşyaların depolanma sürecinde paketleme malzemeleri eşyaların üzerinde kalır.",
+        "STEP": "Aşama 3"
+      },
+      {
+        "id": 4,
+        "title": "Eşyalarınız size özel,",
+        "subTitle": "oda deponuzda güvende.",
+        "description": "Eşyalarınızı görebileceğiniz, size özel bir alana yerleştirildi ve güvende. İçiniz rahat olabilir. Konteyner çözümünde de size özel bir alanda eşyalarınız muhafaza edilmektedir.",
+        "STEP": "Aşama 4"
+      }
+    ],
+    "SITE_NAME": "Depo Next",
+    "HOME": "Ana Sayfa",
+    "ABOUT": "Hakkımızda",
+    "SERVICES": "Hizmetler",
+    "PRICING": "Fiyatlar",
+    "CONTACT": "İletişim",
+    "BLOG": "Blog",
+    "REVIEWS": "İncelemeler",
+    "TAKE_OFFER": "Teklif Al",
+    "FAQ": "SSS",
     "CONTACT_US": "Bize Ulaşın",
-    "SEND": "Gönder",
-    "LEAVE_COMMENT": "Mesajınızı Bırakın",
-    "YOUR_MESSAGE": "Mesajınız",
-    "SUBJECT": "Konu",
-    "LET_US_KNOW_HOW_WE_CAN_HELP_YOU": "Size nasıl yardımcı olabileceğimizi bize bildirin",
-    "YOUR_EMAIL": "E-posta Adresiniz"
+    "HERO_TITLE": "Eşyalarınız İçin Güvenli ve Kolay Depolama Çözümü",
+    "HERO_DESCRIPTION": "Kendinize Özel Depolama Alanınızı Oluşturun",
+    "LEARN_MORE": "Daha Fazla Bilgi",
+    "VIEW_SERVICES": "Hizmetlerimizi Görüntüle",
+    "LOGO_TEXT": "Kişiye Özel Depo Kiralama",
+    "FEATURES_TITLE": "Neden Depo Next?",
+    "FEATURES_DESCRIPTION": "Güvenlik, erişilebilirlik ve uygun fiyat garantisiyle depolama alanlarımız size özel çözümler sunar.",
+    "FEATURES": [
+      "7/24 Güvenlik Kameraları ve Alarm Sistemi",
+      "Kolay ve Hızlı Online Rezervasyon",
+      "Farklı Büyüklükte Depolama Alanları",
+      "Esnek Kiralama Süreleri",
+      "Müşteri Destek Hizmetleri"
+    ]
+  },
+  "PRICING_PAGE": {
+    "TITLE": "İhtiyacınıza Uygun Depolama Seçenekleri",
+    "DESCRIPTION": "Depolama ihtiyaçlarınıza göre uygun fiyatlı ve esnek çözümler sunuyoruz.",
+    "STARTING_FROM": "Başlayan fiyatlarla",
+    "BUTTON_TEXT": "Teklif Al",
+    "PLANS": [
+      {
+        "NAME": "Küçük Ölçekli Depo",
+        "DESCRIPTION": "0-10 m³ arası bireysel eşyalar için ideal çözüm.",
+        "PRICE": "₺3.999"
+      },
+      {
+        "NAME": "Orta Ölçekli Depo",
+        "DESCRIPTION": "10-15 m³ hacim aralığında kullanıcılar için uygun.",
+        "PRICE": "₺6.999"
+      },
+      {
+        "NAME": "Büyük Ölçekli Depo",
+        "DESCRIPTION": "15 m³ üzeri eşyalar için geniş alan çözümleri.",
+        "PRICE": "₺9.999"
+      }
+    ],
+    "FEATURES": [
+      "Sigorta",
+      "Merkezi lokasyon",
+      "İsteğe göre taşıma hizmeti",
+      "Temizlik & İlaçlama",
+      "Güvenlik",
+      "7/24 karşılama resepsiyonu",
+      "İletişim desteği"
+    ]
+  },
+
+  "FAQ_SECTION": {
+    "TITLE": "Sıkça Sorulan Sorular",
+    "DESCRIPTION": "Depo Next hizmetleri hakkında sıkça sorulan sorular ve yanıtları.",
+    "VIEW_ALL_FAQ": "Tüm SSS'leri Görüntüle"
+  },
+  "JOIN_SECTION": {
+    "TITLE": "Depo Next Ailesine Katılın",
+    "DESCRIPTION": "Depo Next ile güvenli ve kolay depolama hizmetlerimizden yararlanın, eşyalarınızı rahatlıkla depolayın.",
+    "LEARN_ABOUT": "Daha Fazla Bilgi",
+    "EXPLORE_SERVICES": "Hizmetlerimizi Keşfet"
+  },
+
+  "ACTIVITIES_SECTION": {
+    "CONTACT_US": "Bize Ulaşın",
+    "METADATA": {
+      "TITLE": "Haberler & Duyurular | Depo Next",
+      "DESCRIPTION": "Depo Next'in yeni hizmetleri, kampanyaları ve önemli duyurularını takip edin.",
+      "KEYWORDS": [
+        "Depo Next Haberler",
+        "Depo Kampanyaları",
+        "Depo Duyuruları",
+        "Depolama Hizmetleri",
+        "Güvenli Depo",
+        "Kolay Depolama"
+      ],
+      "CANONICAL": "https://deponext.com/news",
+      "OPENGRAPH": {
+        "TITLE": "Haberler & Duyurular | Depo Next",
+        "DESCRIPTION": "Depo Next'in en güncel haberlerini ve kampanyalarını keşfedin.",
+        "URL": "https://deponext.com/news",
+        "SITENAME": "Depo Next",
+        "LOCALE": "tr",
+        "TYPE": "website"
+      }
+    },
+    "TITLE": "Haberler ve Duyurular",
+    "DESCRIPTION": "Depo Next'teki yenilikler, kampanyalar ve müşteri bilgilendirmeleri.",
+    "SEARCH_PLACEHOLDER": "Haber ara...",
+    "VIEW_DETAILS": "Detayları Görüntüle",
+    "NO_EVENTS_FOUND": "Duyuru Bulunamadı",
+    "NO_EVENTS_FOUND_DESCRIPTION": "Henüz duyuru yapılmadı. Lütfen daha sonra tekrar kontrol edin."
   },
   "ABOUT_SECTION": {
     "METADATA": {
-      "TITLE": "Hakkımızda | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
-      "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'ni, öğrenci girişimlerinin ve çeşitli etkinliklerin arkasındaki ekibi tanıyın. Birlik, farklı fakültelerden ve bölümlerden üyelerden oluşur ve yeni öğrencilere yardımcı olmak ve destekleyici, etkileşimli bir üniversite ortamı sağlamak için çalışır.",
+      "TITLE": "Hakkımızda | Depo Next",
+      "DESCRIPTION": "Depo Next'i, misyonumuzu, vizyonumuzu ve depo sektöründeki deneyimimizi keşfedin. Müşterilerimize güvenli ve kaliteli depolama hizmetleri sunuyoruz.",
       "KEYWORDS": [
-        "Suriyeli Öğrenci Birliği",
-        "Birlik Ekibi",
-        "Birlik Üyeleri",
-        "Birlik Bölümleri",
-        "Yeni Öğrencilere Yardım",
-        "Karabük Üniversitesi Öğrencileri",
-        "Türkiye'deki Suriyeli Öğrenciler"
+        "Depo Next Hakkında",
+        "Depolama Hizmetleri",
+        "Güvenli Depo",
+        "Misyon ve Vizyon",
+        "Depo Çözümleri"
       ],
-      "CANONICAL": "https://kbusyogr.com/about",
+      "CANONICAL": "https://deponext.com/about",
       "OPENGRAPH": {
-        "TITLE": "Hakkımızda | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
-        "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği ekibini ve öğrencilere hizmet etmeyi ve üniversite yaşamına uyum sağlamalarına yardımcı olmayı amaçlayan farklı bölümleri tanıyın.",
-        "URL": "https://kbusyogr.com/about",
-        "SITENAME": "Suriyeli Öğrenci Birliği - Karabük",
+        "TITLE": "Hakkımızda | Depo Next",
+        "DESCRIPTION": "Depo Next ekibi ve hizmetleri hakkında detaylı bilgi alın.",
+        "URL": "https://deponext.com/about",
+        "SITENAME": "Depo Next",
         "LOCALE": "tr",
         "TYPE": "website"
       }
     },
     "TITLE": "Hakkımızda",
-    "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'ni, misyonumuzu, vizyonumuzu, tarihimizi ve Suriyeli öğrencileri destekleyen ekibimizi tanıyın.",
+    "DESCRIPTION": "Depo Next olarak, müşterilerimize güvenli, kolay ve esnek depolama çözümleri sunuyoruz.",
     "VISION_TITLE": "Vizyonumuz",
-    "VISION_DESCRIPTION_1": "Üniversite çapında aktif bir öğrenci birliği olarak, Suriye kimliğini ifade eden ve öğrencilerin beklentilerini yansıtan kültürel ve sosyal programlar ve hizmetler sunarak yaratıcılığı ve iletişimi teşvik eden bir üniversite ortamı oluşturmayı hedefliyoruz.",
-    "VISION_DESCRIPTION_2": "Suriyeli öğrenciler ile daha geniş üniversite topluluğu arasında bir köprü olarak kültürel anlayışı artırmayı ve kalıcı ilişkiler kurmayı amaçlıyoruz.",
+    "VISION_DESCRIPTION_1": "Depolama sektöründe öncü ve yenilikçi hizmetler sunarak müşteri memnuniyetini en üst seviyeye çıkarmak.",
+    "VISION_DESCRIPTION_2": "Müşterilerimizin ihtiyaçlarına özel, esnek ve güvenilir çözümler üretmek.",
     "MISSION_TITLE": "Misyonumuz",
-    "MISSION_DESCRIPTION_1": "Karabük Üniversitesi, Türkiye'de en fazla Suriyeli öğrenciye ev sahipliği yapan üniversitelerden biridir. Farklı bölümlerde 3000'den fazla Suriyeli öğrenci bulunmaktadır. Bu büyük sayı ile birlikte, kampüste Suriyeli öğrencilerin birçok akademik, kültürel ve sosyal etkinliğe katıldığı önemli bir öğrenci etkileşimi gözlemlenmektedir.",
-    "MISSION_DESCRIPTION_2": "Buradan hareketle, Karabük Üniversitesi Suriyeli Öğrenci Birliği olarak öğrenciler arasındaki bağları güçlendirmeyi, akademik ve sosyal destek sağlamayı ve üniversite yolculuklarında becerilerini ve deneyimlerini geliştirmelerine katkıda bulunacak etkinlikler düzenlemeyi hedefliyoruz.",
-    "HISTORY_TITLE": "Tarihimiz",
-    "HISTORY_DESCRIPTION_1": "Karabük Üniversitesi Suriyeli Öğrenci Birliği, 2020 yılında akranlarına destek sistemine ihtiyaç duyan küçük bir grup Suriyeli öğrenci tarafından kurulmuştur.",
-    "HISTORY_DESCRIPTION_2": "Yeni öğrencilerin üniversite yaşamına uyum sağlamalarına yardımcı olmak için yapılan gayri resmi toplantılar, hızla organize bir birliğe dönüşmüş ve üniversitedeki büyüyen Suriyeli öğrenci topluluğunu desteklemek için net bir mesaj taşımaktadır.",
-    "HISTORY_DESCRIPTION_3": "Yıllar geçtikçe, faaliyetlerimizi oryantasyon etkinlikleri, akademik çalıştaylar, kültürel kutlamalar ve mesleki gelişim fırsatlarını içerecek şekilde genişlettik. Bugün, Türkiye'deki eğitim yolculuklarında yüzlerce Suriyeli öğrenciye hizmet vermekten gurur duyuyoruz.",
-    "TEAM_TITLE": "Ekibimizle Tanışın",
-    "ALL": "Tümü",
-    "MEET_OUR_TEAM": "Ekibimizle Tanışın"
+    "MISSION_DESCRIPTION_1": "Eşyalarınızı güvenle saklamanızı sağlayacak kaliteli depolama alanları sunmak.",
+    "MISSION_DESCRIPTION_2": "Teknoloji ve müşteri hizmetlerinde en iyi standartları sağlayarak, her adımda destek olmak.",
+    "HISTORY_TITLE": "Tarihçemiz",
+    "HISTORY_DESCRIPTION_1": "Depo Next, 2023 yılında kurulmuş olup, kısa sürede sektörde güvenilir bir isim haline gelmiştir.",
+    "HISTORY_DESCRIPTION_2": "Müşteri odaklı hizmet anlayışıyla hızlı büyüyen bir depo çözüm sağlayıcısıyız.",
+    "TEAM_TITLE": "Ekibimiz",
+    "MEET_OUR_TEAM": "Profesyonel ve deneyimli ekibimizle tanışın",
+    "ALL": "Tümü"
   },
   "COMMON": {
     "READ_MORE": "Daha Fazla Oku",
     "BACK": "Geri"
   },
-  "ABOUT_PAGE": {
-    "OUR_MISSION": ""
-  },
-  "BLOGS": {
-    "METADATA": {
-      "TITLE": "Blog | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
-      "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'nin Türkiye'deki Suriyeli öğrenciler için akademik, kültürel ve rehberlik konularını kapsayan blog yazılarını okuyun. Öğrencilerin üniversite yolculuklarını geliştirmelerine ve farkındalıklarını artırmalarına yardımcı olacak deneyimler ve ipuçları paylaşıyoruz.",
-      "KEYWORDS": [
-        "Birlik Blogu",
-        "Öğrenci Yazıları",
-        "Çalışma İpuçları",
-        "Öğrenci Deneyimleri",
-        "Karabük Üniversitesi Öğrencileri",
-        "Türkiye'deki Suriyeli Öğrenciler",
-        "Suriyeli Öğrenci Birliği"
-      ],
-      "CANONICAL": "https://kbusyogr.com/blogs",
-      "OPENGRAPH": {
-        "TITLE": "Blog | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
-        "DESCRIPTION": "Suriyeli Öğrenci Birliği'nin Türkiye'deki Suriyeli öğrenciler için öğrenci deneyimlerini, çalışma ipuçlarını ve yararlı bilgileri vurgulayan blog yazılarını keşfedin.",
-        "URL": "https://kbusyogr.com/blogs",
-        "SITENAME": "Suriyeli Öğrenci Birliği - Karabük",
-        "LOCALE": "tr",
-        "TYPE": "website"
-      }
-    }
-  },
-  "REVIEWS_PAGE": {
-    "STUDENTS_REVIEWS": "Öğrenci Yorumları",
-    "REVIEWS_DESCRIPTION": "Suriyeli öğrencilerin Birlik ile olan deneyimlerini ve akademik yolculuklarında nasıl yardımcı olduğumuzu dinleyin.",
-    "FILTER_BY_RATING": "Puanlamaya Göre Filtrele:",
-    "ALL_REVIEWS": "Tüm Yorumları Görüntüle",
-    "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrencilerin, Suriyeli Öğrenci Birliği'nin sunduğu hizmetler ve etkinlikler hakkındaki deneyimlerini ve görüşlerini öğrenin.",
-    "TITLE": "Öğrencilerimizin Görüşleri ve Deneyimleri"
-  },
+
   "FAQ_PAGE": {
     "METADATA": {
-      "TITLE": "Sıkça Sorulan Sorular | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
-      "DESCRIPTION": "Karabük Üniversitesi'ndeki yeni Suriyeli öğrencilerin üniversite kaydı, konaklama ve yasal işlemler gibi konularla ilgili tüm sorularına net ve doğrudan cevaplar bulmak için SSS sayfamızı ziyaret edin.",
+      "TITLE": "Sıkça Sorulan Sorular | Depo Next",
+      "DESCRIPTION": "Depo Next hizmetleri, rezervasyon ve depolama ile ilgili sıkça sorulan soruların cevaplarını bulun.",
       "KEYWORDS": [
-        "Sıkça Sorulan Sorular",
-        "Öğrenci Yardımı",
-        "Üniversite Kaydı",
-        "Öğrenci Konaklama",
-        "Yasal İşlemler",
-        "Suriyeli Öğrenciler",
-        "Karabük Üniversitesi"
+        "SSS",
+        "Depo Kiralama Soruları",
+        "Depolama Hizmeti Yardımı",
+        "Depo Next Destek",
+        "Güvenli Depo",
+        "Kolay Depolama"
       ],
-      "CANONICAL": "https://kbusyogr.com/faq",
+      "CANONICAL": "https://deponext.com/faq",
       "OPENGRAPH": {
-        "TITLE": "Sıkça Sorulan Sorular | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
-        "DESCRIPTION": "Karabük Üniversitesi'ndeki Suriyeli öğrencilerin üniversite ve idari yaşamları hakkında en çok sorulan soruların cevapları.",
-        "URL": "https://kbusyogr.com/faq",
-        "SITENAME": "Suriyeli Öğrenci Birliği - Karabük",
+        "TITLE": "Sıkça Sorulan Sorular | Depo Next",
+        "DESCRIPTION": "Depo Next sıkça sorulan sorular ve cevapları sayfasını ziyaret edin.",
+        "URL": "https://deponext.com/faq",
+        "SITENAME": "Depo Next",
         "LOCALE": "tr",
         "TYPE": "website"
       }
     },
     "FAQ_TITLE": "Sıkça Sorulan Sorular",
-    "FAQ_DESCRIPTION": "Suriyeli Öğrenci Birliği ve hizmetlerimiz hakkında sıkça sorulan soruların cevaplarını keşfedin.",
+    "FAQ_DESCRIPTION": "Depo Next hizmetleri hakkında merak ettiğiniz soruların yanıtlarını bulun.",
     "SEARCH_PLACEHOLDER": "Soruları ara...",
     "VIEW_ALL_FAQ": "Tüm SSS'leri Görüntüle",
-    "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'nin kayıt, etkinlikler, akademik destek ve Türkiye'deki üniversite yaşamı hakkındaki sıkça sorulan soruların cevapları için SSS bölümümüzü ziyaret edin.",
+    "DESCRIPTION": "Depo Next ile ilgili rezervasyon, fiyatlandırma ve depo kullanımı hakkında sıkça sorulan soruların yanıtları.",
     "TITLE": "Sıkça Sorulan Sorular"
-  },
-  "FACULTIES_SECTION": {
-    "TITLE": "Fakülteler",
-    "DESCRIPTION": "Üniversitedeki fakültelerimiz ve uzman öğrenciler"
-  },
-  "DEPARTMENTS_SECTION": {
-    "METADATA": {
-      "TITLE": "Bölümler | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
-      "DESCRIPTION": "Karabük Üniversitesi Suriyeli Öğrenci Birliği'nin bölümlerini tanıyın. Her bölümde, yeni öğrencilere yardımcı olan ve farklı disiplinlerde akademik rehberlik ve etkili iletişim sağlayan Suriyeli öğrenciler bulunmaktadır.",
-      "KEYWORDS": [
-        "Birlik Bölümleri",
-        "Üniversite Bölümleri",
-        "Akademik Rehberlik",
-        "Suriyeli Öğrenciler",
-        "Karabük Üniversitesi",
-        "Yeni Öğrencilere Yardım",
-        "Suriyeli Öğrenci Birliği"
-      ],
-      "CANONICAL": "https://kbusyogr.com/departments",
-      "OPENGRAPH": {
-        "TITLE": "Bölümler | Karabük Üniversitesi Suriyeli Öğrenci Birliği",
-        "DESCRIPTION": "Suriyeli Öğrenci Birliği'nin farklı bölümlerini keşfedin ve Suriyeli öğrencileri desteklemeye ve yönlendirmeye katkıda bulunan bölüm temsilcilerini tanıyın.",
-        "URL": "https://kbusyogr.com/departments",
-        "SITENAME": "Suriyeli Öğrenci Birliği - Karabük",
-        "LOCALE": "tr",
-        "TYPE": "website"
-      }
-    },
-    "ALL": "Tüm"
-  },
-  "Pagination": {
-    "PREVIOUS_PAGE": "Önceki sayfa",
-    "PREVIOUS": "Öncesi",
-    "NEXT_PAGE": "Sonraki sayfa",
-    "NEXT": "Sonraki"
   }
 }

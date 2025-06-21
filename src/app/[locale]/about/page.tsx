@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import TeamSection from "../../../components/Team/TeamSection"; // 👈 استيراد المكون الجديد
 import { getTranslations } from "next-intl/server";
 import { FRONTEND_URL } from "@/constants/env";
+import MotionSection from "@/components/MotionSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("ABOUT_SECTION.METADATA");
@@ -33,7 +34,7 @@ const About = async () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-ssu-blue text-white py-16">
+      <MotionSection className="bg-ssu-blue text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="h1 mb-6 rtl:font-changa ltr:font-montserrat">
             Hakkımızda
@@ -50,9 +51,9 @@ const About = async () => {
             Eşyalarınızı güvenle bize emanet edin, gerisini düşünmeyin!
           </p>
         </div>
-      </section>
+      </MotionSection>
 
-      <section className="bg-gray-50">
+      <MotionSection className="bg-gray-50">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 rounded-lg">
           <div className="space-y-8 lg:grid lg:grid-cols-2 sm:gap-12 lg:space-y-0 rounded-lg">
             {/* Misyon Bölümü */}
@@ -85,7 +86,7 @@ const About = async () => {
             </div>
           </div>
         </div>
-      </section>
+      </MotionSection>
 
       <TeamSection />
     </>
