@@ -42,6 +42,9 @@ export default function TeamMemberModal({
 
       <Dialog open={!!selectedMember} onOpenChange={() => setOpenId(null)}>
         <DialogContent className="max-w-4xl  rounded-2xl shadow-2xl overflow-hidden animate-in fade-in-90 p-7">
+          <DialogTitle className="text-2xl font-bold text-ssu-blue mb-4 rtl:font-changa ltr:font-montserrat">
+            {t("TEAM_MEMBER_DETAILS")}
+          </DialogTitle>
           {selectedMember && (
             <div className="grid md:grid-cols-2 h-max">
               {/* Left: Image */}
