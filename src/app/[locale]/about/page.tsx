@@ -88,7 +88,7 @@ const About = async () => {
         </div>
       </MotionSection>
 
-      <TeamSection />
+      {/* <TeamSection /> */}
     </>
   );
 };

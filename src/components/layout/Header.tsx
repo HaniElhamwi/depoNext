@@ -31,7 +31,7 @@ const Header = () => {
           <Image
             src="/images/logo.png"
             alt="Depo Next Logo"
-            width={120}
+            width={140}
             height={50}
             priority
           />
