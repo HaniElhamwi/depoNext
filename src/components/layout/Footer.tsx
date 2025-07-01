@@ -58,7 +58,11 @@ const Footer = () => {
         {/* Contact */}
         <div>
           <h3 className="text-lg font-semibold mb-4">{t("CONTACT.TITLE")}</h3>
-          <p className="text-gray-300">{t("CONTACT.LOCATION")}</p>
+          <Link
+            href="https://www.google.com/maps/place/Cam+Pak+otopark+ve+y%C4%B1kama/@41.0655793,29.0040037,21z/data=!4m14!1m7!3m6!1s0x14cab654199f9f09:0xc56988360e82a6aa!2zR2F5cmV0dGVwZSwgVmVmYWJleSBTb2thxJ_EsSBObzoyNSBEOjEsIDM0MzQ5IEJlxZ9pa3RhxZ8vxLBzdGFuYnVs!3b1!8m2!3d41.0656118!4d29.0042239!3m5!1s0x14cab7e0e90d1005:0x1bfb0e4fa8b47755!8m2!3d41.0656188!4d29.0039287!16s%2Fg%2F11y1dv3j2v?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"
+            className="text-gray-300 hover:underline">
+            <p className="text-gray-300">{t("CONTACT.LOCATION")}</p>
+          </Link>
           <div className="flex flex-col gap-2">
             <Link
               className="text-gray-300 mt-2 hover:underline"

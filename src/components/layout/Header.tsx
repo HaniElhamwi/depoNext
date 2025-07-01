@@ -31,8 +31,8 @@ const Header = () => {
           <Image
             src="/images/logo.png"
             alt="Depo Next Logo"
-            width={140}
-            height={50}
+            width={160}
+            height={70}
             priority
           />
         </Link>
@@ -67,8 +67,9 @@ const Header = () => {
                 <Image
                   src="/images/logo.png"
                   alt="Depo Next Logo"
-                  width={100}
-                  height={50}
+                  width={160}
+                  height={60}
+                  objectFit="cover"
                 />
                 {/* <SheetClose asChild>
                   <Button variant="ghost" size="icon" aria-label="Close menu">
