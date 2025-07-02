@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: FRONTEND_URL,
       images: [
         {
-          url: `https://res.cloudinary.com/dgx53rnli/image/upload/v1746999250/333330449_222467423509608_534902053517746262_n_hxlk8d.jpg`,
+          url: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRPE8vNxbByEFR8uyqYounKxctmuepljohEQ&s`,
           width: 1200,
           height: 630,
           alt: t("TITLE"),
