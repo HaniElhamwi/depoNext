@@ -48,7 +48,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:underline text-gray-300">
+              <Link href="/iletisim" className="hover:underline text-gray-300">
                 {t("NAVIGATION.CONTACT")}
               </Link>
             </li>

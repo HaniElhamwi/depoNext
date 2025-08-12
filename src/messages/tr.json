@@ -90,6 +90,7 @@
         "TITLE": "Hızlı Linkler",
         "HOME": "Anasayfa",
         "SERVICES": "Hizmetler",
+        "SERVICES_LOCATIONS": "Hizmet Bölgeleri",
         "ABOUT": "Hakkımızda",
         "FAQ": "Sık Sorulanlar",
         "CONTACT": "İletişim"
@@ -183,6 +184,7 @@
     "HOME": "Ana Sayfa",
     "ABOUT": "Hakkımızda",
     "SERVICES": "Hizmetler",
+    "SERVICES_LOCATIONS": "Hizmet Bölgeleri",
     "PRICING": "Fiyatlar",
     "CONTACT": "İletişim",
     "BLOG": "Blog",
